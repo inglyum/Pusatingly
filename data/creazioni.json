@@ -1,0 +1,838 @@
+[
+  {
+    "id": "portamenu",
+    "n": "Portamenu da tavolo",
+    "settore": "horeca",
+    "settoreN": "Ristoranti, bar e hotel",
+    "lavorazione": "P3 taglia e piega la struttura · UV stampa il logo a colori sul fronte",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Legno",
+      "Plexiglass"
+    ],
+    "personalizzazione": [
+      "logo",
+      "nome locale",
+      "QR"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 10,
+    "prezzoDa": 18,
+    "esclusiva": true,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "numeri-tavolo",
+    "n": "Numeri da tavolo",
+    "settore": "horeca",
+    "settoreN": "Ristoranti, bar e hotel",
+    "lavorazione": "P3 taglia legno e plexiglass · F2 marca i numeri su piastrine metalliche acquistate già tagliate",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "marcatura-metalli"
+    ],
+    "materiali": [
+      "Legno",
+      "Plexiglass",
+      "Ottone (piastrina)",
+      "Inox (piastrina)"
+    ],
+    "personalizzazione": [
+      "numerazione",
+      "logo"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 20,
+    "prezzoDa": 6.5,
+    "esclusiva": true,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "targhe-porta-camera",
+    "n": "Targhe numero camera",
+    "settore": "horeca",
+    "settoreN": "Ristoranti, bar e hotel",
+    "lavorazione": "F2 marca la piastra metallica acquistata a misura · UV stampa il colore del brand",
+    "tecniche": [
+      "marcatura-metalli",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Inox",
+      "Alluminio anodizzato",
+      "Ottone"
+    ],
+    "personalizzazione": [
+      "numero",
+      "logo hotel",
+      "pittogrammi",
+      "braille in vernice UV"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 10,
+    "prezzoDa": 22,
+    "esclusiva": true,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "espositori-qr",
+    "n": "Espositori QR da banco",
+    "settore": "horeca",
+    "settoreN": "Ristoranti, bar e hotel",
+    "lavorazione": "P3 taglia la sagoma · UV stampa QR e istruzioni a colori (il QR stampato legge meglio dell'inciso)",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Legno",
+      "Plexiglass"
+    ],
+    "personalizzazione": [
+      "QR",
+      "logo",
+      "testo multilingua"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 10,
+    "prezzoDa": 12,
+    "esclusiva": true,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "calici-personalizzati",
+    "n": "Calici e bicchieri personalizzati",
+    "settore": "horeca",
+    "settoreN": "Ristoranti, bar e hotel",
+    "lavorazione": "UV con rotativo: stampa a colori su vetro cilindrico, senza calore",
+    "tecniche": [
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Calice vino",
+      "Bicchiere birra",
+      "Flute",
+      "Tumbler",
+      "Bottiglia"
+    ],
+    "personalizzazione": [
+      "logo",
+      "nome",
+      "annata"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 24,
+    "prezzoDa": 9.5,
+    "esclusiva": false,
+    "nota": "Enoteche e birrifici: ordine ricorrente per stagione. Il rotativo è la capacità che quasi nessuno ha in zona.",
+    "foto": []
+  },
+  {
+    "id": "sottobicchieri",
+    "n": "Sottobicchieri personalizzati",
+    "settore": "horeca",
+    "settoreN": "Ristoranti, bar e hotel",
+    "lavorazione": "P3 taglia sughero o legno · UV stampa il logo a colori",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Sughero",
+      "Legno",
+      "Ardesia"
+    ],
+    "personalizzazione": [
+      "logo",
+      "claim"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 50,
+    "prezzoDa": 4.5,
+    "esclusiva": true,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "targhette-allergeni",
+    "n": "Targhette allergeni e igiene",
+    "settore": "horeca",
+    "settoreN": "Ristoranti, bar e hotel",
+    "lavorazione": "F2 su inox: marcatura permanente, lavabile, resistente ai disinfettanti",
+    "tecniche": [
+      "marcatura-metalli"
+    ],
+    "materiali": [
+      "Inox"
+    ],
+    "personalizzazione": [
+      "pittogrammi allergeni",
+      "numerazione"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 25,
+    "prezzoDa": 5,
+    "esclusiva": false,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "targhe-matricola",
+    "n": "Targhe matricola e dati macchina",
+    "settore": "industriale",
+    "settoreN": "Industria e officina",
+    "lavorazione": "F2 marca inox o alluminio anodizzato acquistato già tagliato: marcatura permanente, resiste a oli e solventi",
+    "tecniche": [
+      "marcatura-metalli"
+    ],
+    "materiali": [
+      "Inox",
+      "Alluminio anodizzato"
+    ],
+    "personalizzazione": [
+      "dati targa",
+      "matricola progressiva",
+      "QR",
+      "marcatura CE"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 25,
+    "prezzoDa": 14,
+    "esclusiva": false,
+    "nota": "Riordino per obbligo normativo: il cliente torna perché deve, non perché vuole. Le piastrine si comprano a misura, non si producono.",
+    "foto": []
+  },
+  {
+    "id": "etichette-quadri",
+    "n": "Etichette per quadri elettrici",
+    "settore": "industriale",
+    "settoreN": "Industria e officina",
+    "lavorazione": "F2 su alluminio anodizzato acquistato a misura: marcatura bianca netta, la più leggibile a distanza",
+    "tecniche": [
+      "marcatura-metalli"
+    ],
+    "materiali": [
+      "Alluminio anodizzato",
+      "Inox"
+    ],
+    "personalizzazione": [
+      "siglatura",
+      "numerazione progressiva"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 50,
+    "prezzoDa": null,
+    "esclusiva": false,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "cartellonistica-sicurezza",
+    "n": "Cartellonistica di sicurezza",
+    "settore": "industriale",
+    "settoreN": "Industria e officina",
+    "lavorazione": "P3 sagoma il supporto · UV stampa i colori che la norma impone (rosso, giallo, verde, blu non sono opzionali)",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Plexiglass",
+      "Alluminio composito"
+    ],
+    "personalizzazione": [
+      "pittogrammi UNI EN ISO 7010",
+      "testo",
+      "logo aziendale"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 10,
+    "prezzoDa": null,
+    "esclusiva": true,
+    "nota": "Il colore è obbligatorio per norma: un concorrente con il solo CO2 non può farla. È l'esempio più chiaro del vantaggio delle tre macchine.",
+    "foto": []
+  },
+  {
+    "id": "shadow-board",
+    "n": "Pannelli sagomati porta-attrezzi",
+    "settore": "industriale",
+    "settoreN": "Industria e officina",
+    "lavorazione": "P3 80 W taglia le sagome degli utensili; piano da 915 × 458 e convogliatore per i pannelli lunghi",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser"
+    ],
+    "materiali": [
+      "Schiuma tecnica",
+      "Plexiglass",
+      "MDF"
+    ],
+    "personalizzazione": [
+      "sagome utensili",
+      "siglatura postazione",
+      "logo"
+    ],
+    "daPezzoSingolo": true,
+    "quantitaMinima": 1,
+    "prezzoDa": null,
+    "esclusiva": false,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "premi-trofei",
+    "n": "Premi e trofei",
+    "settore": "aziendale",
+    "settoreN": "Aziende e uffici",
+    "lavorazione": "P3 taglia la base · F2 incide la targhetta in metallo · UV stampa il logo a colori. Tutte e tre.",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "marcatura-metalli",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Plexiglass + metallo",
+      "Legno + metallo",
+      "Vetro + metallo"
+    ],
+    "personalizzazione": [
+      "nome premiato",
+      "anno",
+      "logo",
+      "motivazione"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 5,
+    "prezzoDa": 45,
+    "esclusiva": true,
+    "nota": "La famiglia con il margine più alto del catalogo e la sola che usa tutte e tre le macchine.",
+    "foto": []
+  },
+  {
+    "id": "biglietti-metallo",
+    "n": "Biglietti da visita in metallo",
+    "settore": "aziendale",
+    "settoreN": "Aziende e uffici",
+    "lavorazione": "F2 marca le tessere metalliche acquistate già tagliate a misura carta di credito",
+    "tecniche": [
+      "marcatura-metalli"
+    ],
+    "materiali": [
+      "Inox",
+      "Ottone",
+      "Alluminio nero"
+    ],
+    "personalizzazione": [
+      "dati",
+      "logo",
+      "QR"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 25,
+    "prezzoDa": 8.5,
+    "esclusiva": false,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "regali-dipendenti",
+    "n": "Regali aziendali personalizzati",
+    "settore": "aziendale",
+    "settoreN": "Aziende e uffici",
+    "lavorazione": "P3 per la scatola e gli oggetti in legno · UV per il colore su borracce, taccuini, power bank",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Borraccia",
+      "Taccuino",
+      "Set scrittura",
+      "Tagliere",
+      "Cofanetto"
+    ],
+    "personalizzazione": [
+      "logo",
+      "nome dipendente",
+      "messaggio"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 20,
+    "prezzoDa": null,
+    "esclusiva": true,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "bomboniere",
+    "n": "Bomboniere personalizzate",
+    "settore": "eventi",
+    "settoreN": "Matrimoni e ricorrenze",
+    "lavorazione": "P3 taglia e incide · UV aggiunge il colore dove il tema lo richiede",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Legno",
+      "Plexiglass",
+      "Sughero"
+    ],
+    "personalizzazione": [
+      "nomi",
+      "data",
+      "frase",
+      "colore tema"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 30,
+    "prezzoDa": 3.5,
+    "esclusiva": true,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "segnaposto",
+    "n": "Segnaposto",
+    "settore": "eventi",
+    "settoreN": "Matrimoni e ricorrenze",
+    "lavorazione": "P3: taglio e incisione del nome",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser"
+    ],
+    "materiali": [
+      "Legno",
+      "Plexiglass",
+      "Cartoncino"
+    ],
+    "personalizzazione": [
+      "nome ospite",
+      "tavolo"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 50,
+    "prezzoDa": 1.8,
+    "esclusiva": false,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "tableau",
+    "n": "Tableau de mariage",
+    "settore": "eventi",
+    "settoreN": "Matrimoni e ricorrenze",
+    "lavorazione": "P3 taglia il pannello fino a 915 × 458 mm · UV stampa fiori e decori a colori",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Legno",
+      "Plexiglass"
+    ],
+    "personalizzazione": [
+      "elenco tavoli",
+      "nomi",
+      "tema grafico"
+    ],
+    "daPezzoSingolo": true,
+    "quantitaMinima": 1,
+    "prezzoDa": 89,
+    "esclusiva": true,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "cake-topper",
+    "n": "Cake topper",
+    "settore": "eventi",
+    "settoreN": "Matrimoni e ricorrenze",
+    "lavorazione": "P3 su plexiglass o legno sottile",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser"
+    ],
+    "materiali": [
+      "Plexiglass",
+      "Legno",
+      "Specchiato"
+    ],
+    "personalizzazione": [
+      "nomi",
+      "data",
+      "età"
+    ],
+    "daPezzoSingolo": true,
+    "quantitaMinima": 1,
+    "prezzoDa": 12,
+    "esclusiva": false,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "medagliette-animali",
+    "n": "Medagliette per animali",
+    "settore": "animali",
+    "settoreN": "Animali",
+    "lavorazione": "F2 marca le medagliette acquistate già sagomate. 6.000 mm/s e camera 50 MP: un lotto da cento in una sessione",
+    "tecniche": [
+      "marcatura-metalli"
+    ],
+    "materiali": [
+      "Inox",
+      "Ottone",
+      "Alluminio anodizzato"
+    ],
+    "personalizzazione": [
+      "nome",
+      "telefono",
+      "microchip",
+      "QR"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 25,
+    "prezzoDa": 9.9,
+    "esclusiva": false,
+    "nota": "Il lavoro che la F2 fa meglio: pezzo piccolo, metallo, ripetitivo. Le medagliette grezze si comprano a pochi centesimi. Canale B2B naturale — veterinari e toelettature — che nessuno presidia.",
+    "foto": []
+  },
+  {
+    "id": "targhe-nascita",
+    "n": "Targhe nascita",
+    "settore": "bambini",
+    "settoreN": "Bambini e nascite",
+    "lavorazione": "P3 sagoma · UV stampa a colori il disegno o l'illustrazione",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Legno",
+      "Plexiglass"
+    ],
+    "personalizzazione": [
+      "nome",
+      "data",
+      "peso",
+      "lunghezza",
+      "illustrazione"
+    ],
+    "daPezzoSingolo": true,
+    "quantitaMinima": 1,
+    "prezzoDa": 26,
+    "esclusiva": true,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "scritte-nome",
+    "n": "Scritte nome da parete",
+    "settore": "bambini",
+    "settoreN": "Bambini e nascite",
+    "lavorazione": "P3: taglio del nome, anche a doppio strato",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser"
+    ],
+    "materiali": [
+      "Legno",
+      "Plexiglass"
+    ],
+    "personalizzazione": [
+      "nome",
+      "carattere",
+      "colore"
+    ],
+    "daPezzoSingolo": true,
+    "quantitaMinima": 1,
+    "prezzoDa": 24,
+    "esclusiva": false,
+    "nota": "Sostituisce i prodotti a tema personaggio: stessa forma, nessun rischio, l'originale lo porta il cliente.",
+    "foto": []
+  },
+  {
+    "id": "misuratori",
+    "n": "Misuratori altezza",
+    "settore": "bambini",
+    "settoreN": "Bambini e nascite",
+    "lavorazione": "P3: con il convogliatore la lunghezza non è un limite",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser"
+    ],
+    "materiali": [
+      "Legno"
+    ],
+    "personalizzazione": [
+      "nome",
+      "decoro"
+    ],
+    "daPezzoSingolo": true,
+    "quantitaMinima": 1,
+    "prezzoDa": 38,
+    "esclusiva": false,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "borracce-tumbler",
+    "n": "Borracce e tumbler personalizzati",
+    "settore": "accessori",
+    "settoreN": "Accessori e regali",
+    "lavorazione": "UV con rotativo: colore pieno su acciaio, senza calore né sublimazione",
+    "tecniche": [
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Borraccia 500",
+      "Tumbler 600",
+      "Termos"
+    ],
+    "personalizzazione": [
+      "nome",
+      "logo",
+      "illustrazione"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 24,
+    "prezzoDa": 22,
+    "esclusiva": false,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "portachiavi",
+    "n": "Portachiavi personalizzati",
+    "settore": "accessori",
+    "settoreN": "Accessori e regali",
+    "lavorazione": "P3 taglia legno, pelle e plexiglass · F2 marca i portachiavi metallici acquistati grezzi",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "marcatura-metalli"
+    ],
+    "materiali": [
+      "Legno",
+      "Pelle",
+      "Plexiglass",
+      "Inox",
+      "Ottone"
+    ],
+    "personalizzazione": [
+      "nome",
+      "logo",
+      "coordinate",
+      "QR"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 50,
+    "prezzoDa": 5.9,
+    "esclusiva": false,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "taglieri",
+    "n": "Taglieri personalizzati",
+    "settore": "casa",
+    "settoreN": "Casa",
+    "lavorazione": "P3 incide sul retro · UV stampa a colori sul fronte decorativo",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Legno"
+    ],
+    "personalizzazione": [
+      "nome",
+      "ricetta",
+      "illustrazione a colori"
+    ],
+    "daPezzoSingolo": true,
+    "quantitaMinima": 1,
+    "prezzoDa": 29,
+    "esclusiva": true,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "ritratto-sagomato",
+    "n": "Ritratto sagomato dal tuo disegno",
+    "settore": "regalo",
+    "settoreN": "Regali personalizzati",
+    "lavorazione": "P3 taglia la sagoma a strati dal disegno del cliente · UV aggiunge i colori",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Legno",
+      "Plexiglass"
+    ],
+    "personalizzazione": [
+      "disegno o foto del cliente",
+      "nome",
+      "colori"
+    ],
+    "daPezzoSingolo": true,
+    "quantitaMinima": 1,
+    "prezzoDa": 34.99,
+    "esclusiva": true,
+    "nota": "Sostituisce i prodotti a tema Marvel e Ghibli: stessa lavorazione, stesso prezzo, margine migliore e nessun rischio — l'originale lo porta il cliente e nessun concorrente lo può copiare.",
+    "foto": []
+  },
+  {
+    "id": "grembiuli-divise",
+    "n": "Grembiuli e divise personalizzate",
+    "settore": "horeca",
+    "settoreN": "Ristoranti, bar e hotel",
+    "lavorazione": "UV stampa il trasferimento DTF · il forno lo cura · la pressa lo applica. Colore pieno, nessun minimo d'ordine",
+    "tecniche": [
+      "stampa-uv",
+      "personalizzazione-tessile"
+    ],
+    "materiali": [
+      "Grembiule",
+      "Polo",
+      "Camicia",
+      "Cappellino"
+    ],
+    "personalizzazione": [
+      "logo locale",
+      "nome del dipendente",
+      "ruolo"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 6,
+    "prezzoDa": 24,
+    "esclusiva": true,
+    "nota": "Il ristoratore che ordina i portamenu ordina anche i grembiuli, e li ricompra quando entra personale nuovo. Nessun minimo è l'argomento di vendita: i fornitori tessili ne impongono 50.",
+    "foto": []
+  },
+  {
+    "id": "capi-aziendali",
+    "n": "Capi e gadget tessili aziendali",
+    "settore": "aziendale",
+    "settoreN": "Aziende e uffici",
+    "lavorazione": "UV DTF stampato e curato in casa, applicato con la pressa a 100 kg",
+    "tecniche": [
+      "stampa-uv",
+      "personalizzazione-tessile"
+    ],
+    "materiali": [
+      "T-shirt",
+      "Felpa",
+      "Tote bag",
+      "Cappellino",
+      "Asciugamano"
+    ],
+    "personalizzazione": [
+      "logo",
+      "claim",
+      "nome"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 10,
+    "prezzoDa": null,
+    "esclusiva": true,
+    "nota": null,
+    "foto": []
+  },
+  {
+    "id": "tazze-3d",
+    "n": "Tazze e oggetti a stampa avvolgente",
+    "settore": "accessori",
+    "settoreN": "Accessori e regali",
+    "lavorazione": "Modulo sottovuoto della WonderPress: sublimazione 3D che avvolge tutta la superficie, senza giunzioni",
+    "tecniche": [
+      "stampa-uv",
+      "personalizzazione-tessile"
+    ],
+    "materiali": [
+      "Tazza",
+      "Tazza termica",
+      "Cover telefono",
+      "Borraccia"
+    ],
+    "personalizzazione": [
+      "foto",
+      "nome",
+      "logo"
+    ],
+    "daPezzoSingolo": false,
+    "quantitaMinima": 12,
+    "prezzoDa": 14,
+    "esclusiva": true,
+    "nota": "La sublimazione 3D avvolge il pezzo: è la differenza visibile da una stampa piana applicata male, ed è quello che giustifica il prezzo.",
+    "foto": []
+  },
+  {
+    "id": "insegne-grandi",
+    "n": "Insegne e pannelli da parete",
+    "settore": "aziendale",
+    "settoreN": "Aziende e uffici",
+    "lavorazione": "P3 taglia fino a 915 × 458 mm, o senza limite di lunghezza col convogliatore · UV stampa i colori del brand",
+    "tecniche": [
+      "taglio-laser",
+      "incisione-laser",
+      "stampa-uv"
+    ],
+    "materiali": [
+      "Legno",
+      "Plexiglass",
+      "Multistrato"
+    ],
+    "personalizzazione": [
+      "logo",
+      "testo",
+      "colori aziendali"
+    ],
+    "daPezzoSingolo": true,
+    "quantitaMinima": 1,
+    "prezzoDa": 95,
+    "esclusiva": true,
+    "nota": "Sbloccata dalla P3: con 80 W e un piano da quasi un metro il grande formato non va più subappaltato.",
+    "foto": []
+  },
+  {
+    "id": "personalizzazione-dal-vivo",
+    "n": "Personalizzazione dal vivo su evento",
+    "settore": "servizi",
+    "settoreN": "Servizi",
+    "lavorazione": "La F2 è portatile: si incide davanti al cliente, a fiere, inaugurazioni, eventi aziendali e in negozio",
+    "tecniche": [
+      "marcatura-metalli"
+    ],
+    "materiali": [],
+    "personalizzazione": [
+      "nome all'istante"
+    ],
+    "daPezzoSingolo": true,
+    "quantitaMinima": 1,
+    "prezzoDa": null,
+    "esclusiva": false,
+    "nota": "Non è un prodotto, è un servizio: margine alto, nessun magazzino, e ogni evento è una vetrina davanti a centinaia di persone. È la ragione vera per cui una macchina portatile vale in azienda.",
+    "foto": []
+  }
+]

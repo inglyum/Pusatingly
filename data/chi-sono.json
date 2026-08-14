@@ -1,0 +1,17 @@
+{
+  "nome": "Giuseppe Inglima",
+  "ruolo": "Maker e progettista",
+  "sede": "Cesena, Emilia-Romagna",
+  "sommario": "Progetto e realizzo oggetti personalizzati con taglio laser, incisione e stampa UV. In officina, un pezzo alla volta o mille, dallo schizzo alla consegna.",
+  "racconto": [
+    "INGLY DESIGN è un laboratorio a Cesena. Non è una piattaforma che gira gli ordini a qualcun altro: le macchine sono qui, le uso io, e se un pezzo esce storto lo rifaccio io.",
+    "Lavoro con quattro tecnologie che si completano a vicenda: un laser CO2 da 80 watt per il taglio e il grande formato, un laser a infrarossi per la marcatura dei metalli, una stampante UV per il colore su qualunque superficie e una pressa a caldo per il tessile. È una combinazione poco comune, e serve a una cosa sola: poter dire di sì a un lavoro senza doverne subappaltare metà.",
+    "Il mestiere vero, però, non è accendere la macchina. È sapere che il plexiglass estruso si incide trasparente invece che bianco, che il pino macchia il bordo in modo irregolare, che la pelle conciata al cromo non si taglia mai. Sono le cose che si imparano sbagliando, e sono quelle che ti evito di sbagliare tu."
+  ],
+  "principi": [
+    { "t": "Ti dico prima cosa non funziona", "d": "Se il materiale che hai in mente si comporta male, lo sai in fase di preventivo. Preferisco perdere un ordine che consegnare un pezzo che non ti piacerà." },
+    { "t": "Niente va in produzione senza la tua approvazione", "d": "La prova grafica è sempre scritta. È l'unico modo di lavorare su misura senza discussioni alla consegna." },
+    { "t": "Il file resta archiviato", "d": "Chi riordina — un ristorante che cambia menu, un'azienda che assume — la seconda volta salta direttamente alla produzione." },
+    { "t": "Un pezzo solo è un ordine valido", "d": "Non ci sono minimi su gran parte delle lavorazioni. Il prototipo unico è il lavoro che faccio più volentieri." }
+  ]
+}

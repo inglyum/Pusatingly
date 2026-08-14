@@ -1,0 +1,33 @@
+{
+  "titolo": "Come si ordina",
+  "sommario": "Sei passaggi, e a ognuno sai già cosa succede dopo. Nessun preventivo che arriva fra due settimane.",
+  "passi": [
+    { "n": 1, "t": "Mi racconti cosa ti serve",
+      "d": "Via WhatsApp, per email o dal modulo. Va bene anche una foto storta o uno schizzo su un tovagliolo: quello che conta è capire l'uso, la quantità e la data in cui ti serve.",
+      "tempi": "risposta entro 24 ore lavorative" },
+    { "n": 2, "t": "Scegliamo materiale e tecnica",
+      "d": "Ti dico cosa conviene e cosa no, e perché. Se il legno che hai in mente si comporta male su quel pezzo te lo dico prima, non dopo.",
+      "tempi": "nella stessa conversazione" },
+    { "n": 3, "t": "Ricevi il preventivo scritto",
+      "d": "Prezzo, quantità, materiale, misure e data di consegna. Se la quantità cambia il prezzo, trovi anche gli scaglioni: non ci sono sorprese a fine lavoro.",
+      "tempi": "entro 48 ore" },
+    { "n": 4, "t": "Approvi la prova grafica",
+      "d": "Prima di accendere la macchina ti mando la grafica esatta che verrà incisa o stampata. Si corregge finché non è giusta. Niente va in produzione senza il tuo sì scritto.",
+      "tempi": "1–2 giorni, dipende dai giri di correzione" },
+    { "n": 5, "t": "Produzione",
+      "d": "Il pezzo si fa qui a Cesena, non si subappalta. Per gli ordini ripetuti il file resta archiviato: la volta dopo si salta direttamente a questo passaggio.",
+      "tempi": "3–7 giorni secondo lavorazione e quantità" },
+    { "n": 6, "t": "Consegna o ritiro",
+      "d": "Spedizione tracciata in tutta Italia, oppure ritiro in officina se sei in zona — e ne approfittiamo per guardare il pezzo insieme.",
+      "tempi": "24–48 ore di corriere" }
+  ],
+  "pagamenti": {
+    "titolo": "Pagamenti",
+    "voci": [
+      "Bonifico bancario, con fattura per privati e aziende.",
+      "Per il primo ordine sopra i 200 €: acconto del 40 % alla conferma, saldo alla consegna.",
+      "Aziende con ordini ricorrenti: pagamento a 30 giorni dopo il terzo ordine.",
+      "Ogni lavoro personalizzato è realizzato su misura: per legge il diritto di recesso non si applica ai beni confezionati su specifiche del cliente. Per questo la prova grafica va approvata per iscritto — è la garanzia di tutti e due."
+    ]
+  }
+}

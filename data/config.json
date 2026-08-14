@@ -1,0 +1,25 @@
+{
+  "marchio": "INGLY DESIGN",
+  "titolare": "Giuseppe Inglima",
+  "ruolo": "Maker e progettista · taglio laser, incisione e stampa UV",
+  "claim": "Dall'idea al pezzo finito, in officina a Cesena.",
+  "descrizione": "Prototipazione rapida, taglio e incisione laser, stampa UV e personalizzazione su misura. Un pezzo solo o una serie: si parte dal tuo disegno o dalla tua idea.",
+  "sede": { "citta": "Cesena", "provincia": "FC", "regione": "Emilia-Romagna", "paese": "IT" },
+  "contatti": {
+    "email": "inglydesign@gmail.com",
+    "whatsapp": "+39 329 690 4627",
+    "whatsappNumero": "393296904627"
+  },
+  "social": {
+    "instagram": "https://instagram.com/ingly_design",
+    "facebook": "https://facebook.com/inglydesign"
+  },
+  "seo": {
+    "dominio": "",
+    "_nota": "DA COMPILARE prima di pubblicare. Deve essere un dominio DIVERSO da inglydesign.it: due repository non possono dichiarare lo stesso dominio, si stacca da entrambi.",
+    "azienda": "INGLY DESIGN",
+    "citta": "Cesena"
+  },
+  "moduli": { "formspreePreventivo": "", "formspreeContatto": "" },
+  "analytics": { "cloudflare": "" }
+}

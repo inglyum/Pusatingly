@@ -1,0 +1,13 @@
+{
+  "name": "ingly-design-servizi",
+  "version": "1.0.0",
+  "description": "Sito servizi INGLY DESIGN — Giuseppe Inglima, Cesena. Generato dai dati, statico, senza dipendenze.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "genera": "node scripts/genera.mjs && node scripts/sitemap.mjs",
+    "test": "node scripts/valida.mjs && node scripts/genera.mjs --verifica && node scripts/sitemap.mjs --verifica && node tests/test-sito.mjs",
+    "dev": "node scripts/dev-server.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

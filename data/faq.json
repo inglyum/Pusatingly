@@ -1,0 +1,22 @@
+[
+  { "q": "Posso ordinare un pezzo solo?",
+    "a": "Sì, su quasi tutte le lavorazioni. Il pezzo unico e il prototipo sono lavori normali, non eccezioni: col laser non serve uno stampo, quindi non c'è una quantità minima che giustifichi l'attrezzatura. I minimi esistono solo dove il costo del supporto lo impone, e in quel caso sono scritti nella scheda." },
+  { "q": "Quanto costa? Perché non vedo i prezzi?",
+    "a": "Perché su una lavorazione su misura il prezzo dipende da quantità, materiale, dimensione, complessità della grafica e tempi. Un prezzo esposto sarebbe una promessa impossibile da mantenere. Il preventivo scritto arriva entro 48 ore e include gli scaglioni per quantità." },
+  { "q": "Quanto tempo ci vuole?",
+    "a": "Dal sì al pezzo in mano, di norma 5–10 giorni: 1–2 per la prova grafica, 3–7 per la produzione, 1–2 di corriere. Per le urgenze si può accelerare, va detto subito." },
+  { "q": "Che file devo mandare?",
+    "a": "Il meglio è un vettoriale: SVG, PDF, AI o DXF. Ma va bene anche una foto, uno schizzo a mano o una descrizione a parole: la vettorializzazione la faccio io e rientra nel preventivo. Non serve saper usare un programma di grafica per ordinare." },
+  { "q": "Si può incidere il PVC?",
+    "a": "No, e nessun laboratorio serio dovrebbe farlo. Il PVC tagliato al laser libera cloro gassoso: tossico per chi lavora e corrosivo per l'ottica della macchina. Se serve quell'aspetto si usa plexiglass o PETG, che si tagliano bene e sono innocui." },
+  { "q": "L'incisione si cancella o sbiadisce?",
+    "a": "No. L'incisione toglie materiale, non lo aggiunge: non è una vernice né un'etichetta. Sui metalli la marcatura resiste a oli, solventi e disinfettanti. La stampa UV, che è un altro processo, è comunque molto resistente ma su un oggetto sottoposto ad abrasione continua l'incisione dura di più." },
+  { "q": "Posso portare un mio oggetto da personalizzare?",
+    "a": "Sì, ed è una cosa che si fa spesso. Va valutato il materiale prima: alcuni non si possono lavorare, e su un oggetto a cui tieni si fa sempre una prova su un pezzo di scarto simile. Sugli oggetti portati dal cliente non posso garantire il risultato come su un supporto che fornisco io." },
+  { "q": "Fate anche il grande formato?",
+    "a": "Sì, fino a 915 × 458 mm in un pezzo solo, e senza limite di lunghezza con il convogliatore. Insegne, pannelli, tableau e misuratori si fanno in casa." },
+  { "q": "Lavorate con le aziende?",
+    "a": "Sì, ed è buona parte del lavoro: targhe matricola, etichette per quadri elettrici, cartellonistica di sicurezza, premi, regali per i dipendenti, grembiuli e divise. Si fattura regolarmente e per gli ordini ricorrenti si può concordare il pagamento a 30 giorni." },
+  { "q": "Potete riprodurre un personaggio dei cartoni o un logo famoso?",
+    "a": "No. Marchi e personaggi protetti non si riproducono, nemmeno ridisegnati: sarebbe un'opera derivata e metterebbe nei guai sia me sia te. Quello che si può fare è molto meglio: un ritratto sagomato dal tuo disegno o dalla tua foto, che è unico e non lo ha nessun altro." }
+]

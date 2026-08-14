@@ -1,0 +1,12 @@
+name: QA — dati validi, pagine allineate, sitemap corretta
+on: [push, pull_request]
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      # Nessuna dipendenza da installare: è tutto Node puro, di proposito.
+      - name: Suite completa
+        run: npm test
