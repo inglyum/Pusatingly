@@ -44,7 +44,7 @@
   "note": "REGOLA — docs/MIGRATION-MAP.md §3: nessun numero inventato e nessun dato ereditato dal sito di riferimento. I contatori con valore null NON vengono mostrati. Compilare solo con dati reali INGLY DESIGN.",
   "pezzi": null,
   "clienti": null,
-  "materiali": 12,
+  "materiali": 13,
   "tecnologie": 8,
   "categorie": 13,
   "rating": null,

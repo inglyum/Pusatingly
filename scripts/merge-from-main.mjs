@@ -142,6 +142,27 @@ const materials = mMateriali.map((m, i) => {
   };
 });
 
+/* Il taglio laser dichiara "cartoncino" fra i materiali lavorati, ma il sito
+   precedente non gli dedicava una scheda. Senza una voce qui, gli otto
+   prodotti di Carta & Packaging finirebbero marcati come compensato.
+   La scheda riporta solo ciò che è documentato, niente spessori inventati. */
+materials.push({
+  id: 'carta-cartoncino',
+  name: { it: 'Carta e cartoncino', en: 'Paper and board' },
+  family: 'cellulosico',
+  order: materials.length + 1,
+  featured: false,
+  short: { it: 'Taglio e traforo netti, senza fustella e senza tirature minime.', en: '' },
+  description: {
+    it: 'Il laser taglia il cartoncino sigillando il bordo, che quindi non sfilaccia. Permette trafori e sagome che con la fustella tradizionale sarebbero antieconomici sotto le migliaia di copie.\n\nScheda tecnica in preparazione: spessori e grammature vanno confermati sul materiale effettivamente in uso.',
+    en: 'The laser cuts board with a sealed edge, enabling fretwork without die costs.'
+  },
+  properties: { taglio: 'sì', incisione: 'sì', 'marcatura laser': 'no', 'stampa UV': 'sì' },
+  technologies: ['taglio-laser', 'incisione-laser', 'stampa-uv'],
+  bestFor: { it: 'inviti, cartellini, fascette, packaging', en: '' },
+  warning: null
+});
+
 write('data/materials.json', materials);
 
 /* ============================================================
@@ -167,10 +188,8 @@ const MAT_MAP = {
   // passano al materiale con cui verrebbero davvero realizzati.
   pla: 'plexiglass-colato',
   petg: 'plexiglass-colato',
-  // Carta e cartone restano lavorabili ma senza scheda materiale:
-  // si riportano al supporto rigido equivalente.
-  carta: null,
-  cartone: null
+  carta: 'carta-cartoncino',
+  cartone: 'carta-cartoncino'
 };
 
 const TECH_MAP = {
@@ -238,17 +257,20 @@ if (subRenamed) write('data/categories.json', categories);
    Il laboratorio è a Cesena: la collezione sparisce e i prodotti che la
    usavano passano a "turismo", che è il mercato che intercettavano davvero. */
 const migration = read('data/migration.json');
-const hadSicilia = migration.collections.some((c) => c.id === 'sicilia');
-if (hadSicilia) {
-  migration.collections = migration.collections.filter((c) => c.id !== 'sicilia');
-  migration.collections.forEach((c, i) => { c.order = i + 1; });
-  write('data/migration.json', migration);
+migration.collections = migration.collections.filter((c) => c.id !== 'sicilia');
+migration.collections.forEach((c, i) => { c.order = i + 1; });
+write('data/migration.json', migration);
 
-  const seedPath = 'scripts/seed/catalog-seed.mjs';
-  let seedSrc = readFileSync(join(ROOT, seedPath), 'utf8');
-  seedSrc = seedSrc.replace(/'sicilia'/g, "'turismo'");
-  writeFileSync(join(ROOT, seedPath), seedSrc, 'utf8');
-}
+/* La sostituzione nel seed non va condizionata allo stato di migration.json:
+   i due file possono essere disallineati (uno aggiornato, l'altro no) e in quel
+   caso resterebbero prodotti che puntano a una collezione inesistente.
+   Sostituire quando non c'è nulla da sostituire non fa danno. */
+const seedPath2 = 'scripts/seed/catalog-seed.mjs';
+writeFileSync(
+  join(ROOT, seedPath2),
+  readFileSync(join(ROOT, seedPath2), 'utf8').replace(/'sicilia'/g, "'turismo'"),
+  'utf8'
+);
 
 const products = read('data/products.json');
 

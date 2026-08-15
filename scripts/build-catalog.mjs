@@ -150,7 +150,9 @@ for (const category of categories) {
     const techs = [...new Set(rawTechs)];
 
     const id = `${PREFIX[category.id]}-${pad(n + 1)}`;
-    const slug = slugify(`${name} ${subtitle}`);
+    // Il nome è il descrittore funzionale: basta lui a fare un URL leggibile.
+    // Aggiungere il sottotitolo ci infilerebbe dentro anche le misure.
+    const slug = slugify(name);
     const shortDescription = clamp(firstSentence(detail), 150);
     const description = buildDescription(detail, mats, techs, customization, globalIndex);
     const categoryName = category.name.it;

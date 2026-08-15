@@ -34,7 +34,7 @@ Prodotti totali: **176** · definitivi INGLY: **0** (0%)
 | Materiale | Prodotti |
 | --------- | -------- |
 | Legno massello | 27 |
-| Compensato di betulla | 139 |
+| Compensato di betulla | 132 |
 | MDF | 12 |
 | Plexiglass colato | 26 |
 | Acciaio inox | 13 |
@@ -45,6 +45,7 @@ Prodotti totali: **176** · definitivi INGLY: **0** (0%)
 | Ardesia | 0 |
 | Sughero | 0 |
 | Tessuto e capi | 1 |
+| Carta e cartoncino | 11 |
 
 ## Copertura tecnologie
 

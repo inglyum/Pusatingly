@@ -409,5 +409,39 @@
    "en": ""
   },
   "warning": "La sublimazione funziona su poliestere o supporti trattati. Sul cotone si usa il trasferimento DTF, che stampiamo e cuociamo in officina."
+ },
+ {
+  "id": "carta-cartoncino",
+  "name": {
+   "it": "Carta e cartoncino",
+   "en": "Paper and board"
+  },
+  "family": "cellulosico",
+  "order": 13,
+  "featured": false,
+  "short": {
+   "it": "Taglio e traforo netti, senza fustella e senza tirature minime.",
+   "en": ""
+  },
+  "description": {
+   "it": "Il laser taglia il cartoncino sigillando il bordo, che quindi non sfilaccia. Permette trafori e sagome che con la fustella tradizionale sarebbero antieconomici sotto le migliaia di copie.\n\nScheda tecnica in preparazione: spessori e grammature vanno confermati sul materiale effettivamente in uso.",
+   "en": "The laser cuts board with a sealed edge, enabling fretwork without die costs."
+  },
+  "properties": {
+   "taglio": "sì",
+   "incisione": "sì",
+   "marcatura laser": "no",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "taglio-laser",
+   "incisione-laser",
+   "stampa-uv"
+  ],
+  "bestFor": {
+   "it": "inviti, cartellini, fascette, packaging",
+   "en": ""
+  },
+  "warning": null
  }
 ]

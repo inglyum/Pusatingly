@@ -49,7 +49,7 @@
       "en": "Material follows use"
      },
      "text": {
-      "it": "12 materiali in lavorazione corrente, ognuno con i suoi limiti dichiarati. Il legno non è sempre la risposta giusta.",
+      "it": "13 materiali in lavorazione corrente, ognuno con i suoi limiti dichiarati. Il legno non è sempre la risposta giusta.",
       "en": "Materials chosen case by case."
      }
     },
@@ -137,8 +137,8 @@
     "en": "Not only wood"
    },
    "lead": {
-    "it": "Dodici materiali con scheda tecnica, dal compensato di betulla all'acciaio inox, passando per vetro, ardesia e sughero. Per ognuno c'è scritto cosa si può fare e cosa no.",
-    "en": "12 materials with a technical sheet, from birch plywood to stainless steel."
+    "it": "13 materiali con scheda tecnica, dal compensato di betulla all'acciaio inox, passando per vetro, ardesia e sughero. Per ognuno c'è scritto cosa si può fare e cosa no.",
+    "en": "13 materials with a technical sheet, from birch plywood to stainless steel."
    }
   },
   "b2b": {
@@ -719,8 +719,8 @@
    "en": "INGLY Materials"
   },
   "lead": {
-   "it": "12 materiali con scheda tecnica: spessori, cosa si può incidere, cosa si può marcare, cosa si può stampare. Dove un materiale ha un limite, è scritto.",
-   "en": "12 materials with technical sheets."
+   "it": "13 materiali con scheda tecnica: spessori, cosa si può incidere, cosa si può marcare, cosa si può stampare. Dove un materiale ha un limite, è scritto.",
+   "en": "13 materials with technical sheets."
   },
   "families": [
    {
@@ -770,6 +770,13 @@
     "name": {
      "it": "Tessili",
      "en": "Textiles"
+    }
+   },
+   {
+    "id": "cellulosico",
+    "name": {
+     "it": "cellulosico",
+     "en": "cellulosico"
     }
    }
   ],

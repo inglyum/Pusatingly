@@ -146,6 +146,9 @@ test('ogni redirect punta a una rotta esistente', () => {
     '/chi-sono', '/come-acquistare', '/b2b', '/contatti'
   ]);
   for (const c of categories) routes.add(`/creazioni/${c.id}`);
+  // Anche le schede prodotto sono destinazioni legittime: i redirect dai
+  // vecchi slug puntano lì dopo la rinomina del catalogo.
+  for (const p of products) routes.add(`/creazioni/${p.category}/${p.slug}`);
 
   for (const r of migration.redirects) {
     const target = r.to.split('?')[0];
