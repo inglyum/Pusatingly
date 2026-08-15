@@ -1,0 +1,211 @@
+[
+  {
+    "id": "laser-co2",
+    "name": { "it": "Laser CO₂", "en": "CO₂ laser" },
+    "family": "laser",
+    "order": 1,
+    "featured": true,
+    "short": { "it": "Taglio e incisione su materiali organici", "en": "Cutting and engraving on organic materials" },
+    "description": {
+      "it": "Sorgente a 10,6 µm: è la tecnologia che lavora legno, plexiglass, carta, cartone, pelle e tessuto. Taglia e incide con la stessa macchina cambiando potenza e velocità, quindi un pezzo esce sagomato e decorato in un unico passaggio.",
+      "en": "A 10.6 µm source: the technology for wood, acrylic, paper, leather and textile. Cuts and engraves in one pass."
+    },
+    "specs": {
+      "spessoreMax": "legno 20 mm · plexiglass 10 mm",
+      "precisione": "± 0,1 mm",
+      "areaLavoro": "fino a 1300 × 900 mm"
+    },
+    "materials": ["legno", "betulla", "mdf", "compensato", "plexiglass", "acrilico", "carta", "cartone", "pelle", "tessuto"],
+    "bestFor": { "it": "Portamenù, targhe, espositori, gadget", "en": "Menu holders, plaques, displays, gadgets" }
+  },
+  {
+    "id": "laser-mopa",
+    "name": { "it": "Laser MOPA", "en": "MOPA laser" },
+    "family": "laser",
+    "order": 2,
+    "featured": true,
+    "short": { "it": "Colore reale sul metallo, senza inchiostro", "en": "Real colour on metal, no ink" },
+    "description": {
+      "it": "Sorgente a fibra con durata dell'impulso regolabile. Variando la frequenza si controlla l'ossidazione superficiale dell'acciaio e si ottengono colori — blu, viola, ambra, bronzo — che non sono stampati ma generati nel metallo. Sull'alluminio anodizzato produce un bianco pieno.",
+      "en": "Fibre source with tunable pulse duration. Frequency control produces real colours on steel through surface oxidation."
+    },
+    "specs": {
+      "potenza": "30 W",
+      "precisione": "± 0,02 mm",
+      "areaLavoro": "fino a 200 × 200 mm"
+    },
+    "materials": ["acciaio", "alluminio", "ottone"],
+    "bestFor": { "it": "Targhe di pregio, badge, dettagli a colori", "en": "Premium plates, badges, coloured details" }
+  },
+  {
+    "id": "laser-fibra",
+    "name": { "it": "Laser fibra", "en": "Fibre laser" },
+    "family": "laser",
+    "order": 3,
+    "featured": true,
+    "short": { "it": "Marcatura permanente sui metalli", "en": "Permanent marking on metals" },
+    "description": {
+      "it": "Sorgente a 1064 nm per marcatura profonda e veloce su metalli. Il segno è inciso nel materiale: non si consuma con l'uso, non teme solventi né raggi UV. È lo standard per matricole, dati tecnici e codici.",
+      "en": "A 1064 nm source for deep, fast metal marking. The mark is in the material and resists solvents and UV."
+    },
+    "specs": {
+      "potenza": "20–50 W",
+      "precisione": "± 0,02 mm",
+      "profondita": "fino a 0,3 mm"
+    },
+    "materials": ["alluminio", "acciaio", "ottone"],
+    "bestFor": { "it": "Matricole, dati tecnici, targhe industriali", "en": "Serial numbers, technical data, industrial plates" }
+  },
+  {
+    "id": "uv-printing",
+    "name": { "it": "Stampa UV", "en": "UV printing" },
+    "family": "stampa",
+    "order": 4,
+    "featured": true,
+    "short": { "it": "Colore pieno diretto su qualsiasi superficie", "en": "Full colour straight onto any surface" },
+    "description": {
+      "it": "Inchiostro polimerizzato da lampada UV nell'istante in cui tocca il supporto. Stampa a colori pieni su legno, plexiglass, metallo e cartone senza primer, con la possibilità di depositare bianco coprente sotto il colore e vernice a rilievo sopra.",
+      "en": "Ink cured by UV lamp on contact. Full colour on wood, acrylic, metal and board, with white underbase and raised varnish."
+    },
+    "specs": {
+      "risoluzione": "1440 dpi",
+      "colori": "CMYK + bianco + vernice",
+      "areaLavoro": "fino a 600 × 400 mm"
+    },
+    "materials": ["betulla", "mdf", "plexiglass", "alluminio", "carta", "cartone", "legno"],
+    "bestFor": { "it": "Loghi a colori, targhe grafiche, gadget", "en": "Full-colour logos, graphic plates, gadgets" }
+  },
+  {
+    "id": "dtf",
+    "name": { "it": "Stampa DTF", "en": "DTF printing" },
+    "family": "stampa",
+    "order": 5,
+    "featured": false,
+    "short": { "it": "Colore sul tessuto, anche in pochi pezzi", "en": "Colour on fabric, even in small runs" },
+    "description": {
+      "it": "Direct to Film: la grafica si stampa su pellicola e si trasferisce a caldo. Funziona su cotone, poliestere e misti senza cambiare processo, e non impone tirature minime — dieci grembiuli costano proporzionalmente come cento.",
+      "en": "Direct to Film: artwork is printed on film and heat-transferred. Works on any fabric, with no minimum run."
+    },
+    "specs": {
+      "resa": "colori pieni, bianco coprente",
+      "lavaggio": "fino a 60 °C",
+      "tiratura": "da 1 pezzo"
+    },
+    "materials": ["tessuto"],
+    "bestFor": { "it": "Grembiuli, borse, divise, merchandising", "en": "Aprons, bags, uniforms, merch" }
+  },
+  {
+    "id": "stampa-3d",
+    "name": { "it": "Stampa 3D", "en": "3D printing" },
+    "family": "additiva",
+    "order": 6,
+    "featured": false,
+    "short": { "it": "Volumi e geometrie che il piano non permette", "en": "Volumes flat cutting cannot reach" },
+    "description": {
+      "it": "Deposizione FDM in PLA e PETG. Serve dove la lavorazione piana si ferma: sottosquadri, incastri tridimensionali, supporti sagomati su un oggetto esistente. È anche il modo più rapido per validare un progetto prima di produrlo in legno o metallo.",
+      "en": "FDM in PLA and PETG. For undercuts, 3D joints and mounts shaped around existing objects."
+    },
+    "specs": {
+      "volume": "300 × 300 × 400 mm",
+      "layer": "0,12–0,28 mm",
+      "materiali": "PLA, PETG"
+    },
+    "materials": ["pla", "petg"],
+    "bestFor": { "it": "Prototipi, supporti, componenti funzionali", "en": "Prototypes, mounts, functional parts" }
+  },
+  {
+    "id": "incisione",
+    "name": { "it": "Incisione", "en": "Engraving" },
+    "family": "lavorazione",
+    "order": 7,
+    "featured": true,
+    "short": { "it": "Il segno entra nel materiale", "en": "The mark goes into the material" },
+    "description": {
+      "it": "Asportazione controllata di superficie: il disegno è scavato, non appoggiato. Su legno si gioca sul contrasto della bruciatura, su plexiglass sull'opacità, su metallo sulla profondità. Un'incisione non si stacca e non sbiadisce.",
+      "en": "Controlled surface removal: the design is carved, not applied. It cannot peel or fade."
+    },
+    "specs": {
+      "profondita": "0,1–2 mm secondo materiale",
+      "risoluzione": "fino a 1000 dpi",
+      "dettaglioMin": "0,2 mm"
+    },
+    "materials": ["legno", "betulla", "mdf", "plexiglass", "alluminio", "acciaio", "ottone", "pelle"],
+    "bestFor": { "it": "Loghi, testi, ritratti, dati tecnici", "en": "Logos, text, portraits, technical data" }
+  },
+  {
+    "id": "taglio",
+    "name": { "it": "Taglio", "en": "Cutting" },
+    "family": "lavorazione",
+    "order": 8,
+    "featured": false,
+    "short": { "it": "Sagome libere, tolleranze strette", "en": "Free shapes, tight tolerances" },
+    "description": {
+      "it": "Taglio laser passante con precisione di un decimo di millimetro. Permette sagome impossibili da ottenere con utensili rotanti e incastri che tengono per sola geometria, senza colla né viti.",
+      "en": "Through-cutting at 0.1 mm precision. Enables shapes and press-fit joints that need no glue or screws."
+    },
+    "specs": {
+      "precisione": "± 0,1 mm",
+      "raggioMin": "0,1 mm",
+      "spessoreMax": "20 mm"
+    },
+    "materials": ["legno", "betulla", "mdf", "compensato", "plexiglass", "acrilico", "carta", "cartone", "pelle", "tessuto"],
+    "bestFor": { "it": "Sagome, incastri, fustelle, traforati", "en": "Shapes, joints, dies, fretwork" }
+  },
+  {
+    "id": "marcatura",
+    "name": { "it": "Marcatura", "en": "Marking" },
+    "family": "lavorazione",
+    "order": 9,
+    "featured": false,
+    "short": { "it": "Identificazione permanente", "en": "Permanent identification" },
+    "description": {
+      "it": "Segno superficiale indelebile senza asportare materiale: matricole, QR, datamatrix, codici di lotto. Sui metalli si ottiene per ossidazione o ricottura, senza alterare lo spessore del pezzo.",
+      "en": "Indelible surface marking without material removal: serials, QR, datamatrix, batch codes."
+    },
+    "specs": {
+      "tipi": "annerimento, ricottura, ossidazione",
+      "leggibilita": "codici da 5 mm",
+      "durata": "permanente"
+    },
+    "materials": ["alluminio", "acciaio", "ottone"],
+    "bestFor": { "it": "Matricole, QR, tracciabilità", "en": "Serials, QR, traceability" }
+  },
+  {
+    "id": "verniciatura",
+    "name": { "it": "Verniciatura", "en": "Finishing" },
+    "family": "finitura",
+    "order": 10,
+    "featured": false,
+    "short": { "it": "Colore, protezione, tatto", "en": "Colour, protection, touch" },
+    "description": {
+      "it": "Vernici all'acqua, oli certificati per contatto alimentare, cere e finiture opache. La finitura non è un dettaglio estetico: decide quanto un oggetto resiste all'uso e come invecchia dopo un anno di servizio.",
+      "en": "Water-based paints, food-safe oils, waxes and matt finishes. The finish decides how an object ages."
+    },
+    "specs": {
+      "tipi": "acqua, olio, cera, poliuretanica",
+      "finiture": "opaco, satinato, lucido",
+      "contattoAlimentare": "disponibile"
+    },
+    "materials": ["legno", "betulla", "mdf", "compensato", "pla"],
+    "bestFor": { "it": "Insegne, complementi, oggetti d'uso", "en": "Signs, accents, everyday objects" }
+  },
+  {
+    "id": "assemblaggio",
+    "name": { "it": "Assemblaggio", "en": "Assembly" },
+    "family": "finitura",
+    "order": 11,
+    "featured": false,
+    "short": { "it": "Dove i pezzi diventano un oggetto", "en": "Where parts become an object" },
+    "description": {
+      "it": "Incastri, viteria a scomparsa, magneti, cerniere, meccanismi. È la fase che decide se un oggetto regge cinque anni di servizio o una stagione: un portamenù si apre e si chiude migliaia di volte, e il meccanismo va scelto di conseguenza.",
+      "en": "Joints, hidden fixings, magnets, hinges and mechanisms — the stage that decides real durability."
+    },
+    "specs": {
+      "tecniche": "incastro, magnete, viteria, cerniera",
+      "meccanismi": "anelli, vite, pinza, elastico",
+      "collaudo": "su ogni pezzo"
+    },
+    "materials": ["legno", "betulla", "mdf", "compensato", "plexiglass", "alluminio", "petg"],
+    "bestFor": { "it": "Portamenù, cassette, espositori, automi", "en": "Menu holders, crates, displays, automata" }
+  }
+]

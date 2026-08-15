@@ -1,0 +1,344 @@
+[
+  {
+    "id": "soluzioni-menu",
+    "name": { "it": "Soluzioni Menu", "en": "Menu Solutions" },
+    "legacyName": "Portamenù",
+    "tagline": { "it": "Portamenù, espositori e supporti per la ristorazione", "en": "Menu holders, displays and hospitality supports" },
+    "intro": {
+      "it": "Il menù è il primo oggetto che un cliente tocca. Progettiamo supporti che reggono l'uso quotidiano di una sala e che raccontano il locale prima ancora della lista dei piatti: meccanismi affidabili, materiali selezionati, formati su misura.",
+      "en": "The menu is the first object a guest touches. We design supports built for daily service that speak for the venue before the dishes do."
+    },
+    "icon": "menu",
+    "order": 1,
+    "featured": true,
+    "audience": "b2b",
+    "subcategories": [
+      { "id": "meccanismi-ad-anelli", "name": { "it": "Meccanismi ad anelli", "en": "Ring mechanisms" } },
+      { "id": "meccanismi-a-vite", "name": { "it": "Meccanismi a vite", "en": "Screw mechanisms" } },
+      { "id": "meccanismi-a-pinza", "name": { "it": "Meccanismi a pinza", "en": "Clamp mechanisms" } },
+      { "id": "espositori-da-tavolo", "name": { "it": "Espositori da tavolo", "en": "Table displays" } },
+      { "id": "menu-qr", "name": { "it": "Menu QR", "en": "QR menus" } },
+      { "id": "menu-nfc", "name": { "it": "Menu NFC", "en": "NFC menus" } },
+      { "id": "formato-a4", "name": { "it": "Formato A4", "en": "A4 format" } },
+      { "id": "formato-a5", "name": { "it": "Formato A5", "en": "A5 format" } },
+      { "id": "formati-personalizzati", "name": { "it": "Formati personalizzati", "en": "Custom formats" } }
+    ],
+    "seo": {
+      "title": "Portamenù personalizzati per ristoranti | INGLY DESIGN",
+      "description": "Portamenù in legno, plexiglass e metallo per ristoranti, hotel e wine bar. Meccanismi ad anelli, a vite o a pinza. Formati A4, A5 e su misura, personalizzabili con il tuo logo."
+    }
+  },
+  {
+    "id": "tavola-cucina",
+    "name": { "it": "Tavola & Cucina", "en": "Table & Kitchen" },
+    "legacyName": "Tavola & Cucina",
+    "tagline": { "it": "Oggetti che vivono il servizio, ogni giorno", "en": "Objects that live through service, every day" },
+    "intro": {
+      "it": "Tutto ciò che sta sul tavolo passa di mano in mano decine di volte al giorno. Questi oggetti sono disegnati per quel ritmo: spessori che non si deformano, spigoli smussati, finiture idonee al contatto alimentare e pulizia rapida a fine turno.",
+      "en": "Everything on the table changes hands dozens of times a day. These objects are designed for that rhythm: stable thicknesses, eased edges, food-safe finishes."
+    },
+    "icon": "table",
+    "order": 2,
+    "featured": true,
+    "audience": "both",
+    "subcategories": [
+      { "id": "apribottiglie", "name": { "it": "Apribottiglie", "en": "Bottle openers" } },
+      { "id": "segnatavoli", "name": { "it": "Segnatavoli", "en": "Table numbers" } },
+      { "id": "segnaposto", "name": { "it": "Segnaposto", "en": "Place cards" } },
+      { "id": "poggia-posate", "name": { "it": "Poggia-posate", "en": "Cutlery rests" } },
+      { "id": "poggia-bacchette", "name": { "it": "Poggia-bacchette", "en": "Chopstick rests" } },
+      { "id": "porta-conto", "name": { "it": "Porta conto", "en": "Bill holders" } },
+      { "id": "porta-resto", "name": { "it": "Porta resto", "en": "Change trays" } },
+      { "id": "portatovaglioli", "name": { "it": "Portatovaglioli", "en": "Napkin holders" } },
+      { "id": "porta-zucchero", "name": { "it": "Porta zucchero", "en": "Sugar holders" } },
+      { "id": "sottobicchieri", "name": { "it": "Sottobicchieri", "en": "Coasters" } },
+      { "id": "vassoi", "name": { "it": "Vassoi", "en": "Trays" } },
+      { "id": "menage", "name": { "it": "Menage", "en": "Condiment caddies" } },
+      { "id": "taglieri", "name": { "it": "Taglieri", "en": "Cutting boards" } }
+    ],
+    "seo": {
+      "title": "Tavola e cucina: complementi personalizzati | INGLY DESIGN",
+      "description": "Portatovaglioli, porta conto, vassoi, taglieri, sottobicchieri e menage personalizzati per ristoranti, bar e casa. Finiture idonee al contatto alimentare."
+    }
+  },
+  {
+    "id": "wood-art-design",
+    "name": { "it": "Wood Art & Design", "en": "Wood Art & Design" },
+    "legacyName": "Wood Art & Design",
+    "tagline": { "it": "Contenitori, espositori e pezzi d'autore", "en": "Boxes, displays and signature pieces" },
+    "intro": {
+      "it": "La sezione dove il legno smette di essere solo supporto e diventa il progetto. Incastri a vista, essenze accostate per contrasto, incisioni profonde: pezzi pensati per essere guardati da vicino.",
+      "en": "Where wood stops being a support and becomes the project itself. Visible joints, contrasting species, deep engraving."
+    },
+    "icon": "wood",
+    "order": 3,
+    "featured": true,
+    "audience": "both",
+    "subcategories": [
+      { "id": "cassette", "name": { "it": "Cassette", "en": "Crates" } },
+      { "id": "cofanetti", "name": { "it": "Cofanetti", "en": "Gift boxes" } },
+      { "id": "porta-biglietti", "name": { "it": "Porta biglietti da visita", "en": "Business card holders" } },
+      { "id": "espositori", "name": { "it": "Espositori", "en": "Displays" } },
+      { "id": "creazioni-nfc", "name": { "it": "Creazioni NFC", "en": "NFC creations" } },
+      { "id": "targhe-decorative", "name": { "it": "Targhe decorative", "en": "Decorative plaques" } },
+      { "id": "segnaletica", "name": { "it": "Segnaletica", "en": "Signage" } },
+      { "id": "matrimoni", "name": { "it": "Matrimoni", "en": "Weddings" } },
+      { "id": "eventi-speciali", "name": { "it": "Eventi speciali", "en": "Special events" } }
+    ],
+    "seo": {
+      "title": "Wood Art & Design: creazioni in legno su misura | INGLY DESIGN",
+      "description": "Cassette, cofanetti, espositori, porta biglietti da visita e targhe decorative in legno. Progetti su misura con incisione e taglio laser."
+    }
+  },
+  {
+    "id": "oggettistica",
+    "name": { "it": "Oggettistica & Complementi", "en": "Objects & Home Accents" },
+    "legacyName": "Oggettistica & Complementi d'Arredo",
+    "tagline": { "it": "Piccoli oggetti, presenza precisa", "en": "Small objects, precise presence" },
+    "intro": {
+      "it": "Complementi che occupano poco spazio e cambiano il carattere di un ambiente: portapenne, fermalibri, vassoi svuotatasche, organizer da scrivania. Geometrie essenziali, nessuna decorazione superflua.",
+      "en": "Accents that take little space and change the character of a room. Essential geometry, no superfluous decoration."
+    },
+    "icon": "object",
+    "order": 4,
+    "featured": false,
+    "audience": "both",
+    "subcategories": [
+      { "id": "scrivania", "name": { "it": "Scrivania & ufficio", "en": "Desk & office" } },
+      { "id": "svuotatasche", "name": { "it": "Svuotatasche", "en": "Catch-alls" } },
+      { "id": "fermalibri", "name": { "it": "Fermalibri", "en": "Bookends" } },
+      { "id": "organizer", "name": { "it": "Organizer", "en": "Organizers" } },
+      { "id": "decorativi", "name": { "it": "Decorativi", "en": "Decorative" } }
+    ],
+    "seo": {
+      "title": "Oggettistica e complementi d'arredo | INGLY DESIGN",
+      "description": "Portapenne, fermalibri, svuotatasche e organizer da scrivania personalizzati. Legno, plexiglass e metallo lavorati al laser."
+    }
+  },
+  {
+    "id": "targhe-insegne",
+    "name": { "it": "Targhe & Insegne", "en": "Plaques & Signs" },
+    "legacyName": "Targhe & Insegne",
+    "tagline": { "it": "Dire chi sei, dove sei, cosa fai", "en": "Say who you are, where you are, what you do" },
+    "intro": {
+      "it": "Segnaletica per interni ed esterni: targhe di ingresso, numeri civici, insegne di locale, cartelli di servizio, direzionali. Materiali scelti in base all'esposizione: fuori dura solo ciò che è progettato per durare.",
+      "en": "Indoor and outdoor signage: entrance plaques, house numbers, venue signs, service and directional signs."
+    },
+    "icon": "sign",
+    "order": 5,
+    "featured": true,
+    "audience": "b2b",
+    "subcategories": [
+      { "id": "targhe-ingresso", "name": { "it": "Targhe di ingresso", "en": "Entrance plaques" } },
+      { "id": "numeri-civici", "name": { "it": "Numeri civici", "en": "House numbers" } },
+      { "id": "insegne-locale", "name": { "it": "Insegne di locale", "en": "Venue signs" } },
+      { "id": "segnaletica-servizio", "name": { "it": "Segnaletica di servizio", "en": "Service signage" } },
+      { "id": "direzionali", "name": { "it": "Direzionali", "en": "Wayfinding" } },
+      { "id": "targhe-camere", "name": { "it": "Targhe camere", "en": "Room plaques" } },
+      { "id": "targhe-metallo", "name": { "it": "Targhe in metallo", "en": "Metal plaques" } }
+    ],
+    "seo": {
+      "title": "Targhe e insegne personalizzate | INGLY DESIGN",
+      "description": "Targhe di ingresso, insegne per locali, numeri civici e segnaletica per hotel e B&B. Legno, plexiglass, alluminio e acciaio inciso."
+    }
+  },
+  {
+    "id": "gadget",
+    "name": { "it": "Gadget & Personalizzati", "en": "Gadgets & Custom Items" },
+    "legacyName": "Gadget di legno",
+    "tagline": { "it": "Piccoli oggetti che restano", "en": "Small objects that stay" },
+    "intro": {
+      "it": "Il gadget promozionale funziona solo se qualcuno decide di tenerlo. Lavoriamo su oggetti di uso reale — portachiavi, apribottiglie, calamite, segnalibri — con una lavorazione che regge il confronto ravvicinato.",
+      "en": "A promotional item works only if someone decides to keep it. We work on genuinely useful objects."
+    },
+    "icon": "gadget",
+    "order": 6,
+    "featured": true,
+    "audience": "both",
+    "subcategories": [
+      { "id": "portachiavi", "name": { "it": "Portachiavi", "en": "Keychains" } },
+      { "id": "calamite", "name": { "it": "Calamite", "en": "Magnets" } },
+      { "id": "targhe-sagomate", "name": { "it": "Targhe sagomate", "en": "Shaped tags" } },
+      { "id": "segnalibri", "name": { "it": "Segnalibri", "en": "Bookmarks" } },
+      { "id": "spille-pin", "name": { "it": "Spille & pin", "en": "Pins & badges" } },
+      { "id": "altri-gadget", "name": { "it": "Altri gadget", "en": "Other gadgets" } }
+    ],
+    "seo": {
+      "title": "Gadget personalizzati in legno e metallo | INGLY DESIGN",
+      "description": "Portachiavi, calamite, segnalibri, spille e targhe sagomate personalizzati con logo. Produzione in serie per aziende, eventi e turismo."
+    }
+  },
+  {
+    "id": "casa",
+    "name": { "it": "Casa & Arredamento", "en": "Home & Living" },
+    "legacyName": "Per la casa",
+    "tagline": { "it": "Oggetti che abitano gli spazi", "en": "Objects that inhabit spaces" },
+    "intro": {
+      "it": "Appendiabiti, mensole, portachiavi da parete, orologi, decorazioni murali, lampade. Pezzi pensati per stare in casa a lungo, con montaggi solidi e finiture che invecchiano bene.",
+      "en": "Coat racks, shelves, wall key holders, clocks, wall decor and lamps built to stay."
+    },
+    "icon": "home",
+    "order": 7,
+    "featured": true,
+    "audience": "b2c",
+    "subcategories": [
+      { "id": "appendiabiti", "name": { "it": "Appendiabiti", "en": "Coat racks" } },
+      { "id": "orologi", "name": { "it": "Orologi", "en": "Clocks" } },
+      { "id": "decorazioni-murali", "name": { "it": "Decorazioni murali", "en": "Wall decor" } },
+      { "id": "lampade", "name": { "it": "Lampade", "en": "Lamps" } },
+      { "id": "mensole", "name": { "it": "Mensole", "en": "Shelves" } },
+      { "id": "portachiavi-parete", "name": { "it": "Portachiavi da parete", "en": "Wall key holders" } },
+      { "id": "cucina-casa", "name": { "it": "Cucina", "en": "Kitchen" } }
+    ],
+    "seo": {
+      "title": "Casa e arredamento su misura | INGLY DESIGN",
+      "description": "Appendiabiti, orologi, mensole, lampade e decorazioni murali personalizzate. Progetti su misura in legno, plexiglass e metallo."
+    }
+  },
+  {
+    "id": "kids",
+    "name": { "it": "INGLY Kids", "en": "INGLY Kids" },
+    "legacyName": "PusaToys",
+    "tagline": { "it": "Giocattoli e camerette, senza plastica inutile", "en": "Toys and kids' rooms, without pointless plastic" },
+    "intro": {
+      "it": "Giocattoli in legno, incastri, puzzle, decorazioni per camerette. Spigoli arrotondati, finiture atossiche, nessun componente che si stacchi. Il gioco prima del decoro.",
+      "en": "Wooden toys, puzzles and nursery decor. Rounded edges, non-toxic finishes, no detachable parts."
+    },
+    "icon": "kids",
+    "order": 8,
+    "featured": false,
+    "audience": "b2c",
+    "subcategories": [
+      { "id": "giochi-incastro", "name": { "it": "Giochi a incastro", "en": "Interlocking toys" } },
+      { "id": "puzzle", "name": { "it": "Puzzle", "en": "Puzzles" } },
+      { "id": "cameretta", "name": { "it": "Cameretta", "en": "Nursery" } },
+      { "id": "giochi-educativi", "name": { "it": "Giochi educativi", "en": "Educational toys" } }
+    ],
+    "seo": {
+      "title": "INGLY Kids: giocattoli e cameretta in legno | INGLY DESIGN",
+      "description": "Giocattoli in legno, puzzle a incastro e decorazioni per cameretta personalizzabili con il nome. Finiture atossiche e spigoli arrotondati."
+    }
+  },
+  {
+    "id": "arte-movimento",
+    "name": { "it": "Arte & Movimento", "en": "Art & Motion" },
+    "legacyName": "Automata",
+    "tagline": { "it": "Meccanismi che diventano sculture", "en": "Mechanisms that become sculpture" },
+    "intro": {
+      "it": "Automi meccanici: camme, bielle, ingranaggi tagliati al laser che trasformano un giro di manovella in un movimento. Sono i pezzi più lenti da produrre e i più difficili da smettere di guardare.",
+      "en": "Mechanical automata: cams, rods and laser-cut gears that turn a crank into motion."
+    },
+    "icon": "motion",
+    "order": 9,
+    "featured": false,
+    "audience": "b2c",
+    "subcategories": [
+      { "id": "automi", "name": { "it": "Automi", "en": "Automata" } },
+      { "id": "meccanismi", "name": { "it": "Meccanismi", "en": "Mechanisms" } },
+      { "id": "sculture-cinetiche", "name": { "it": "Sculture cinetiche", "en": "Kinetic sculpture" } }
+    ],
+    "seo": {
+      "title": "Arte & Movimento: automi meccanici in legno | INGLY DESIGN",
+      "description": "Automi meccanici e sculture cinetiche in legno tagliato al laser. Pezzi da collezione e regali d'autore, personalizzabili."
+    }
+  },
+  {
+    "id": "tech",
+    "name": { "it": "INGLY Tech", "en": "INGLY Tech" },
+    "legacyName": "PusaTeck",
+    "tagline": { "it": "QR, NFC e oggetti connessi", "en": "QR, NFC and connected objects" },
+    "intro": {
+      "it": "Oggetti fisici che portano a qualcosa di digitale: menu QR, tag NFC per recensioni e contatti, biglietti da visita programmabili, totem informativi. Il supporto è materia, il contenuto si aggiorna quando serve.",
+      "en": "Physical objects that lead somewhere digital: QR menus, NFC review tags, programmable cards, info totems."
+    },
+    "icon": "tech",
+    "order": 10,
+    "featured": true,
+    "audience": "b2b",
+    "subcategories": [
+      { "id": "qr-code", "name": { "it": "QR code", "en": "QR code" } },
+      { "id": "tag-nfc", "name": { "it": "Tag NFC", "en": "NFC tags" } },
+      { "id": "biglietti-nfc", "name": { "it": "Biglietti da visita NFC", "en": "NFC business cards" } },
+      { "id": "totem-informativi", "name": { "it": "Totem informativi", "en": "Info totems" } },
+      { "id": "recensioni", "name": { "it": "Raccolta recensioni", "en": "Review collection" } }
+    ],
+    "seo": {
+      "title": "INGLY Tech: QR e NFC personalizzati | INGLY DESIGN",
+      "description": "Menu QR, tag NFC per recensioni, biglietti da visita NFC e totem informativi. Supporti in legno, plexiglass e metallo con contenuto aggiornabile."
+    }
+  },
+  {
+    "id": "carta-packaging",
+    "name": { "it": "Carta & Packaging", "en": "Paper & Packaging" },
+    "legacyName": "Carta & Cartone",
+    "tagline": { "it": "La prima cosa che si apre", "en": "The first thing that opens" },
+    "intro": {
+      "it": "Scatole, fascette, cartellini, inviti, buste su misura. Fustelle tagliate al laser per tirature corte, dove la stampa industriale non arriva e il dettaglio conta più del volume.",
+      "en": "Boxes, sleeves, tags, invitations and custom envelopes. Laser-cut dies for short runs."
+    },
+    "icon": "paper",
+    "order": 11,
+    "featured": false,
+    "audience": "b2b",
+    "subcategories": [
+      { "id": "scatole", "name": { "it": "Scatole", "en": "Boxes" } },
+      { "id": "cartellini", "name": { "it": "Cartellini", "en": "Tags" } },
+      { "id": "inviti", "name": { "it": "Inviti", "en": "Invitations" } },
+      { "id": "fascette", "name": { "it": "Fascette & sleeve", "en": "Sleeves" } }
+    ],
+    "seo": {
+      "title": "Carta e packaging su misura | INGLY DESIGN",
+      "description": "Scatole, cartellini, inviti e fascette tagliati al laser. Packaging personalizzato per tirature corte e progetti su misura."
+    }
+  },
+  {
+    "id": "plexi-metallo",
+    "name": { "it": "Plexi & Metallo", "en": "Plexi & Metal" },
+    "legacyName": "Plexi & Metal",
+    "tagline": { "it": "Trasparenza e precisione", "en": "Transparency and precision" },
+    "intro": {
+      "it": "Plexiglass tagliato a specchio, acrilico satinato retroilluminato, alluminio anodizzato marcato a fibra, acciaio inox. Materiali che richiedono tolleranze strette e che non perdonano l'approssimazione.",
+      "en": "Mirror-cut acrylic, backlit frosted plexiglass, fibre-marked anodised aluminium, stainless steel."
+    },
+    "icon": "plexi",
+    "order": 12,
+    "featured": false,
+    "audience": "b2b",
+    "subcategories": [
+      { "id": "plexiglass", "name": { "it": "Plexiglass", "en": "Plexiglass" } },
+      { "id": "acrilico-retroilluminato", "name": { "it": "Acrilico retroilluminato", "en": "Backlit acrylic" } },
+      { "id": "alluminio", "name": { "it": "Alluminio", "en": "Aluminium" } },
+      { "id": "acciaio", "name": { "it": "Acciaio", "en": "Steel" } },
+      { "id": "combinati", "name": { "it": "Combinati", "en": "Mixed materials" } }
+    ],
+    "seo": {
+      "title": "Plexiglass e metallo lavorati su misura | INGLY DESIGN",
+      "description": "Taglio plexiglass, acrilico retroilluminato, marcatura laser MOPA su alluminio e acciaio. Lavorazioni di precisione su misura."
+    }
+  },
+  {
+    "id": "eventi",
+    "name": { "it": "Eventi & B2B", "en": "Events & B2B" },
+    "legacyName": "Eventi & Fiere",
+    "tagline": { "it": "Allestimenti, wedding, fiere", "en": "Set-ups, weddings, trade shows" },
+    "intro": {
+      "it": "Tutto ciò che serve a un evento per essere riconoscibile: tableau, segnaposto, welcome bag, badge, totem, backdrop, targhe ricordo. Produzione concentrata su una data, con tempi da rispettare.",
+      "en": "Everything an event needs to be recognisable: seating charts, place cards, badges, totems, backdrops."
+    },
+    "icon": "event",
+    "order": 13,
+    "featured": true,
+    "audience": "b2b",
+    "subcategories": [
+      { "id": "wedding", "name": { "it": "Wedding", "en": "Wedding" } },
+      { "id": "fiere-stand", "name": { "it": "Fiere & stand", "en": "Trade shows" } },
+      { "id": "badge-accrediti", "name": { "it": "Badge & accrediti", "en": "Badges" } },
+      { "id": "premi-targhe", "name": { "it": "Premi & targhe ricordo", "en": "Awards" } },
+      { "id": "allestimenti", "name": { "it": "Allestimenti", "en": "Set-ups" } }
+    ],
+    "seo": {
+      "title": "Eventi, wedding e fiere: allestimenti su misura | INGLY DESIGN",
+      "description": "Tableau, segnaposto, badge, premi e allestimenti personalizzati per matrimoni, fiere ed eventi aziendali. Produzione su data."
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "name": "ingly-design-pusatingly",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "INGLY DESIGN — Giuseppe Inglima. Sito e catalogo premium (static, zero dipendenze runtime).",
+  "scripts": {
+    "serve": "npx --yes serve . -l 3000",
+    "build:catalog": "node scripts/build-catalog.mjs",
+    "placeholders": "node scripts/generate-placeholders.mjs",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "report": "node scripts/report.mjs",
+    "build": "npm run build:catalog && npm run placeholders && npm run sitemap && npm run report",
+    "validate": "node scripts/validate-data.mjs",
+    "test": "node scripts/validate-data.mjs && node tests/test-data.mjs && node tests/test-css.mjs && node tests/test-site.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

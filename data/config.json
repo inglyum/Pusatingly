@@ -1,0 +1,69 @@
+{
+  "brand": {
+    "name": "INGLY DESIGN",
+    "person": "Giuseppe Inglima",
+    "role": { "it": "Designer & Maker", "en": "Designer & Maker" },
+    "payoff": { "it": "Progetto, materia, precisione.", "en": "Design, matter, precision." },
+    "claim": {
+      "it": "Studio di progettazione e produzione su misura. Legno, metallo, plexiglass e tecnologie digitali per oggetti che devono funzionare tutti i giorni.",
+      "en": "Design and custom manufacturing studio. Wood, metal, acrylic and digital technologies for objects built for daily use."
+    }
+  },
+
+  "site": {
+    "title": "INGLY DESIGN — Giuseppe Inglima | Creazioni su misura",
+    "description": "Studio di design e produzione su misura: portamenù, targhe, insegne, gadget e complementi per ristorazione, hotel, aziende ed eventi. Laser CO₂ e MOPA, stampa UV, incisione su legno, metallo e plexiglass.",
+    "url": "https://inglydesign.it",
+    "lang": "it",
+    "locale": "it_IT",
+    "themeColor": "#1F2328"
+  },
+
+  "contact": {
+    "email": "inglydesign@gmail.com",
+    "whatsapp": "",
+    "phone": "",
+    "city": "Sicilia",
+    "country": "Italia",
+    "note": "whatsapp e phone restano vuoti finché Giuseppe non fornisce i recapiti definitivi: il front-end nasconde i pulsanti non valorizzati invece di mostrare link rotti."
+  },
+
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "pinterest": "",
+    "linkedin": "",
+    "etsy": ""
+  },
+
+  "stats": {
+    "note": "REGOLA — docs/MIGRATION-MAP.md §3: nessun numero inventato e nessun dato ereditato dal sito di riferimento. I contatori con valore null NON vengono mostrati. Compilare solo con dati reali INGLY DESIGN.",
+    "pezzi": null,
+    "clienti": null,
+    "materiali": 15,
+    "tecnologie": 11,
+    "categorie": 13,
+    "rating": null,
+    "puntualita": null
+  },
+
+  "business": {
+    "model": "preventivo",
+    "note": "Il sito non è un e-commerce: ogni creazione è prodotta su commessa dopo la richiesta. Nessun prezzo esposto in catalogo.",
+    "leadTime": { "it": "4–20 giorni lavorativi secondo complessità e quantità", "en": "4–20 working days depending on complexity and quantity" },
+    "minOrder": { "it": "Nessun minimo d'ordine sui progetti su misura", "en": "No minimum order on bespoke projects" }
+  },
+
+  "features": {
+    "i18n": true,
+    "darkMode": true,
+    "search": true,
+    "filters": true,
+    "wishlist": false,
+    "cart": false
+  },
+
+  "copyright": "© 2026 INGLY DESIGN — Giuseppe Inglima",
+  "legal": "Tutti i contenuti, i progetti e le immagini originali sono di proprietà di INGLY DESIGN."
+}

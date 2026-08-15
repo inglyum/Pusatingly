@@ -1,0 +1,128 @@
+{
+  "_nota": "REGOLA NON NEGOZIABILE (docs/MIGRATION-MAP.md §3): in `projects` entrano SOLO lavori realmente eseguiti da INGLY DESIGN, documentati con fotografie proprie e con autorizzazione del cliente alla pubblicazione. Nessun progetto, cliente, referenza o immagine di terzi. `archetypes` NON sono lavori svolti: sono tipologie di commessa, e la pagina li presenta esplicitamente come tali.",
+
+  "projects": [],
+
+  "archetypes": [
+    {
+      "id": "allestimento-ristorante",
+      "title": { "it": "Allestimento completo per ristorante", "en": "Full restaurant fit-out" },
+      "sector": "ristorazione",
+      "brief": {
+        "it": "Un locale che apre o rinnova l'immagine ha bisogno che tutti gli oggetti sul tavolo parlino la stessa lingua. La commessa parte dal marchio e si declina su ogni supporto della sala.",
+        "en": "A venue opening or refreshing its identity needs every object on the table to speak the same language."
+      },
+      "includes": ["Portamenù A4 e A5", "Segnatavoli numerati", "Porta conto", "Porta QR", "Segnaletica servizi", "Insegna da parete"],
+      "categories": ["soluzioni-menu", "tavola-cucina", "targhe-insegne", "tech"],
+      "technologies": ["laser-co2", "incisione", "assemblaggio", "verniciatura"],
+      "materials": ["betulla", "plexiglass", "alluminio"],
+      "scale": { "it": "30–150 pezzi", "en": "30–150 pieces" },
+      "leadTime": { "it": "3–5 settimane", "en": "3–5 weeks" }
+    },
+    {
+      "id": "kit-hospitality",
+      "title": { "it": "Kit hospitality per struttura ricettiva", "en": "Hospitality kit" },
+      "sector": "turismo",
+      "brief": {
+        "it": "Hotel, B&B e case vacanza hanno lo stesso problema in scala diversa: orientare l'ospite senza cartelli improvvisati. Il kit copre l'intero percorso, dall'ingresso alla camera.",
+        "en": "Hotels and B&Bs share one problem at different scales: guiding guests without improvised signs."
+      },
+      "includes": ["Targa di ingresso", "Numerazione camere", "Segnaletica di piano", "Portachiavi", "Placca recensioni NFC", "Totem accoglienza"],
+      "categories": ["targhe-insegne", "tech", "gadget", "casa"],
+      "technologies": ["laser-co2", "incisione", "laser-fibra", "assemblaggio"],
+      "materials": ["betulla", "alluminio", "plexiglass"],
+      "scale": { "it": "20–200 pezzi", "en": "20–200 pieces" },
+      "leadTime": { "it": "3–6 settimane", "en": "3–6 weeks" }
+    },
+    {
+      "id": "wedding-completo",
+      "title": { "it": "Coordinato wedding", "en": "Wedding suite" },
+      "sector": "wedding",
+      "brief": {
+        "it": "Una data fissa e nessuna possibilità di ritardo. Il coordinato nasce da un unico motivo grafico e attraversa inviti, allestimento e ricordo finale.",
+        "en": "A fixed date and no room for delay. One graphic motif across invitations, set-up and keepsakes."
+      },
+      "includes": ["Inviti traforati", "Tableau de mariage", "Segnaposto", "Porta fedi", "Ventagli programma", "Bomboniere", "Guestbook a tessere"],
+      "categories": ["eventi", "wood-art-design", "carta-packaging"],
+      "technologies": ["laser-co2", "taglio", "incisione", "assemblaggio"],
+      "materials": ["betulla", "carta", "legno"],
+      "scale": { "it": "50–300 pezzi", "en": "50–300 pieces" },
+      "leadTime": { "it": "4–8 settimane", "en": "4–8 weeks" }
+    },
+    {
+      "id": "corporate-gifting",
+      "title": { "it": "Corporate gifting e welcome kit", "en": "Corporate gifting" },
+      "sector": "aziendale",
+      "brief": {
+        "it": "Il regalo aziendale funziona quando viene usato, non quando viene ricevuto. La commessa parte dagli oggetti che le persone tengono davvero sulla scrivania.",
+        "en": "A corporate gift works when it gets used, not when it's received."
+      },
+      "includes": ["Biglietti da visita NFC", "Portachiavi", "Sottobicchieri", "Portapenne", "Scatola coordinata", "Targhe riconoscimento"],
+      "categories": ["tech", "gadget", "oggettistica", "carta-packaging"],
+      "technologies": ["laser-mopa", "laser-co2", "uv-printing", "incisione"],
+      "materials": ["alluminio", "betulla", "cartone"],
+      "scale": { "it": "50–500 pezzi", "en": "50–500 pieces" },
+      "leadTime": { "it": "3–6 settimane", "en": "3–6 weeks" }
+    },
+    {
+      "id": "retail-collezione",
+      "title": { "it": "Collezione per retail turistico", "en": "Tourism retail collection" },
+      "sector": "turismo",
+      "brief": {
+        "it": "Una linea di souvenir che non sia la solita: soggetti legati a un territorio specifico, prodotti in serie ma con lavorazione riconoscibile, e un espositore che li tenga insieme sul banco.",
+        "en": "A souvenir line tied to a specific place, produced in series but recognisably made."
+      },
+      "includes": ["Calamite sagomate", "Portachiavi", "Segnalibri", "Mappe incise", "Espositore da banco"],
+      "categories": ["gadget", "oggettistica"],
+      "technologies": ["laser-co2", "incisione", "uv-printing"],
+      "materials": ["betulla", "mdf"],
+      "scale": { "it": "200–2000 pezzi", "en": "200–2000 pieces" },
+      "leadTime": { "it": "4–8 settimane", "en": "4–8 weeks" }
+    },
+    {
+      "id": "stand-fiera",
+      "title": { "it": "Allestimento stand fieristico", "en": "Trade show stand" },
+      "sector": "eventi",
+      "brief": {
+        "it": "Deve entrare in un'auto, montarsi senza attrezzi e reggere tre giorni di fiera. Tutto il resto viene dopo questi tre vincoli.",
+        "en": "It must fit in a car, assemble without tools and survive three days."
+      },
+      "includes": ["Espositori a colonna", "Porta brochure", "Totem informativi", "Badge accrediti", "Backdrop modulare", "Segnaletica"],
+      "categories": ["eventi", "wood-art-design", "tech"],
+      "technologies": ["laser-co2", "verniciatura", "assemblaggio"],
+      "materials": ["betulla", "mdf", "plexiglass"],
+      "scale": { "it": "10–80 pezzi", "en": "10–80 pieces" },
+      "leadTime": { "it": "3–5 settimane", "en": "3–5 weeks" }
+    },
+    {
+      "id": "targhe-professionali",
+      "title": { "it": "Targhe e segnaletica professionale", "en": "Professional signage" },
+      "sector": "aziendale",
+      "brief": {
+        "it": "Studi, ambulatori e uffici hanno bisogno di targhe che reggano vent'anni all'esterno e restino leggibili. Il materiale conta più della grafica.",
+        "en": "Practices and offices need plates that last twenty years outdoors and stay legible."
+      },
+      "includes": ["Targa professionale inox", "Targa in plexiglass a distanziali", "Segnaletica interna", "Numeri civici", "Cartelli orari"],
+      "categories": ["targhe-insegne", "plexi-metallo"],
+      "technologies": ["laser-mopa", "laser-fibra", "marcatura", "incisione"],
+      "materials": ["acciaio", "alluminio", "plexiglass"],
+      "scale": { "it": "1–30 pezzi", "en": "1–30 pieces" },
+      "leadTime": { "it": "2–4 settimane", "en": "2–4 weeks" }
+    },
+    {
+      "id": "casa-su-misura",
+      "title": { "it": "Complementi su misura per la casa", "en": "Bespoke home pieces" },
+      "sector": "casa",
+      "brief": {
+        "it": "Il pezzo unico per uno spazio preciso: la mensola per quell'angolo, l'appendiabiti per quell'ingresso stretto, il pannello per quella parete.",
+        "en": "The single piece for a precise space: that corner, that narrow hallway, that wall."
+      },
+      "includes": ["Mensole a incastro", "Appendiabiti", "Pannelli decorativi", "Orologi", "Lampade a diffusione"],
+      "categories": ["casa", "oggettistica"],
+      "technologies": ["laser-co2", "taglio", "verniciatura", "assemblaggio"],
+      "materials": ["legno", "betulla", "acrilico"],
+      "scale": { "it": "1–10 pezzi", "en": "1–10 pieces" },
+      "leadTime": { "it": "2–5 settimane", "en": "2–5 weeks" }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "updated": "2026-08-14",
+  "note": "Mappa di migrazione machine-readable. Fonte narrativa: docs/MIGRATION-MAP.md",
+
+  "brand": {
+    "from": { "brand": "Pusateri Maker", "person": "Alessio Pusateri" },
+    "to": { "brand": "INGLY DESIGN", "person": "Giuseppe Inglima" },
+    "rule": "Struttura editoriale riusata come modello. Contenuto personale, clienti, referenze, numeri e nomi di prodotto NON importati. Vedi docs/MIGRATION-MAP.md §3."
+  },
+
+  "categoryMap": [
+    { "from": "Catalogo Creazioni", "to": "Catalogo Creazioni", "id": null, "url": "/creazioni" },
+    { "from": "Portamenù", "to": "Soluzioni Menu", "id": "soluzioni-menu", "url": "/creazioni/soluzioni-menu" },
+    { "from": "Tavola & Cucina", "to": "Tavola & Cucina", "id": "tavola-cucina", "url": "/creazioni/tavola-cucina" },
+    { "from": "Wood Art & Design", "to": "Wood Art & Design", "id": "wood-art-design", "url": "/creazioni/wood-art-design" },
+    { "from": "Oggettistica & Complementi d'Arredo", "to": "Oggettistica & Complementi", "id": "oggettistica", "url": "/creazioni/oggettistica" },
+    { "from": "Targhe & Insegne", "to": "Targhe & Insegne", "id": "targhe-insegne", "url": "/creazioni/targhe-insegne" },
+    { "from": "Gadget di legno", "to": "Gadget & Personalizzati", "id": "gadget", "url": "/creazioni/gadget" },
+    { "from": "Per la casa", "to": "Casa & Arredamento", "id": "casa", "url": "/creazioni/casa" },
+    { "from": "PusaToys", "to": "INGLY Kids", "id": "kids", "url": "/creazioni/kids" },
+    { "from": "Automata", "to": "Arte & Movimento", "id": "arte-movimento", "url": "/creazioni/arte-movimento" },
+    { "from": "PusaTeck", "to": "INGLY Tech", "id": "tech", "url": "/creazioni/tech" },
+    { "from": "Carta & Cartone", "to": "Carta & Packaging", "id": "carta-packaging", "url": "/creazioni/carta-packaging" },
+    { "from": "Plexi & Metal", "to": "Plexi & Metallo", "id": "plexi-metallo", "url": "/creazioni/plexi-metallo" },
+    { "from": "Eventi & Fiere", "to": "Eventi & B2B", "id": "eventi", "url": "/creazioni/eventi" },
+    { "from": "Chi Sono", "to": "Giuseppe Inglima", "id": null, "url": "/chi-sono" },
+    { "from": "Materiali", "to": "Materiali INGLY", "id": null, "url": "/materiali" },
+    { "from": "Tecniche", "to": "Tecnologie & Tecniche", "id": null, "url": "/tecnologie" },
+    { "from": "Come acquistare", "to": "Come acquistare", "id": null, "url": "/come-acquistare" },
+    { "from": "Contattami", "to": "Contattami", "id": null, "url": "/contatti" },
+    { "from": "Portfolio clienti", "to": "Portfolio", "id": null, "url": "/portfolio" }
+  ],
+
+  "collections": [
+    { "id": "ristorazione", "name": { "it": "Ristorazione", "en": "Restaurants" }, "description": { "it": "Ristoranti, bar, pizzerie, wine bar", "en": "Restaurants, bars, wine bars" }, "icon": "restaurant", "order": 1, "featured": true },
+    { "id": "casa", "name": { "it": "Casa", "en": "Home" }, "description": { "it": "Complementi e decorazione per la casa", "en": "Home accents and decor" }, "icon": "home", "order": 2, "featured": true },
+    { "id": "regali", "name": { "it": "Regali", "en": "Gifts" }, "description": { "it": "Idee regalo personalizzate", "en": "Personalised gift ideas" }, "icon": "gift", "order": 3, "featured": true },
+    { "id": "aziendale", "name": { "it": "Aziendale", "en": "Corporate" }, "description": { "it": "Corporate gifting e identità aziendale", "en": "Corporate gifting and identity" }, "icon": "corporate", "order": 4, "featured": true },
+    { "id": "eventi", "name": { "it": "Eventi", "en": "Events" }, "description": { "it": "Allestimenti, fiere, congressi", "en": "Set-ups, trade shows, conferences" }, "icon": "event", "order": 5, "featured": true },
+    { "id": "wedding", "name": { "it": "Wedding", "en": "Wedding" }, "description": { "it": "Matrimoni e cerimonie", "en": "Weddings and ceremonies" }, "icon": "wedding", "order": 6, "featured": true },
+    { "id": "turismo", "name": { "it": "Turismo", "en": "Tourism" }, "description": { "it": "Hotel, B&B, case vacanza", "en": "Hotels, B&Bs, holiday homes" }, "icon": "tourism", "order": 7, "featured": true },
+    { "id": "sicilia", "name": { "it": "Sicilia", "en": "Sicily" }, "description": { "it": "Collezione di ispirazione siciliana", "en": "Sicilian-inspired collection" }, "icon": "sicily", "order": 8, "featured": true },
+    { "id": "gadget", "name": { "it": "Gadget", "en": "Gadgets" }, "description": { "it": "Oggetti promozionali e merchandising", "en": "Promotional items and merch" }, "icon": "gadget", "order": 9, "featured": true },
+    { "id": "tecnologia", "name": { "it": "Tecnologia", "en": "Technology" }, "description": { "it": "QR, NFC e oggetti connessi", "en": "QR, NFC and connected objects" }, "icon": "tech", "order": 10, "featured": true },
+    { "id": "custom", "name": { "it": "Custom", "en": "Custom" }, "description": { "it": "Progetti interamente su misura", "en": "Fully bespoke projects" }, "icon": "custom", "order": 11, "featured": true }
+  ],
+
+  "migrationStates": [
+    { "id": "imported", "label": { "it": "Importato", "en": "Imported" }, "public": true, "description": "Struttura importata, contenuto in lavorazione" },
+    { "id": "review", "label": { "it": "In revisione", "en": "In review" }, "public": true, "description": "Revisione redazionale in corso" },
+    { "id": "redesign", "label": { "it": "In riprogettazione", "en": "Redesign" }, "public": true, "description": "Prodotto INGLY in progettazione" },
+    { "id": "replaced", "label": { "it": "Sostituito", "en": "Replaced" }, "public": true, "description": "Sostituito da prodotto INGLY" },
+    { "id": "active", "label": { "it": "Attivo", "en": "Active" }, "public": true, "description": "Prodotto INGLY definitivo" },
+    { "id": "archived", "label": { "it": "Archiviato", "en": "Archived" }, "public": false, "description": "Fuori catalogo, storia conservata" }
+  ],
+
+  "replacementStates": [
+    { "id": "pending", "label": { "it": "Da sostituire", "en": "Pending" } },
+    { "id": "in-progress", "label": { "it": "In lavorazione", "en": "In progress" } },
+    { "id": "done", "label": { "it": "Completato", "en": "Done" } }
+  ],
+
+  "redirects": [
+    { "from": "/porta-menu-lista-completa", "to": "/creazioni/soluzioni-menu", "type": 301 },
+    { "from": "/tavola-cucina-lista-completa", "to": "/creazioni/tavola-cucina", "type": 301 },
+    { "from": "/wood-design-lista-completa", "to": "/creazioni/wood-art-design", "type": 301 },
+    { "from": "/per-la-casa", "to": "/creazioni/casa", "type": 301 },
+    { "from": "/insegne-di-legno-2", "to": "/creazioni/targhe-insegne", "type": 301 },
+    { "from": "/insegne-di-legno-interni-ed-esterni", "to": "/creazioni/targhe-insegne", "type": 301 },
+    { "from": "/giocattoli-di-legno", "to": "/creazioni/kids", "type": 301 },
+    { "from": "/le-nuove-creazioni", "to": "/creazioni?ordina=novita", "type": 301 },
+    { "from": "/portfolio-clienti", "to": "/portfolio", "type": 301 },
+    { "from": "/catalogo", "to": "/creazioni", "type": 301 },
+    { "from": "/prodotti", "to": "/creazioni", "type": 301 },
+    { "from": "/contattami", "to": "/contatti", "type": 301 },
+    { "from": "/chi-siamo", "to": "/chi-sono", "type": 301 },
+    { "from": "/about", "to": "/chi-sono", "type": 301 },
+    { "from": "/materiali-e-tecniche", "to": "/materiali", "type": 301 },
+    { "from": "/tecniche", "to": "/tecnologie", "type": 301 },
+    { "from": "/servizio-realizzazione-prototipo", "to": "/come-acquistare", "type": 301 }
+  ],
+
+  "reservedNames": {
+    "note": "Nomi propri di prodotto rilevati sul sito di riferimento. Vietati nel catalogo INGLY. Verificato da scripts/validate-data.mjs.",
+    "list": [
+      "Sperone", "Libertà", "Nassa", "Arcoiris", "Approdo", "Bussola", "Scirocco",
+      "In-Fusione", "Identitas", "Babahouse", "Camula", "Maidda", "Avusa",
+      "Appizza", "Maiolica Lignea", "Mediterraneo", "Pusateri", "PusaToys",
+      "PusaTeck", "PusaGym"
+    ]
+  }
+}

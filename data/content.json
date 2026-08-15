@@ -1,0 +1,292 @@
+{
+  "_nota": "Contenuti editoriali del sito. Testi ORIGINALI INGLY DESIGN. Nessun contenuto biografico, cliente, referenza o numero è stato importato dal sito di riferimento (docs/MIGRATION-MAP.md §3). I campi elencati in _daCompletare richiedono dati reali di Giuseppe prima della pubblicazione.",
+
+  "_daCompletare": [
+    "chiSono.biografia — anno di inizio attività, formazione, percorso personale",
+    "chiSono.laboratorio.luogo — indirizzo o area del laboratorio",
+    "config.contact.whatsapp / phone — recapiti definitivi",
+    "config.social.* — profili attivi",
+    "config.stats.pezzi / clienti / rating — solo se dati reali e verificabili",
+    "portfolio.projects[] — lavori realmente eseguiti, con foto proprie"
+  ],
+
+  "home": {
+    "hero": {
+      "eyebrow": { "it": "Studio di design e produzione", "en": "Design and manufacturing studio" },
+      "title": { "it": "Progetto, materia, precisione.", "en": "Design, matter, precision." },
+      "lead": {
+        "it": "INGLY DESIGN progetta e produce oggetti su misura per la ristorazione, l'ospitalità, le aziende e gli eventi. Legno, metallo, plexiglass e tecnologie digitali, dalla prima idea al pezzo finito.",
+        "en": "INGLY DESIGN designs and manufactures bespoke objects for hospitality, business and events. Wood, metal, acrylic and digital technologies, from first idea to finished piece."
+      },
+      "ctaPrimary": { "it": "Esplora il catalogo", "en": "Explore the catalogue" },
+      "ctaSecondary": { "it": "Parliamo del tuo progetto", "en": "Let's discuss your project" }
+    },
+
+    "manifesto": {
+      "eyebrow": { "it": "Manifesto", "en": "Manifesto" },
+      "title": { "it": "Un oggetto ben fatto non si nota. Funziona.", "en": "A well-made object goes unnoticed. It works." },
+      "body": {
+        "it": "Un portamenù viene aperto e chiuso migliaia di volte in una stagione. Una targa resta al sole per anni. Un tagliere finisce in lavastoviglie il giorno dopo l'acquisto. Progettiamo partendo da qui: da cosa succede all'oggetto dopo, non da come appare in fotografia.\n\nQuesto significa scegliere il materiale in base all'uso e non all'abitudine, dimensionare gli spessori sul carico reale, e preferire un incastro a una colla ogni volta che è possibile. Il risultato è meno appariscente e dura di più.",
+        "en": "A menu holder is opened thousands of times in a season. A sign stays in the sun for years. We design from what happens to the object afterwards, not from how it photographs."
+      },
+      "points": [
+        { "title": { "it": "Il materiale segue l'uso", "en": "Material follows use" }, "text": { "it": "Quindici materiali in catalogo, scelti caso per caso. Il legno non è sempre la risposta giusta.", "en": "Fifteen materials, chosen case by case. Wood is not always the right answer." } },
+        { "title": { "it": "Precisione misurabile", "en": "Measurable precision" }, "text": { "it": "Tolleranze dichiarate: ± 0,1 mm al laser CO₂, ± 0,02 mm su metallo. Se un incastro non tiene, è un difetto, non una caratteristica.", "en": "Declared tolerances: ± 0.1 mm on CO₂, ± 0.02 mm on metal." } },
+        { "title": { "it": "Produzione su commessa", "en": "Made to order" }, "text": { "it": "Nessun magazzino, nessuna serie invenduta. Ogni pezzo nasce dopo la richiesta e per quella richiesta.", "en": "No warehouse, no unsold runs. Every piece is made after the request." } },
+        { "title": { "it": "Un solo interlocutore", "en": "One point of contact" }, "text": { "it": "Chi risponde al preventivo è chi disegna il progetto e chi lo produce. Niente passaggi intermedi.", "en": "Whoever answers your quote is the one who designs and produces it." } }
+      ]
+    },
+
+    "categories": {
+      "eyebrow": { "it": "Catalogo", "en": "Catalogue" },
+      "title": { "it": "Tredici famiglie di creazioni", "en": "Thirteen families of creations" },
+      "lead": { "it": "Dalla sala del ristorante alla parete di casa, dal gadget aziendale all'allestimento di un evento.", "en": "From the dining room to the living room wall, from corporate gifts to event set-ups." }
+    },
+
+    "featured": {
+      "eyebrow": { "it": "In evidenza", "en": "Featured" },
+      "title": { "it": "Creazioni in evidenza", "en": "Featured creations" },
+      "lead": { "it": "Una selezione trasversale alle categorie, utile per capire il modo di lavorare prima ancora del catalogo completo.", "en": "A cross-category selection." }
+    },
+
+    "technologies": {
+      "eyebrow": { "it": "Tecnologie", "en": "Technologies" },
+      "title": { "it": "Undici lavorazioni, un solo laboratorio", "en": "Eleven processes, one workshop" },
+      "lead": { "it": "Taglio e incisione laser, marcatura su metallo, stampa UV e DTF, stampa 3D, finitura e assemblaggio. Tutto interno: nessun passaggio esterno da coordinare, nessun tempo morto fra una fase e l'altra.", "en": "Laser cutting and engraving, metal marking, UV and DTF printing, 3D printing, finishing and assembly — all in-house." }
+    },
+
+    "materials": {
+      "eyebrow": { "it": "Materiali", "en": "Materials" },
+      "title": { "it": "Non solo legno", "en": "Not only wood" },
+      "lead": { "it": "Quindici materiali in lavorazione corrente, dal compensato di betulla all'acciaio inox. La scelta parte da dove starà l'oggetto e da quanto deve durare.", "en": "Fifteen materials in current use, from birch plywood to stainless steel." }
+    },
+
+    "b2b": {
+      "eyebrow": { "it": "Business", "en": "Business" },
+      "title": { "it": "INGLY DESIGN Business", "en": "INGLY DESIGN Business" },
+      "lead": { "it": "Forniture coordinate per ristoranti, hotel, B&B, negozi, aziende, wedding planner e agenzie. Un progetto unico declinato su tutti gli oggetti, invece di acquisti separati che non parlano fra loro.", "en": "Coordinated supply for restaurants, hotels, shops, companies and agencies." }
+    },
+
+    "about": {
+      "eyebrow": { "it": "Chi sono", "en": "About" },
+      "title": { "it": "Giuseppe Inglima", "en": "Giuseppe Inglima" },
+      "lead": { "it": "Designer e maker. Progetto al computer e produco in laboratorio: le due cose non sono separate, e il progetto cambia in base a cosa la macchina può davvero fare.", "en": "Designer and maker. I design on screen and produce in the workshop." }
+    },
+
+    "process": {
+      "eyebrow": { "it": "Processo", "en": "Process" },
+      "title": { "it": "Come si arriva al pezzo finito", "en": "How the finished piece happens" },
+      "lead": { "it": "Otto passaggi, nessuno saltato. Prima di produrre, il progetto va approvato: è il momento in cui costa poco cambiare idea.", "en": "Eight steps, none skipped." }
+    },
+
+    "cta": {
+      "title": { "it": "Hai un progetto in mente?", "en": "Have a project in mind?" },
+      "lead": { "it": "Descrivilo com'è adesso, anche se non è ancora definito. La prima risposta arriva entro un giorno lavorativo e include una stima di fattibilità.", "en": "Describe it as it stands. First reply within one working day." },
+      "cta": { "it": "Invia una richiesta", "en": "Send a request" }
+    }
+  },
+
+  "chiSono": {
+    "eyebrow": { "it": "Chi sono", "en": "About" },
+    "title": { "it": "Giuseppe Inglima", "en": "Giuseppe Inglima" },
+    "role": { "it": "Designer & Maker — INGLY DESIGN", "en": "Designer & Maker — INGLY DESIGN" },
+    "lead": {
+      "it": "Progetto oggetti e li produco. Non è una precisazione da poco: significa che ogni disegno nasce già sapendo su quale macchina finirà, con che tolleranza, e cosa succederà al pezzo il giorno dopo la consegna.",
+      "en": "I design objects and I make them. Every drawing is born knowing which machine it will end up on."
+    },
+    "biografia": {
+      "_todo": "Da completare con il percorso reale di Giuseppe: anno di inizio, formazione, tappe. Nessun dato ereditato da terzi.",
+      "it": "",
+      "en": ""
+    },
+    "sections": [
+      {
+        "id": "filosofia",
+        "title": { "it": "La filosofia", "en": "The philosophy" },
+        "body": {
+          "it": "Ci sono due modi di progettare un oggetto: partire da come deve apparire, o partire da cosa deve sopportare. INGLY DESIGN parte sempre dal secondo.\n\nÈ una scelta che si vede nei dettagli poco spettacolari — lo spessore di un dorso, il raggio di uno spigolo, il tipo di magnete scelto per una chiusura — e che si nota solo dopo un anno di utilizzo, quando l'oggetto è ancora quello del primo giorno. La forma arriva dopo, e arriva più pulita, perché non deve nascondere niente.",
+          "en": "There are two ways to design an object: starting from how it should look, or from what it must withstand. INGLY DESIGN always starts from the second."
+        }
+      },
+      {
+        "id": "laboratorio",
+        "title": { "it": "Il laboratorio", "en": "The workshop" },
+        "body": {
+          "it": "Progettazione e produzione stanno nello stesso posto. Un prototipo si taglia mentre il file è ancora aperto, si prova in mano, si corregge e si ritaglia nello stesso pomeriggio.\n\nQuesto accorcia i tempi, ma soprattutto cambia i progetti: si scoprono i problemi toccando il pezzo, non guardando il rendering. Molte soluzioni del catalogo esistono perché la prima versione, in mano, non convinceva.",
+          "en": "Design and production live in the same place. A prototype is cut while the file is still open."
+        }
+      },
+      {
+        "id": "tecnologie",
+        "title": { "it": "Le tecnologie", "en": "The technologies" },
+        "body": {
+          "it": "Laser CO₂ per legno, plexiglass, carta e pelle. Laser MOPA e fibra per la marcatura dei metalli, con la possibilità di ottenere colori reali sull'acciaio senza inchiostro. Stampa UV per il colore pieno diretto su qualsiasi supporto, DTF per il tessuto, stampa 3D per ciò che il piano non permette.\n\nSono strumenti, non argomenti di vendita: la tecnologia si sceglie dopo aver capito l'oggetto, mai prima.",
+          "en": "CO₂ laser for organics, MOPA and fibre for metals, UV printing, DTF, 3D printing. Tools, not selling points."
+        }
+      },
+      {
+        "id": "processo",
+        "title": { "it": "Il processo creativo", "en": "The creative process" },
+        "body": {
+          "it": "Ogni progetto comincia da una domanda concreta: dove starà l'oggetto, chi lo userà, quante volte al giorno, chi lo pulirà. Le risposte determinano il materiale, e il materiale determina la forma molto più di qualsiasi preferenza estetica.\n\nSolo a quel punto si disegna. E prima di produrre si manda sempre un'anteprima: cambiare idea su un file costa zero, cambiarla su cento pezzi tagliati costa cento pezzi.",
+          "en": "Every project starts from concrete questions: where will it live, who will use it, how often. Then we draw."
+        }
+      }
+    ],
+    "seo": {
+      "title": "Giuseppe Inglima — Designer & Maker | INGLY DESIGN",
+      "description": "Giuseppe Inglima, designer e maker. Progettazione e produzione su misura in legno, metallo e plexiglass: laser CO₂ e MOPA, stampa UV, incisione e assemblaggio."
+    }
+  },
+
+  "comeAcquistare": {
+    "eyebrow": { "it": "Come acquistare", "en": "How to order" },
+    "title": { "it": "Dalla richiesta al pezzo finito", "en": "From request to finished piece" },
+    "lead": {
+      "it": "Non è un e-commerce: ogni creazione è prodotta dopo l'ordine e per quell'ordine. Il percorso è sempre lo stesso, otto passaggi, e a metà strada c'è un punto in cui sei tu a dire se si procede.",
+      "en": "This is not an e-commerce site: everything is made to order. Eight steps, with your approval halfway through."
+    },
+    "steps": [
+      { "n": 1, "title": { "it": "Scegli", "en": "Choose" }, "text": { "it": "Individua la creazione nel catalogo, oppure descrivi l'oggetto che ti serve se non lo trovi. Le due strade portano allo stesso posto.", "en": "Pick a creation from the catalogue, or describe what you need." } },
+      { "n": 2, "title": { "it": "Personalizza", "en": "Customise" }, "text": { "it": "Materiale, misura, finitura, logo, quantità. Ogni scheda prodotto elenca cosa è modificabile su quel modello.", "en": "Material, size, finish, logo, quantity." } },
+      { "n": 3, "title": { "it": "Richiedi", "en": "Request" }, "text": { "it": "Invia la richiesta dal modulo o su WhatsApp, allegando logo e riferimenti se li hai già. Rispondo entro un giorno lavorativo con una stima di fattibilità e di prezzo.", "en": "Send the request with your logo and references. Reply within one working day." } },
+      { "n": 4, "title": { "it": "Ricevi il progetto", "en": "Get the design" }, "text": { "it": "Ricevi un'anteprima grafica con misure reali e materiale scelto. Non è un rendering suggestivo: è il file che andrà in macchina.", "en": "You receive a preview with real dimensions — the file that goes to the machine." } },
+      { "n": 5, "title": { "it": "Approva", "en": "Approve" }, "text": { "it": "Le modifiche in questa fase non costano nulla. È il momento giusto per cambiare idea, e si può fare più volte.", "en": "Changes at this stage are free, as many times as needed." } },
+      { "n": 6, "title": { "it": "Produciamo", "en": "We make it" }, "text": { "it": "Taglio, incisione, stampa, finitura e assemblaggio. Da 4 a 20 giorni lavorativi secondo complessità e quantità.", "en": "Cutting, engraving, printing, finishing, assembly. 4–20 working days." } },
+      { "n": 7, "title": { "it": "Controlliamo", "en": "We check" }, "text": { "it": "Verifica pezzo per pezzo su misure, incisione e finitura. Quello che non passa non parte: viene rifatto.", "en": "Piece-by-piece check. What fails is remade, not shipped." } },
+      { "n": 8, "title": { "it": "Spediamo", "en": "We ship" }, "text": { "it": "Imballo su misura del contenuto e spedizione tracciata in tutta Italia. Consegna a mano concordabile in Sicilia.", "en": "Custom packing and tracked shipping across Italy." } }
+    ],
+    "faq": [
+      { "q": { "it": "Qual è il minimo d'ordine?", "en": "What's the minimum order?" }, "a": { "it": "Non c'è un minimo sui progetti su misura: si produce anche un pezzo solo. Sulle serie il costo unitario scende in modo sensibile a partire da cinquanta pezzi.", "en": "No minimum on bespoke projects. Unit cost drops noticeably from fifty pieces." } },
+      { "q": { "it": "Quanto tempo serve?", "en": "How long does it take?" }, "a": { "it": "Da 4 a 20 giorni lavorativi dall'approvazione del progetto, secondo complessità e quantità. La stima esatta arriva insieme al preventivo, non dopo.", "en": "4–20 working days from approval. The exact estimate comes with the quote." } },
+      { "q": { "it": "Posso mandare un mio disegno?", "en": "Can I send my own drawing?" }, "a": { "it": "Sì. I formati vettoriali (SVG, PDF, AI, DXF) sono i migliori. Da un'immagine raster si lavora comunque, con un passaggio di ricostruzione del tracciato.", "en": "Yes. Vector formats are best; raster images need a redraw step." } },
+      { "q": { "it": "Il logo va bene in qualsiasi formato?", "en": "Any logo format?" }, "a": { "it": "Per incisione e taglio serve un tracciato vettoriale. Se hai solo un JPG o un PNG lo ricostruisco io: è un servizio incluso, non una voce a parte.", "en": "Engraving needs vectors. If you only have a JPG I'll redraw it — included, not extra." } },
+      { "q": { "it": "Fate anche un solo prototipo?", "en": "Do you make single prototypes?" }, "a": { "it": "Sì, ed è spesso la scelta giusta prima di una serie. Il costo del prototipo si scala dall'ordine successivo.", "en": "Yes, and the prototype cost is deducted from the following order." } },
+      { "q": { "it": "Spedite fuori dall'Italia?", "en": "Do you ship abroad?" }, "a": { "it": "Sì, in tutta l'Unione Europea. I tempi e i costi di spedizione vengono indicati nel preventivo.", "en": "Yes, across the EU. Times and costs are stated in the quote." } }
+    ],
+    "seo": {
+      "title": "Come acquistare — dalla richiesta al pezzo | INGLY DESIGN",
+      "description": "Come funziona un ordine INGLY DESIGN: otto passaggi dalla richiesta alla spedizione, con anteprima del progetto da approvare prima della produzione. Tempi 4–20 giorni."
+    }
+  },
+
+  "b2b": {
+    "eyebrow": { "it": "Business", "en": "Business" },
+    "title": { "it": "INGLY DESIGN Business", "en": "INGLY DESIGN Business" },
+    "lead": {
+      "it": "Quando gli oggetti di un locale arrivano da fornitori diversi si vede, e si vede subito. Una fornitura coordinata parte da un progetto unico e lo declina su tutto: portamenù, segnaletica, gadget, packaging.",
+      "en": "When a venue's objects come from different suppliers, it shows. A coordinated supply starts from one design."
+    },
+    "segments": [
+      { "id": "ristoranti", "title": { "it": "Ristoranti e pizzerie", "en": "Restaurants" }, "text": { "it": "Portamenù, segnatavoli, porta conto, segnaletica, sottobicchieri e QR coordinati. Materiali scelti per reggere il servizio e la pulizia quotidiana.", "en": "Menu holders, table numbers, bill holders, signage and QR — coordinated." } },
+      { "id": "hotel", "title": { "it": "Hotel e resort", "en": "Hotels and resorts" }, "text": { "it": "Numerazione camere, segnaletica di piano, cartelli servizio, accessori per la colazione e welcome kit. Serie coordinate su tutte le camere.", "en": "Room numbering, floor signage, service signs, breakfast accessories, welcome kits." } },
+      { "id": "bnb", "title": { "it": "B&B e case vacanza", "en": "B&Bs and holiday homes" }, "text": { "it": "Targa di ingresso, portachiavi, guida di benvenuto, QR wifi e placca recensioni. Il kit completo per una struttura piccola.", "en": "Entrance plaque, keyrings, welcome guide, wifi QR and review plaque." } },
+      { "id": "aziende", "title": { "it": "Aziende", "en": "Companies" }, "text": { "it": "Corporate gifting, targhe professionali, biglietti da visita NFC, welcome kit per i nuovi assunti, premi e riconoscimenti interni.", "en": "Corporate gifting, professional plates, NFC cards, onboarding kits, awards." } },
+      { "id": "negozi", "title": { "it": "Negozi e retail", "en": "Shops and retail" }, "text": { "it": "Espositori da banco, cartellini prezzo, segnaletica interna, packaging e collezioni di gadget da rivendere.", "en": "Counter displays, price tags, in-store signage, packaging and resale gadget lines." } },
+      { "id": "wedding", "title": { "it": "Wedding planner", "en": "Wedding planners" }, "text": { "it": "Tableau, segnaposto, porta fedi, bomboniere e allestimenti. Produzione concentrata su una data, con consegna concordata sul calendario dell'evento.", "en": "Seating charts, place cards, ring boxes, favours and set-ups, delivered on the event date." } },
+      { "id": "eventi", "title": { "it": "Eventi e fiere", "en": "Events and trade shows" }, "text": { "it": "Stand, totem, badge, premi e segnaletica modulare. Strutture smontabili che entrano in un'auto e si rimontano senza attrezzi.", "en": "Stands, totems, badges, awards and modular signage that packs flat." } },
+      { "id": "agenzie", "title": { "it": "Agenzie e professionisti", "en": "Agencies and professionals" }, "text": { "it": "Produzione conto terzi su progetto fornito, con rispetto delle specifiche grafiche e possibilità di consegna in bianco.", "en": "White-label production from supplied artwork, to spec." } }
+    ],
+    "advantages": [
+      { "title": { "it": "Progetto coordinato", "en": "Coordinated design" }, "text": { "it": "Un solo disegno declinato su tutti gli oggetti della fornitura, invece di acquisti separati che non si parlano.", "en": "One design across every object in the supply." } },
+      { "title": { "it": "Riordino identico", "en": "Identical reorders" }, "text": { "it": "I file di produzione restano archiviati: un riordino a distanza di due anni esce uguale al primo lotto.", "en": "Production files are archived: a reorder two years later matches the first batch." } },
+      { "title": { "it": "Prezzo per volume", "en": "Volume pricing" }, "text": { "it": "Il costo unitario scende sopra i cinquanta pezzi e in modo più marcato oltre i duecento.", "en": "Unit cost drops above fifty pieces, and further beyond two hundred." } },
+      { "title": { "it": "Un interlocutore solo", "en": "One contact" }, "text": { "it": "Dal preventivo alla consegna parli sempre con chi il lavoro lo fa.", "en": "From quote to delivery you speak with the person doing the work." } }
+    ],
+    "cta": { "it": "Richiedi un preventivo B2B", "en": "Request a B2B quote" },
+    "seo": {
+      "title": "INGLY DESIGN Business — forniture B2B su misura",
+      "description": "Forniture coordinate per ristoranti, hotel, B&B, negozi, aziende, wedding planner ed eventi. Progetto unico, riordino identico, prezzi per volume."
+    }
+  },
+
+  "contatti": {
+    "eyebrow": { "it": "Contatti", "en": "Contact" },
+    "title": { "it": "Parliamo del tuo progetto", "en": "Let's discuss your project" },
+    "lead": {
+      "it": "Descrivi cosa ti serve, anche in modo approssimativo. Più dettagli dai — quantità, misure, tempi — più la prima risposta sarà precisa invece di generica.",
+      "en": "Describe what you need, even roughly. The more detail you give, the more precise the first reply."
+    },
+    "responseTime": { "it": "Risposta entro un giorno lavorativo", "en": "Reply within one working day" },
+    "seo": {
+      "title": "Contatti — parliamo del tuo progetto | INGLY DESIGN",
+      "description": "Richiedi un preventivo a INGLY DESIGN: descrivi il progetto, la quantità e i tempi. Risposta entro un giorno lavorativo con stima di fattibilità."
+    }
+  },
+
+  "materiali": {
+    "eyebrow": { "it": "Materiali", "en": "Materials" },
+    "title": { "it": "Materiali INGLY", "en": "INGLY Materials" },
+    "lead": {
+      "it": "Quindici materiali in lavorazione corrente, divisi per famiglia. La scheda di ciascuno indica spessori disponibili, finiture, idoneità al contatto alimentare e all'esterno: sono i quattro dati che decidono quasi sempre la scelta.",
+      "en": "Fifteen materials in current use. Each sheet states thicknesses, finishes, food-contact and outdoor suitability."
+    },
+    "families": [
+      { "id": "legno", "name": { "it": "Legno e derivati", "en": "Wood and panels" } },
+      { "id": "sintetici", "name": { "it": "Sintetici", "en": "Synthetics" } },
+      { "id": "metalli", "name": { "it": "Metalli", "en": "Metals" } },
+      { "id": "naturali", "name": { "it": "Naturali", "en": "Natural" } },
+      { "id": "cellulosici", "name": { "it": "Cellulosici", "en": "Cellulose" } },
+      { "id": "stampa-3d", "name": { "it": "Stampa 3D", "en": "3D printing" } }
+    ],
+    "seo": {
+      "title": "Materiali: legno, metallo, plexiglass e altro | INGLY DESIGN",
+      "description": "Quindici materiali lavorati: betulla, MDF, massello, plexiglass, acrilico, alluminio, acciaio, ottone, pelle, carta, cartone, tessuto, PLA e PETG. Spessori e finiture."
+    }
+  },
+
+  "tecnologie": {
+    "eyebrow": { "it": "Tecnologie", "en": "Technologies" },
+    "title": { "it": "Tecnologie & Tecniche", "en": "Technologies & Techniques" },
+    "lead": {
+      "it": "Undici lavorazioni interne al laboratorio, dal taglio laser all'assemblaggio finale. Per ciascuna sono dichiarate le specifiche reali — precisione, spessori, aree di lavoro — perché è su quelle che si decide se un progetto è fattibile.",
+      "en": "Eleven in-house processes, from laser cutting to final assembly, with declared specifications."
+    },
+    "families": [
+      { "id": "laser", "name": { "it": "Laser", "en": "Laser" } },
+      { "id": "stampa", "name": { "it": "Stampa", "en": "Printing" } },
+      { "id": "additiva", "name": { "it": "Additiva", "en": "Additive" } },
+      { "id": "lavorazione", "name": { "it": "Lavorazione", "en": "Processing" } },
+      { "id": "finitura", "name": { "it": "Finitura", "en": "Finishing" } }
+    ],
+    "seo": {
+      "title": "Tecnologie: laser CO₂, MOPA, UV, DTF, stampa 3D | INGLY DESIGN",
+      "description": "Laser CO₂, MOPA e fibra, stampa UV e DTF, stampa 3D, incisione, taglio, marcatura, verniciatura e assemblaggio. Specifiche tecniche e materiali compatibili."
+    }
+  },
+
+  "creazioni": {
+    "eyebrow": { "it": "Catalogo", "en": "Catalogue" },
+    "title": { "it": "Catalogo Creazioni", "en": "Creations Catalogue" },
+    "lead": {
+      "it": "Tredici categorie, oltre centosettanta creazioni. Filtra per categoria, materiale, tecnologia o destinazione d'uso: i filtri restano nell'indirizzo, quindi una selezione si può salvare o inviare a qualcuno.",
+      "en": "Thirteen categories, over a hundred and seventy creations. Filters stay in the URL, so a selection can be shared."
+    },
+    "seo": {
+      "title": "Catalogo Creazioni — 13 categorie su misura | INGLY DESIGN",
+      "description": "Portamenù, tavola e cucina, targhe e insegne, gadget, casa, kids, tech, packaging, plexi e metallo, eventi. Oltre 170 creazioni personalizzabili, prodotte su commessa."
+    }
+  },
+
+  "portfolio": {
+    "eyebrow": { "it": "Portfolio", "en": "Portfolio" },
+    "title": { "it": "Portfolio", "en": "Portfolio" },
+    "lead": {
+      "it": "I lavori realizzati verranno pubblicati qui con fotografie proprie, man mano che i progetti vengono completati e i clienti autorizzano la pubblicazione.",
+      "en": "Completed work will be published here with our own photography, as clients authorise it."
+    },
+    "emptyState": {
+      "title": { "it": "Portfolio in costruzione", "en": "Portfolio in progress" },
+      "text": {
+        "it": "Questa sezione ospiterà soltanto progetti realmente eseguiti da INGLY DESIGN, documentati con fotografie proprie. Nessun lavoro di terzi viene mostrato come proprio: è una scelta precisa, e vale più di una galleria piena riempita in fretta.\n\nNel frattempo, qui sotto trovi le tipologie di progetto che il laboratorio affronta abitualmente.",
+        "en": "This section will host only work actually carried out by INGLY DESIGN, documented with our own photography."
+      }
+    },
+    "archetypesTitle": { "it": "Tipologie di progetto", "en": "Project types" },
+    "archetypesLead": { "it": "Non sono lavori eseguiti: sono le tipologie di commessa su cui il laboratorio è attrezzato, con le lavorazioni coinvolte.", "en": "Not completed jobs: the kinds of commission the workshop is equipped for." },
+    "seo": {
+      "title": "Portfolio — progetti INGLY DESIGN",
+      "description": "Progetti realizzati da INGLY DESIGN e tipologie di commessa: allestimenti per ristorazione, hospitality, wedding, corporate, retail ed eventi."
+    }
+  }
+}
