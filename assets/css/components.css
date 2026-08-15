@@ -458,6 +458,24 @@ select {
 }
 html[data-debug="1"] .mig-badge { display: block; }
 
+/* ---- Banda di anteprima admin -------------------------------
+   Compare solo con ?anteprima=1: chi guarda deve sapere che sta
+   vedendo dati non ancora pubblicati. */
+
+html[data-preview="1"] body::before {
+  content: "ANTEPRIMA ADMIN — dati non pubblicati";
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: var(--z-toast);
+  padding: var(--sp-2);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: var(--ls-caps);
+  background: var(--accent);
+  color: var(--text-inverse);
+}
+
 /* ---- Toast -------------------------------------------------- */
 
 .toast {

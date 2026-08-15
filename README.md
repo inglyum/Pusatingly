@@ -154,3 +154,36 @@ invalida il resto.
 ---
 
 *Progetto e produzione: Giuseppe Inglima — INGLY DESIGN*
+
+---
+
+## Admin — modificare il catalogo dal browser
+
+Apri **`admin.html`** (serve un server locale: `npm run serve`, poi
+`localhost:3000/admin.html`). Non richiede login, token o configurazione:
+è uno strumento locale, ed è escluso dai motori di ricerca.
+
+Cosa puoi fare:
+
+| | |
+| - | - |
+| **Modificare** | nome, testi, categoria, materiali, tecnologie, misure, personalizzazioni, SEO |
+| **Aggiungere** | «+ Nuova» assegna un codice libero, senza mai riusarne uno già visto |
+| **Duplicare** | parte da una creazione esistente e ne crea una nuova collegata |
+| **Archiviare** | esce dal catalogo pubblico e dalla sitemap, ma resta nel file e si ripristina |
+| **Fotografare** | carichi un'immagine, viene ritagliata 4:3 e convertita in WebP già rinominata |
+| **Verificare** | ogni modifica è controllata in tempo reale; con errori aperti l'esportazione è bloccata |
+| **Vedere** | «Anteprima sito» apre il sito reale con le tue modifiche, prima di pubblicarle |
+
+Il lavoro in corso resta salvato nel browser: puoi chiudere e riprendere.
+
+### Come si pubblica
+
+L'admin non scrive sul server — prepara i file, li metti tu nel repository:
+
+1. **Esporta products.json** → sostituisci `data/products.json`
+2. Se hai caricato foto, mettile in `assets/images/products/`
+3. `npm test` → `git commit` → `git push`
+
+Se dimentichi una foto, `npm run sync-images` riporta quella creazione al
+placeholder invece di lasciare un'immagine rotta.

@@ -1,0 +1,275 @@
+/* ============================================================
+   INGLY DESIGN — ADMIN
+   Usa gli stessi token del sito: nessun colore nuovo.
+   ============================================================ */
+
+.admin { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* ---- barra superiore ---- */
+
+.a-bar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-3) var(--sp-5);
+  background: var(--surface-1);
+  border-bottom: 1px solid var(--line);
+}
+.a-bar .brand { font-size: var(--fs-sm); }
+.a-bar-spacer { flex: 1; }
+
+.a-state {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+}
+.a-state::before {
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--text-3);
+}
+.a-state[data-dirty="1"] { color: var(--accent-text); }
+.a-state[data-dirty="1"]::before { background: var(--accent); }
+
+/* ---- corpo a due colonne ---- */
+
+.a-body {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  flex: 1;
+  min-height: 0;
+}
+@media (max-width: 899px) {
+  .a-body { grid-template-columns: 1fr; }
+  .a-list { max-height: 45vh; }
+}
+
+.a-list {
+  border-right: 1px solid var(--line);
+  overflow-y: auto;
+  background: var(--surface-0);
+}
+.a-list-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: grid;
+  gap: var(--sp-2);
+  padding: var(--sp-4);
+  background: var(--surface-0);
+  border-bottom: 1px solid var(--line-soft);
+}
+.a-list-head input,
+.a-list-head select {
+  width: 100%;
+  padding: var(--sp-2) var(--sp-3);
+  font-size: var(--fs-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--text-1);
+}
+.a-filters { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-2); }
+
+.a-row {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  gap: var(--sp-3);
+  align-items: center;
+  width: 100%;
+  padding: var(--sp-3) var(--sp-4);
+  text-align: left;
+  border-bottom: 1px solid var(--line-soft);
+  transition: background var(--dur-fast) var(--ease);
+}
+.a-row:hover { background: var(--surface-1); }
+.a-row[aria-current="true"] { background: var(--surface-2); box-shadow: inset 2px 0 0 var(--accent); }
+.a-row img {
+  width: 44px; height: 33px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: var(--surface-inset);
+}
+.a-row-name { font-weight: 600; font-size: var(--fs-sm); color: var(--text-1); }
+.a-row-sub {
+  font-size: var(--fs-2xs);
+  color: var(--text-3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.a-row-id { font-family: var(--font-mono); font-size: 10px; color: var(--text-3); }
+
+.a-dot {
+  width: 8px; height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--text-3);
+}
+.a-dot[data-status="active"] { background: var(--accent); }
+.a-dot[data-status="archived"] { background: transparent; border: 1px solid var(--text-3); }
+
+/* ---- editor ---- */
+
+.a-editor { overflow-y: auto; padding: var(--sp-6); background: var(--surface-0); }
+.a-editor-inner { max-width: 900px; margin-inline: auto; }
+
+.a-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3);
+  padding-bottom: var(--sp-5);
+  margin-bottom: var(--sp-6);
+  border-bottom: 1px solid var(--line);
+}
+.a-head h1 { font-size: var(--fs-2xl); flex: 1; }
+
+.a-section {
+  padding: var(--sp-5) 0;
+  border-top: 1px solid var(--line-soft);
+}
+.a-section:first-of-type { border-top: none; padding-top: 0; }
+.a-section > h2 {
+  font-size: var(--fs-2xs);
+  font-weight: 600;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: var(--sp-4);
+}
+
+.a-grid { display: grid; gap: var(--sp-4); }
+.a-grid--2 { grid-template-columns: 1fr 1fr; }
+.a-grid--3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 699px) {
+  .a-grid--2, .a-grid--3 { grid-template-columns: 1fr; }
+  .a-editor { padding: var(--sp-4); }
+}
+
+.a-field { display: grid; gap: var(--sp-2); }
+.a-field > label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--text-2);
+}
+.a-field .hint { font-size: var(--fs-2xs); color: var(--text-3); font-weight: 400; }
+.a-field input,
+.a-field textarea,
+.a-field select {
+  width: 100%;
+  padding: var(--sp-3);
+  font-size: var(--fs-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--text-1);
+}
+/* Il bordo che si accende è un rinforzo visivo, non un sostituto:
+   l'outline di :focus-visible resta, perché è ciò che serve a chi
+   naviga da tastiera. */
+.a-field input:focus,
+.a-field textarea:focus,
+.a-field select:focus { border-color: var(--accent); }
+.a-field textarea { min-height: 120px; resize: vertical; font-family: inherit; }
+.a-field input[readonly] { color: var(--text-3); background: var(--surface-inset); }
+.a-field [aria-invalid="true"] { border-color: #E5484D; }
+
+.a-counter { font-family: var(--font-mono); font-size: var(--fs-2xs); color: var(--text-3); text-align: right; }
+.a-counter[data-over="1"] { color: #E5484D; }
+
+/* multiselezione a chip */
+.a-chips { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.a-chip {
+  padding: var(--sp-2) var(--sp-3);
+  font-size: var(--fs-xs);
+  color: var(--text-2);
+  background: var(--surface-2);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-full);
+  transition: all var(--dur-fast) var(--ease);
+}
+.a-chip:hover { border-color: var(--line-strong); color: var(--text-1); }
+.a-chip[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-inverse);
+}
+
+/* dimensioni */
+.a-dims { display: grid; gap: var(--sp-2); }
+.a-dim { display: grid; grid-template-columns: 1fr 1fr auto; gap: var(--sp-2); }
+.a-dim input { padding: var(--sp-2) var(--sp-3); }
+
+/* foto */
+.a-photo { display: grid; grid-template-columns: 240px 1fr; gap: var(--sp-5); align-items: start; }
+@media (max-width: 699px) { .a-photo { grid-template-columns: 1fr; } }
+.a-photo-frame {
+  aspect-ratio: 4 / 3;
+  background: var(--surface-inset);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.a-photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---- validazione ---- */
+
+.a-issues { display: grid; gap: var(--sp-2); }
+.a-issue {
+  display: flex;
+  gap: var(--sp-3);
+  padding: var(--sp-3);
+  font-size: var(--fs-sm);
+  border-radius: var(--radius-sm);
+  background: var(--surface-1);
+  border-left: 2px solid var(--text-3);
+}
+.a-issue[data-level="error"] { border-left-color: #E5484D; color: var(--text-1); }
+.a-issue[data-level="warn"] { border-left-color: var(--accent); }
+.a-issue code { font-family: var(--font-mono); font-size: var(--fs-2xs); color: var(--text-3); }
+
+.a-empty {
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+  gap: var(--sp-3);
+  text-align: center;
+  color: var(--text-3);
+}
+
+/* ---- dialogo ---- */
+
+.a-dialog {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface-1);
+  color: var(--text-2);
+  padding: var(--sp-6);
+  max-width: 560px;
+  width: calc(100% - 2rem);
+  box-shadow: var(--elev-4);
+}
+.a-dialog::backdrop { background: var(--backdrop); }
+.a-dialog h2 { font-size: var(--fs-lg); margin-bottom: var(--sp-3); }
+.a-dialog p { font-size: var(--fs-sm); margin-bottom: var(--sp-3); }
+.a-dialog ol { padding-left: var(--sp-5); font-size: var(--fs-sm); display: grid; gap: var(--sp-2); }
+.a-dialog li { list-style: decimal; }
+.a-dialog code {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  background: var(--surface-2);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  color: var(--text-1);
+}
+.a-dialog-actions { display: flex; gap: var(--sp-3); margin-top: var(--sp-5); }
+
+/* Il banner di anteprima vive in components.css: deve comparire sul SITO,
+   che non carica questo foglio. */

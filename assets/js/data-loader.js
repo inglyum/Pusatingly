@@ -116,6 +116,8 @@ function heal(D) {
 export async function loadData() {
   if (window.INGLY?.PRODUCTS) return window.INGLY;
 
+  const isPreview = new URLSearchParams(location.search).get('anteprima') === '1';
+
   let v = null;
   try {
     const r = await fetch(`data/version.json?t=${Date.now()}`, { cache: 'no-store' });
@@ -141,6 +143,31 @@ export async function loadData() {
 
   if (dataStatus.missing.length) {
     console.warn(`[INGLY] file non caricati: ${dataStatus.missing.join(', ')}`);
+  }
+
+  /* ANTEPRIMA DALL'ADMIN
+     Con ?anteprima=1 il catalogo pubblicato viene sostituito dalla bozza
+     dell'admin. Solo i prodotti: categorie, testi e contenuti restano quelli
+     reali, così l'anteprima resta piccola e sempre allineata al resto.
+
+     La bozza sta in localStorage e non in sessionStorage perché l'admin apre
+     l'anteprima in una scheda nuova: con `noopener` il contesto non eredita
+     sessionStorage, e l'anteprima resterebbe vuota. */
+  if (isPreview) {
+    try {
+      const raw = localStorage.getItem('ingly-admin-preview');
+      if (raw) {
+        const draft = JSON.parse(raw);
+        if (Array.isArray(draft?.products) && draft.products.length) {
+          D.PRODUCTS = draft.products;
+          D.__preview = true;
+          document.documentElement.dataset.preview = '1';
+          console.info(`[INGLY] anteprima admin — ${draft.products.length} creazioni non pubblicate`);
+        }
+      }
+    } catch (e) {
+      console.warn('[INGLY] anteprima non caricata:', e);
+    }
   }
 
   // Senza catalogo o categorie non c'è sito: è l'unico errore fatale.

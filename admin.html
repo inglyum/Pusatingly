@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin catalogo — INGLY DESIGN</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/images/brand/favicon.svg" type="image/svg+xml">
+
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+<div class="admin">
+
+  <div class="a-bar">
+    <span class="brand">INGL<em>Y</em> DESIGN</span>
+    <span style="font-size:var(--fs-xs);color:var(--text-3)">Admin catalogo</span>
+
+    <span class="a-bar-spacer"></span>
+
+    <span id="globalIssues" style="font-size:var(--fs-xs);color:#E5484D"></span>
+    <span class="a-state" id="state" data-dirty="0">nessuna modifica</span>
+
+    <button type="button" class="btn btn--ghost" id="btnReset">Scarta</button>
+    <button type="button" class="btn btn--ghost" id="btnNew">+ Nuova</button>
+    <button type="button" class="btn btn--outline" id="btnPreview">Anteprima sito</button>
+    <button type="button" class="btn btn--primary" id="btnExport">Esporta products.json</button>
+  </div>
+
+  <div class="a-body">
+    <aside class="a-list">
+      <div class="a-list-head">
+        <input type="search" id="fQ" placeholder="Cerca nome, descrizione o codice…" aria-label="Cerca">
+        <div class="a-filters">
+          <select id="fCat" aria-label="Filtra per categoria"></select>
+          <select id="fStatus" aria-label="Filtra per stato"></select>
+        </div>
+        <span style="font-family:var(--font-mono);font-size:var(--fs-2xs);color:var(--text-3)" id="count"></span>
+      </div>
+      <div id="list"></div>
+    </aside>
+
+    <main class="a-editor" id="editor">
+      <div class="a-empty"><p>Caricamento del catalogo…</p></div>
+    </main>
+  </div>
+
+</div>
+
+<dialog class="a-dialog" id="howto">
+  <h2>File scaricato. Ora mettilo nel sito.</h2>
+  <p>L'admin non scrive sul server: prepara i file, li metti tu nel repository.</p>
+  <ol>
+    <li>Sostituisci <code>data/products.json</code> con il file appena scaricato</li>
+    <li id="howtoPhotos"></li>
+    <li>Esegui <code>npm test</code> per verificare che sia tutto coerente</li>
+    <li>Fai commit e push</li>
+  </ol>
+  <p style="margin-top:var(--sp-4);color:var(--text-3)">
+    Se una fotografia non viene messa nella cartella, <code>npm run sync-images</code>
+    riporta quella creazione al placeholder invece di lasciare un'immagine rotta.
+  </p>
+  <div class="a-dialog-actions">
+    <button type="button" class="btn btn--primary" data-close>Ho capito</button>
+  </div>
+</dialog>
+
+<noscript>
+  <p style="padding:2rem">L'admin richiede JavaScript attivo.</p>
+</noscript>
+
+<script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>
