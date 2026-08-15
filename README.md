@@ -151,9 +151,6 @@ Sito statico: si serve così com'è.
 L'unico file da non mettere in cache lunga è `data/version.json`: è ciò che
 invalida il resto.
 
----
-
-*Progetto e produzione: Giuseppe Inglima — INGLY DESIGN*
 
 ---
 
@@ -187,3 +184,7 @@ L'admin non scrive sul server — prepara i file, li metti tu nel repository:
 
 Se dimentichi una foto, `npm run sync-images` riporta quella creazione al
 placeholder invece di lasciare un'immagine rotta.
+
+---
+
+*Progetto e produzione: Giuseppe Inglima — INGLY DESIGN*
