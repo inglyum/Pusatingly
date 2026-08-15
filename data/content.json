@@ -1,0 +1,979 @@
+{
+ "_nota": "Contenuti editoriali del sito. I dati di attività, sede, contatti, lavorazioni, materiali, processo e FAQ provengono dal sito INGLY esistente (branch main) e sono REALI. Rigenerabile con: node scripts/merge-from-main.mjs",
+ "_daCompletare": [
+  "config.seo.dominio — dominio definitivo, diverso da quello del sito precedente",
+  "config.stats.pezzi / clienti / rating — solo se dati reali e verificabili",
+  "portfolio.projects[] — lavori realmente eseguiti, con foto proprie",
+  "assets/images/products/*.webp — fotografie reali delle creazioni"
+ ],
+ "home": {
+  "hero": {
+   "eyebrow": {
+    "it": "Maker e progettista · taglio laser, incisione e stampa UV",
+    "en": "Maker and designer"
+   },
+   "title": {
+    "it": "Dall'idea al pezzo finito, in officina a Cesena.",
+    "en": "From idea to finished piece."
+   },
+   "lead": {
+    "it": "Prototipazione rapida, taglio e incisione laser, stampa UV e personalizzazione su misura. Un pezzo solo o una serie: si parte dal tuo disegno o dalla tua idea.",
+    "en": "INGLY DESIGN designs and manufactures bespoke objects for hospitality, business and events. Wood, metal, acrylic and digital technologies, from first idea to finished piece."
+   },
+   "ctaPrimary": {
+    "it": "Esplora il catalogo",
+    "en": "Explore the catalogue"
+   },
+   "ctaSecondary": {
+    "it": "Parliamo del tuo progetto",
+    "en": "Let's discuss your project"
+   }
+  },
+  "manifesto": {
+   "eyebrow": {
+    "it": "Manifesto",
+    "en": "Manifesto"
+   },
+   "title": {
+    "it": "Un oggetto ben fatto non si nota. Funziona.",
+    "en": "A well-made object goes unnoticed. It works."
+   },
+   "body": {
+    "it": "Un portamenù viene aperto e chiuso migliaia di volte in una stagione. Una targa resta al sole per anni. Un tagliere finisce in lavastoviglie il giorno dopo l'acquisto. Progettiamo partendo da qui: da cosa succede all'oggetto dopo, non da come appare in fotografia.\n\nQuesto significa scegliere il materiale in base all'uso e non all'abitudine, dimensionare gli spessori sul carico reale, e preferire un incastro a una colla ogni volta che è possibile. Il risultato è meno appariscente e dura di più.",
+    "en": "A menu holder is opened thousands of times in a season. A sign stays in the sun for years. We design from what happens to the object afterwards, not from how it photographs."
+   },
+   "points": [
+    {
+     "title": {
+      "it": "Il materiale segue l'uso",
+      "en": "Material follows use"
+     },
+     "text": {
+      "it": "13 materiali in lavorazione corrente, ognuno con i suoi limiti dichiarati. Il legno non è sempre la risposta giusta.",
+      "en": "Materials chosen case by case."
+     }
+    },
+    {
+     "title": {
+      "it": "Ti dico prima cosa non funziona",
+      "en": "You hear the problems first"
+     },
+     "text": {
+      "it": "Se il materiale che hai in mente si comporta male, lo sai in fase di preventivo. Preferisco perdere un ordine che consegnare un pezzo che non ti piacerà.",
+      "en": ""
+     }
+    },
+    {
+     "title": {
+      "it": "Niente va in produzione senza la tua approvazione",
+      "en": "Nothing is produced without your approval"
+     },
+     "text": {
+      "it": "La prova grafica è sempre scritta. È l'unico modo di lavorare su misura senza discussioni alla consegna.",
+      "en": ""
+     }
+    },
+    {
+     "title": {
+      "it": "Un pezzo solo è un ordine valido",
+      "en": "A single piece is a valid order"
+     },
+     "text": {
+      "it": "Non ci sono minimi su gran parte delle lavorazioni. Il prototipo unico è il lavoro che faccio più volentieri.",
+      "en": ""
+     }
+    }
+   ]
+  },
+  "categories": {
+   "eyebrow": {
+    "it": "Catalogo",
+    "en": "Catalogue"
+   },
+   "title": {
+    "it": "Tredici famiglie di creazioni",
+    "en": "Thirteen families of creations"
+   },
+   "lead": {
+    "it": "Dalla sala del ristorante alla parete di casa, dal gadget aziendale all'allestimento di un evento.",
+    "en": "From the dining room to the living room wall, from corporate gifts to event set-ups."
+   }
+  },
+  "featured": {
+   "eyebrow": {
+    "it": "In evidenza",
+    "en": "Featured"
+   },
+   "title": {
+    "it": "Creazioni in evidenza",
+    "en": "Featured creations"
+   },
+   "lead": {
+    "it": "Una selezione trasversale alle categorie, utile per capire il modo di lavorare prima ancora del catalogo completo.",
+    "en": "A cross-category selection."
+   }
+  },
+  "technologies": {
+   "eyebrow": {
+    "it": "Tecnologie",
+    "en": "Technologies"
+   },
+   "title": {
+    "it": "Otto lavorazioni, un solo laboratorio",
+    "en": "8 processes, one workshop"
+   },
+   "lead": {
+    "it": "Taglio e incisione laser, marcatura su metallo, stampa UV anche su cilindri, personalizzazione tessile, sublimazione e prototipazione. Le macchine sono in officina a Cesena: nessun passaggio da subappaltare, nessuna attesa fra una fase e l'altra.",
+    "en": "Laser cutting and engraving, metal marking, UV printing, textile personalisation, sublimation and prototyping — all in-house."
+   }
+  },
+  "materials": {
+   "eyebrow": {
+    "it": "Materiali",
+    "en": "Materials"
+   },
+   "title": {
+    "it": "Non solo legno",
+    "en": "Not only wood"
+   },
+   "lead": {
+    "it": "13 materiali con scheda tecnica, dal compensato di betulla all'acciaio inox, passando per vetro, ardesia e sughero. Per ognuno c'è scritto cosa si può fare e cosa no.",
+    "en": "13 materials with a technical sheet, from birch plywood to stainless steel."
+   }
+  },
+  "b2b": {
+   "eyebrow": {
+    "it": "Business",
+    "en": "Business"
+   },
+   "title": {
+    "it": "INGLY DESIGN Business",
+    "en": "INGLY DESIGN Business"
+   },
+   "lead": {
+    "it": "Forniture coordinate per ristoranti, hotel, B&B, negozi, aziende, wedding planner e agenzie. Un progetto unico declinato su tutti gli oggetti, invece di acquisti separati che non parlano fra loro.",
+    "en": "Coordinated supply for restaurants, hotels, shops, companies and agencies."
+   }
+  },
+  "about": {
+   "eyebrow": {
+    "it": "Chi sono",
+    "en": "About"
+   },
+   "title": {
+    "it": "Giuseppe Inglima",
+    "en": "Giuseppe Inglima"
+   },
+   "lead": {
+    "it": "Designer e maker. Progetto al computer e produco in laboratorio: le due cose non sono separate, e il progetto cambia in base a cosa la macchina può davvero fare.",
+    "en": "Designer and maker. I design on screen and produce in the workshop."
+   }
+  },
+  "process": {
+   "eyebrow": {
+    "it": "Processo",
+    "en": "Process"
+   },
+   "title": {
+    "it": "Come si ordina",
+    "en": "How to order"
+   },
+   "lead": {
+    "it": "Sei passaggi, e a ognuno sai già cosa succede dopo. Nessun preventivo che arriva fra due settimane.",
+    "en": "Six steps, each with a known next move."
+   }
+  },
+  "cta": {
+   "title": {
+    "it": "Hai un progetto in mente?",
+    "en": "Have a project in mind?"
+   },
+   "lead": {
+    "it": "Descrivilo com'è adesso, anche se non è ancora definito. La prima risposta arriva entro un giorno lavorativo e include una stima di fattibilità.",
+    "en": "Describe it as it stands. First reply within one working day."
+   },
+   "cta": {
+    "it": "Invia una richiesta",
+    "en": "Send a request"
+   }
+  }
+ },
+ "chiSono": {
+  "eyebrow": {
+   "it": "Chi sono",
+   "en": "About"
+  },
+  "title": {
+   "it": "Giuseppe Inglima",
+   "en": "Giuseppe Inglima"
+  },
+  "role": {
+   "it": "Maker e progettista — INGLY DESIGN",
+   "en": "Designer & Maker — INGLY DESIGN"
+  },
+  "lead": {
+   "it": "Progetto e realizzo oggetti personalizzati con taglio laser, incisione e stampa UV. In officina, un pezzo alla volta o mille, dallo schizzo alla consegna.",
+   "en": "I design objects and I make them. Every drawing is born knowing which machine it will end up on."
+  },
+  "biografia": {
+   "it": "INGLY DESIGN è un laboratorio a Cesena. Non è una piattaforma che gira gli ordini a qualcun altro: le macchine sono qui, le uso io, e se un pezzo esce storto lo rifaccio io.\n\nLavoro con quattro tecnologie che si completano a vicenda: un laser CO2 da 80 watt per il taglio e il grande formato, un laser a infrarossi per la marcatura dei metalli, una stampante UV per il colore su qualunque superficie e una pressa a caldo per il tessile. È una combinazione poco comune, e serve a una cosa sola: poter dire di sì a un lavoro senza doverne subappaltare metà.\n\nIl mestiere vero, però, non è accendere la macchina. È sapere che il plexiglass estruso si incide trasparente invece che bianco, che il pino macchia il bordo in modo irregolare, che la pelle conciata al cromo non si taglia mai. Sono le cose che si imparano sbagliando, e sono quelle che ti evito di sbagliare tu.",
+   "en": ""
+  },
+  "sections": [
+   {
+    "id": "laboratorio",
+    "title": {
+     "it": "Il laboratorio",
+     "en": "The workshop"
+    },
+    "body": {
+     "it": "Lavoro con quattro tecnologie che si completano a vicenda: un laser CO2 da 80 watt per il taglio e il grande formato, un laser a infrarossi per la marcatura dei metalli, una stampante UV per il colore su qualunque superficie e una pressa a caldo per il tessile. È una combinazione poco comune, e serve a una cosa sola: poter dire di sì a un lavoro senza doverne subappaltare metà.",
+     "en": "Four technologies that complement each other, all in-house."
+    }
+   },
+   {
+    "id": "filosofia",
+    "title": {
+     "it": "La filosofia",
+     "en": "The philosophy"
+    },
+    "body": {
+     "it": "Ci sono due modi di progettare un oggetto: partire da come deve apparire, o partire da cosa deve sopportare. INGLY DESIGN parte sempre dal secondo.\n\nÈ una scelta che si vede nei dettagli poco spettacolari — lo spessore di un dorso, il raggio di uno spigolo, il tipo di magnete scelto per una chiusura — e che si nota solo dopo un anno di utilizzo, quando l'oggetto è ancora quello del primo giorno. La forma arriva dopo, e arriva più pulita, perché non deve nascondere niente.",
+     "en": "There are two ways to design an object: starting from how it should look, or from what it must withstand. INGLY DESIGN always starts from the second."
+    }
+   },
+   {
+    "id": "tecnologie",
+    "title": {
+     "it": "Le tecnologie",
+     "en": "The technologies"
+    },
+    "body": {
+     "it": "Laser CO₂ per legno, plexiglass, carta e pelle. Laser MOPA e fibra per la marcatura dei metalli, con la possibilità di ottenere colori reali sull'acciaio senza inchiostro. Stampa UV per il colore pieno diretto su qualsiasi supporto, DTF per il tessuto, stampa 3D per ciò che il piano non permette.\n\nSono strumenti, non argomenti di vendita: la tecnologia si sceglie dopo aver capito l'oggetto, mai prima.",
+     "en": "CO₂ laser for organics, MOPA and fibre for metals, UV printing, DTF, 3D printing. Tools, not selling points."
+    }
+   },
+   {
+    "id": "processo",
+    "title": {
+     "it": "Il processo creativo",
+     "en": "The creative process"
+    },
+    "body": {
+     "it": "Ogni progetto comincia da una domanda concreta: dove starà l'oggetto, chi lo userà, quante volte al giorno, chi lo pulirà. Le risposte determinano il materiale, e il materiale determina la forma molto più di qualsiasi preferenza estetica.\n\nSolo a quel punto si disegna. E prima di produrre si manda sempre un'anteprima: cambiare idea su un file costa zero, cambiarla su cento pezzi tagliati costa cento pezzi.",
+     "en": "Every project starts from concrete questions: where will it live, who will use it, how often. Then we draw."
+    }
+   }
+  ],
+  "seo": {
+   "title": "Giuseppe Inglima — Designer & Maker | INGLY DESIGN",
+   "description": "Giuseppe Inglima, designer e maker. Progettazione e produzione su misura in legno, metallo e plexiglass: laser CO₂ e MOPA, stampa UV, incisione e assemblaggio."
+  },
+  "principi": [
+   {
+    "title": {
+     "it": "Ti dico prima cosa non funziona",
+     "en": "Ti dico prima cosa non funziona"
+    },
+    "text": {
+     "it": "Se il materiale che hai in mente si comporta male, lo sai in fase di preventivo. Preferisco perdere un ordine che consegnare un pezzo che non ti piacerà.",
+     "en": "Se il materiale che hai in mente si comporta male, lo sai in fase di preventivo. Preferisco perdere un ordine che consegnare un pezzo che non ti piacerà."
+    }
+   },
+   {
+    "title": {
+     "it": "Niente va in produzione senza la tua approvazione",
+     "en": "Niente va in produzione senza la tua approvazione"
+    },
+    "text": {
+     "it": "La prova grafica è sempre scritta. È l'unico modo di lavorare su misura senza discussioni alla consegna.",
+     "en": "La prova grafica è sempre scritta. È l'unico modo di lavorare su misura senza discussioni alla consegna."
+    }
+   },
+   {
+    "title": {
+     "it": "Il file resta archiviato",
+     "en": "Il file resta archiviato"
+    },
+    "text": {
+     "it": "Chi riordina — un ristorante che cambia menu, un'azienda che assume — la seconda volta salta direttamente alla produzione.",
+     "en": "Chi riordina — un ristorante che cambia menu, un'azienda che assume — la seconda volta salta direttamente alla produzione."
+    }
+   },
+   {
+    "title": {
+     "it": "Un pezzo solo è un ordine valido",
+     "en": "Un pezzo solo è un ordine valido"
+    },
+    "text": {
+     "it": "Non ci sono minimi su gran parte delle lavorazioni. Il prototipo unico è il lavoro che faccio più volentieri.",
+     "en": "Non ci sono minimi su gran parte delle lavorazioni. Il prototipo unico è il lavoro che faccio più volentieri."
+    }
+   }
+  ]
+ },
+ "comeAcquistare": {
+  "eyebrow": {
+   "it": "Come acquistare",
+   "en": "How to order"
+  },
+  "title": {
+   "it": "Come si ordina",
+   "en": "How to order"
+  },
+  "lead": {
+   "it": "Sei passaggi, e a ognuno sai già cosa succede dopo. Nessun preventivo che arriva fra due settimane.",
+   "en": "This is not an e-commerce site: everything is made to order. Eight steps, with your approval halfway through."
+  },
+  "steps": [
+   {
+    "n": 1,
+    "title": {
+     "it": "Mi racconti cosa ti serve",
+     "en": "Mi racconti cosa ti serve"
+    },
+    "text": {
+     "it": "Via WhatsApp, per email o dal modulo. Va bene anche una foto storta o uno schizzo su un tovagliolo: quello che conta è capire l'uso, la quantità e la data in cui ti serve.",
+     "en": "Via WhatsApp, per email o dal modulo. Va bene anche una foto storta o uno schizzo su un tovagliolo: quello che conta è capire l'uso, la quantità e la data in cui ti serve."
+    },
+    "timing": {
+     "it": "risposta entro 24 ore lavorative",
+     "en": "risposta entro 24 ore lavorative"
+    }
+   },
+   {
+    "n": 2,
+    "title": {
+     "it": "Scegliamo materiale e tecnica",
+     "en": "Scegliamo materiale e tecnica"
+    },
+    "text": {
+     "it": "Ti dico cosa conviene e cosa no, e perché. Se il legno che hai in mente si comporta male su quel pezzo te lo dico prima, non dopo.",
+     "en": "Ti dico cosa conviene e cosa no, e perché. Se il legno che hai in mente si comporta male su quel pezzo te lo dico prima, non dopo."
+    },
+    "timing": {
+     "it": "nella stessa conversazione",
+     "en": "nella stessa conversazione"
+    }
+   },
+   {
+    "n": 3,
+    "title": {
+     "it": "Ricevi il preventivo scritto",
+     "en": "Ricevi il preventivo scritto"
+    },
+    "text": {
+     "it": "Prezzo, quantità, materiale, misure e data di consegna. Se la quantità cambia il prezzo, trovi anche gli scaglioni: non ci sono sorprese a fine lavoro.",
+     "en": "Prezzo, quantità, materiale, misure e data di consegna. Se la quantità cambia il prezzo, trovi anche gli scaglioni: non ci sono sorprese a fine lavoro."
+    },
+    "timing": {
+     "it": "entro 48 ore",
+     "en": "entro 48 ore"
+    }
+   },
+   {
+    "n": 4,
+    "title": {
+     "it": "Approvi la prova grafica",
+     "en": "Approvi la prova grafica"
+    },
+    "text": {
+     "it": "Prima di accendere la macchina ti mando la grafica esatta che verrà incisa o stampata. Si corregge finché non è giusta. Niente va in produzione senza il tuo sì scritto.",
+     "en": "Prima di accendere la macchina ti mando la grafica esatta che verrà incisa o stampata. Si corregge finché non è giusta. Niente va in produzione senza il tuo sì scritto."
+    },
+    "timing": {
+     "it": "1–2 giorni, dipende dai giri di correzione",
+     "en": "1–2 giorni, dipende dai giri di correzione"
+    }
+   },
+   {
+    "n": 5,
+    "title": {
+     "it": "Produzione",
+     "en": "Produzione"
+    },
+    "text": {
+     "it": "Il pezzo si fa qui a Cesena, non si subappalta. Per gli ordini ripetuti il file resta archiviato: la volta dopo si salta direttamente a questo passaggio.",
+     "en": "Il pezzo si fa qui a Cesena, non si subappalta. Per gli ordini ripetuti il file resta archiviato: la volta dopo si salta direttamente a questo passaggio."
+    },
+    "timing": {
+     "it": "3–7 giorni secondo lavorazione e quantità",
+     "en": "3–7 giorni secondo lavorazione e quantità"
+    }
+   },
+   {
+    "n": 6,
+    "title": {
+     "it": "Consegna o ritiro",
+     "en": "Consegna o ritiro"
+    },
+    "text": {
+     "it": "Spedizione tracciata in tutta Italia, oppure ritiro in officina se sei in zona — e ne approfittiamo per guardare il pezzo insieme.",
+     "en": "Spedizione tracciata in tutta Italia, oppure ritiro in officina se sei in zona — e ne approfittiamo per guardare il pezzo insieme."
+    },
+    "timing": {
+     "it": "24–48 ore di corriere",
+     "en": "24–48 ore di corriere"
+    }
+   }
+  ],
+  "faq": [
+   {
+    "q": {
+     "it": "Posso ordinare un pezzo solo?",
+     "en": "Posso ordinare un pezzo solo?"
+    },
+    "a": {
+     "it": "Sì, su quasi tutte le lavorazioni. Il pezzo unico e il prototipo sono lavori normali, non eccezioni: col laser non serve uno stampo, quindi non c'è una quantità minima che giustifichi l'attrezzatura. I minimi esistono solo dove il costo del supporto lo impone, e in quel caso sono scritti nella scheda.",
+     "en": "Sì, su quasi tutte le lavorazioni. Il pezzo unico e il prototipo sono lavori normali, non eccezioni: col laser non serve uno stampo, quindi non c'è una quantità minima che giustifichi l'attrezzatura. I minimi esistono solo dove il costo del supporto lo impone, e in quel caso sono scritti nella scheda."
+    }
+   },
+   {
+    "q": {
+     "it": "Quanto costa? Perché non vedo i prezzi?",
+     "en": "Quanto costa? Perché non vedo i prezzi?"
+    },
+    "a": {
+     "it": "Perché su una lavorazione su misura il prezzo dipende da quantità, materiale, dimensione, complessità della grafica e tempi. Un prezzo esposto sarebbe una promessa impossibile da mantenere. Il preventivo scritto arriva entro 48 ore e include gli scaglioni per quantità.",
+     "en": "Perché su una lavorazione su misura il prezzo dipende da quantità, materiale, dimensione, complessità della grafica e tempi. Un prezzo esposto sarebbe una promessa impossibile da mantenere. Il preventivo scritto arriva entro 48 ore e include gli scaglioni per quantità."
+    }
+   },
+   {
+    "q": {
+     "it": "Quanto tempo ci vuole?",
+     "en": "Quanto tempo ci vuole?"
+    },
+    "a": {
+     "it": "Dal sì al pezzo in mano, di norma 5–10 giorni: 1–2 per la prova grafica, 3–7 per la produzione, 1–2 di corriere. Per le urgenze si può accelerare, va detto subito.",
+     "en": "Dal sì al pezzo in mano, di norma 5–10 giorni: 1–2 per la prova grafica, 3–7 per la produzione, 1–2 di corriere. Per le urgenze si può accelerare, va detto subito."
+    }
+   },
+   {
+    "q": {
+     "it": "Che file devo mandare?",
+     "en": "Che file devo mandare?"
+    },
+    "a": {
+     "it": "Il meglio è un vettoriale: SVG, PDF, AI o DXF. Ma va bene anche una foto, uno schizzo a mano o una descrizione a parole: la vettorializzazione la faccio io e rientra nel preventivo. Non serve saper usare un programma di grafica per ordinare.",
+     "en": "Il meglio è un vettoriale: SVG, PDF, AI o DXF. Ma va bene anche una foto, uno schizzo a mano o una descrizione a parole: la vettorializzazione la faccio io e rientra nel preventivo. Non serve saper usare un programma di grafica per ordinare."
+    }
+   },
+   {
+    "q": {
+     "it": "Si può incidere il PVC?",
+     "en": "Si può incidere il PVC?"
+    },
+    "a": {
+     "it": "No, e nessun laboratorio serio dovrebbe farlo. Il PVC tagliato al laser libera cloro gassoso: tossico per chi lavora e corrosivo per l'ottica della macchina. Se serve quell'aspetto si usa plexiglass o PETG, che si tagliano bene e sono innocui.",
+     "en": "No, e nessun laboratorio serio dovrebbe farlo. Il PVC tagliato al laser libera cloro gassoso: tossico per chi lavora e corrosivo per l'ottica della macchina. Se serve quell'aspetto si usa plexiglass o PETG, che si tagliano bene e sono innocui."
+    }
+   },
+   {
+    "q": {
+     "it": "L'incisione si cancella o sbiadisce?",
+     "en": "L'incisione si cancella o sbiadisce?"
+    },
+    "a": {
+     "it": "No. L'incisione toglie materiale, non lo aggiunge: non è una vernice né un'etichetta. Sui metalli la marcatura resiste a oli, solventi e disinfettanti. La stampa UV, che è un altro processo, è comunque molto resistente ma su un oggetto sottoposto ad abrasione continua l'incisione dura di più.",
+     "en": "No. L'incisione toglie materiale, non lo aggiunge: non è una vernice né un'etichetta. Sui metalli la marcatura resiste a oli, solventi e disinfettanti. La stampa UV, che è un altro processo, è comunque molto resistente ma su un oggetto sottoposto ad abrasione continua l'incisione dura di più."
+    }
+   },
+   {
+    "q": {
+     "it": "Posso portare un mio oggetto da personalizzare?",
+     "en": "Posso portare un mio oggetto da personalizzare?"
+    },
+    "a": {
+     "it": "Sì, ed è una cosa che si fa spesso. Va valutato il materiale prima: alcuni non si possono lavorare, e su un oggetto a cui tieni si fa sempre una prova su un pezzo di scarto simile. Sugli oggetti portati dal cliente non posso garantire il risultato come su un supporto che fornisco io.",
+     "en": "Sì, ed è una cosa che si fa spesso. Va valutato il materiale prima: alcuni non si possono lavorare, e su un oggetto a cui tieni si fa sempre una prova su un pezzo di scarto simile. Sugli oggetti portati dal cliente non posso garantire il risultato come su un supporto che fornisco io."
+    }
+   },
+   {
+    "q": {
+     "it": "Fate anche il grande formato?",
+     "en": "Fate anche il grande formato?"
+    },
+    "a": {
+     "it": "Sì, fino a 915 × 458 mm in un pezzo solo, e senza limite di lunghezza con il convogliatore. Insegne, pannelli, tableau e misuratori si fanno in casa.",
+     "en": "Sì, fino a 915 × 458 mm in un pezzo solo, e senza limite di lunghezza con il convogliatore. Insegne, pannelli, tableau e misuratori si fanno in casa."
+    }
+   },
+   {
+    "q": {
+     "it": "Lavorate con le aziende?",
+     "en": "Lavorate con le aziende?"
+    },
+    "a": {
+     "it": "Sì, ed è buona parte del lavoro: targhe matricola, etichette per quadri elettrici, cartellonistica di sicurezza, premi, regali per i dipendenti, grembiuli e divise. Si fattura regolarmente e per gli ordini ricorrenti si può concordare il pagamento a 30 giorni.",
+     "en": "Sì, ed è buona parte del lavoro: targhe matricola, etichette per quadri elettrici, cartellonistica di sicurezza, premi, regali per i dipendenti, grembiuli e divise. Si fattura regolarmente e per gli ordini ricorrenti si può concordare il pagamento a 30 giorni."
+    }
+   },
+   {
+    "q": {
+     "it": "Potete riprodurre un personaggio dei cartoni o un logo famoso?",
+     "en": "Potete riprodurre un personaggio dei cartoni o un logo famoso?"
+    },
+    "a": {
+     "it": "No. Marchi e personaggi protetti non si riproducono, nemmeno ridisegnati: sarebbe un'opera derivata e metterebbe nei guai sia me sia te. Quello che si può fare è molto meglio: un ritratto sagomato dal tuo disegno o dalla tua foto, che è unico e non lo ha nessun altro.",
+     "en": "No. Marchi e personaggi protetti non si riproducono, nemmeno ridisegnati: sarebbe un'opera derivata e metterebbe nei guai sia me sia te. Quello che si può fare è molto meglio: un ritratto sagomato dal tuo disegno o dalla tua foto, che è unico e non lo ha nessun altro."
+    }
+   }
+  ],
+  "seo": {
+   "title": "Come acquistare — dalla richiesta al pezzo | INGLY DESIGN",
+   "description": "Come funziona un ordine INGLY DESIGN: otto passaggi dalla richiesta alla spedizione, con anteprima del progetto da approvare prima della produzione. Tempi 4–20 giorni."
+  },
+  "pagamenti": {
+   "titolo": "Pagamenti",
+   "voci": [
+    "Bonifico bancario, con fattura per privati e aziende.",
+    "Per il primo ordine sopra i 200 €: acconto del 40 % alla conferma, saldo alla consegna.",
+    "Aziende con ordini ricorrenti: pagamento a 30 giorni dopo il terzo ordine.",
+    "Ogni lavoro personalizzato è realizzato su misura: per legge il diritto di recesso non si applica ai beni confezionati su specifiche del cliente. Per questo la prova grafica va approvata per iscritto — è la garanzia di tutti e due."
+   ]
+  }
+ },
+ "b2b": {
+  "eyebrow": {
+   "it": "Business",
+   "en": "Business"
+  },
+  "title": {
+   "it": "INGLY DESIGN Business",
+   "en": "INGLY DESIGN Business"
+  },
+  "lead": {
+   "it": "Quando gli oggetti di un locale arrivano da fornitori diversi si vede, e si vede subito. Una fornitura coordinata parte da un progetto unico e lo declina su tutto: portamenù, segnaletica, gadget, packaging.",
+   "en": "When a venue's objects come from different suppliers, it shows. A coordinated supply starts from one design."
+  },
+  "segments": [
+   {
+    "id": "ristoranti",
+    "title": {
+     "it": "Ristoranti e pizzerie",
+     "en": "Restaurants"
+    },
+    "text": {
+     "it": "Portamenù, segnatavoli, porta conto, segnaletica, sottobicchieri e QR coordinati. Materiali scelti per reggere il servizio e la pulizia quotidiana.",
+     "en": "Menu holders, table numbers, bill holders, signage and QR — coordinated."
+    }
+   },
+   {
+    "id": "hotel",
+    "title": {
+     "it": "Hotel e resort",
+     "en": "Hotels and resorts"
+    },
+    "text": {
+     "it": "Numerazione camere, segnaletica di piano, cartelli servizio, accessori per la colazione e welcome kit. Serie coordinate su tutte le camere.",
+     "en": "Room numbering, floor signage, service signs, breakfast accessories, welcome kits."
+    }
+   },
+   {
+    "id": "bnb",
+    "title": {
+     "it": "B&B e case vacanza",
+     "en": "B&Bs and holiday homes"
+    },
+    "text": {
+     "it": "Targa di ingresso, portachiavi, guida di benvenuto, QR wifi e placca recensioni. Il kit completo per una struttura piccola.",
+     "en": "Entrance plaque, keyrings, welcome guide, wifi QR and review plaque."
+    }
+   },
+   {
+    "id": "aziende",
+    "title": {
+     "it": "Aziende",
+     "en": "Companies"
+    },
+    "text": {
+     "it": "Corporate gifting, targhe professionali, biglietti da visita NFC, welcome kit per i nuovi assunti, premi e riconoscimenti interni.",
+     "en": "Corporate gifting, professional plates, NFC cards, onboarding kits, awards."
+    }
+   },
+   {
+    "id": "negozi",
+    "title": {
+     "it": "Negozi e retail",
+     "en": "Shops and retail"
+    },
+    "text": {
+     "it": "Espositori da banco, cartellini prezzo, segnaletica interna, packaging e collezioni di gadget da rivendere.",
+     "en": "Counter displays, price tags, in-store signage, packaging and resale gadget lines."
+    }
+   },
+   {
+    "id": "wedding",
+    "title": {
+     "it": "Wedding planner",
+     "en": "Wedding planners"
+    },
+    "text": {
+     "it": "Tableau, segnaposto, porta fedi, bomboniere e allestimenti. Produzione concentrata su una data, con consegna concordata sul calendario dell'evento.",
+     "en": "Seating charts, place cards, ring boxes, favours and set-ups, delivered on the event date."
+    }
+   },
+   {
+    "id": "eventi",
+    "title": {
+     "it": "Eventi e fiere",
+     "en": "Events and trade shows"
+    },
+    "text": {
+     "it": "Stand, totem, badge, premi e segnaletica modulare. Strutture smontabili che entrano in un'auto e si rimontano senza attrezzi.",
+     "en": "Stands, totems, badges, awards and modular signage that packs flat."
+    }
+   },
+   {
+    "id": "agenzie",
+    "title": {
+     "it": "Agenzie e professionisti",
+     "en": "Agencies and professionals"
+    },
+    "text": {
+     "it": "Produzione conto terzi su progetto fornito, con rispetto delle specifiche grafiche e possibilità di consegna in bianco.",
+     "en": "White-label production from supplied artwork, to spec."
+    }
+   }
+  ],
+  "advantages": [
+   {
+    "title": {
+     "it": "Progetto coordinato",
+     "en": "Coordinated design"
+    },
+    "text": {
+     "it": "Un solo disegno declinato su tutti gli oggetti della fornitura, invece di acquisti separati che non si parlano.",
+     "en": "One design across every object in the supply."
+    }
+   },
+   {
+    "title": {
+     "it": "Riordino identico",
+     "en": "Identical reorders"
+    },
+    "text": {
+     "it": "I file di produzione restano archiviati: un riordino a distanza di due anni esce uguale al primo lotto.",
+     "en": "Production files are archived: a reorder two years later matches the first batch."
+    }
+   },
+   {
+    "title": {
+     "it": "Prezzo per volume",
+     "en": "Volume pricing"
+    },
+    "text": {
+     "it": "Il costo unitario scende sopra i cinquanta pezzi e in modo più marcato oltre i duecento.",
+     "en": "Unit cost drops above fifty pieces, and further beyond two hundred."
+    }
+   },
+   {
+    "title": {
+     "it": "Un interlocutore solo",
+     "en": "One contact"
+    },
+    "text": {
+     "it": "Dal preventivo alla consegna parli sempre con chi il lavoro lo fa.",
+     "en": "From quote to delivery you speak with the person doing the work."
+    }
+   }
+  ],
+  "cta": {
+   "it": "Richiedi un preventivo B2B",
+   "en": "Request a B2B quote"
+  },
+  "seo": {
+   "title": "INGLY DESIGN Business — forniture B2B su misura",
+   "description": "Forniture coordinate per ristoranti, hotel, B&B, negozi, aziende, wedding planner ed eventi. Progetto unico, riordino identico, prezzi per volume."
+  }
+ },
+ "contatti": {
+  "eyebrow": {
+   "it": "Contatti",
+   "en": "Contact"
+  },
+  "title": {
+   "it": "Parliamo del tuo progetto",
+   "en": "Let's discuss your project"
+  },
+  "lead": {
+   "it": "Descrivi cosa ti serve, anche in modo approssimativo. Più dettagli dai — quantità, misure, tempi — più la prima risposta sarà precisa invece di generica.",
+   "en": "Describe what you need, even roughly. The more detail you give, the more precise the first reply."
+  },
+  "responseTime": {
+   "it": "Risposta entro un giorno lavorativo",
+   "en": "Reply within one working day"
+  },
+  "seo": {
+   "title": "Contatti — parliamo del tuo progetto | INGLY DESIGN",
+   "description": "Richiedi un preventivo a INGLY DESIGN: descrivi il progetto, la quantità e i tempi. Risposta entro un giorno lavorativo con stima di fattibilità."
+  }
+ },
+ "materiali": {
+  "eyebrow": {
+   "it": "Materiali",
+   "en": "Materials"
+  },
+  "title": {
+   "it": "Materiali INGLY",
+   "en": "INGLY Materials"
+  },
+  "lead": {
+   "it": "13 materiali con scheda tecnica: spessori, cosa si può incidere, cosa si può marcare, cosa si può stampare. Dove un materiale ha un limite, è scritto.",
+   "en": "13 materials with technical sheets."
+  },
+  "families": [
+   {
+    "id": "legno",
+    "name": {
+     "it": "Legno e derivati",
+     "en": "Wood and panels"
+    }
+   },
+   {
+    "id": "plastica",
+    "name": {
+     "it": "Plastiche tecniche",
+     "en": "Technical plastics"
+    }
+   },
+   {
+    "id": "metallo",
+    "name": {
+     "it": "Metalli",
+     "en": "Metals"
+    }
+   },
+   {
+    "id": "pelle",
+    "name": {
+     "it": "Pelle",
+     "en": "Leather"
+    }
+   },
+   {
+    "id": "minerale",
+    "name": {
+     "it": "Minerali",
+     "en": "Stone and glass"
+    }
+   },
+   {
+    "id": "naturale",
+    "name": {
+     "it": "Naturali",
+     "en": "Natural"
+    }
+   },
+   {
+    "id": "tessile",
+    "name": {
+     "it": "Tessili",
+     "en": "Textiles"
+    }
+   },
+   {
+    "id": "cellulosico",
+    "name": {
+     "it": "cellulosico",
+     "en": "cellulosico"
+    }
+   }
+  ],
+  "seo": {
+   "title": "Materiali: legno, metallo, plexiglass e altro | INGLY DESIGN",
+   "description": "Quindici materiali lavorati: betulla, MDF, massello, plexiglass, acrilico, alluminio, acciaio, ottone, pelle, carta, cartone, tessuto, PLA e PETG. Spessori e finiture."
+  },
+  "esclusi": {
+   "title": {
+    "it": "Materiali che non lavoriamo, e perché",
+    "en": "Materials we do not process"
+   },
+   "intro": {
+    "it": "Non è una questione di attrezzatura. Alcuni materiali, tagliati al laser, liberano sostanze che fanno male a chi lavora e distruggono la macchina. Se qualcuno ve li propone, cambiate fornitore.",
+    "en": ""
+   },
+   "items": [
+    {
+     "name": {
+      "it": "PVC e vinile",
+      "en": "PVC e vinile"
+     },
+     "why": {
+      "it": "Il taglio libera cloro gassoso: tossico da respirare e corrosivo per l'ottica e le guide della macchina. È il materiale che ha rovinato più laser al mondo.",
+      "en": "Il taglio libera cloro gassoso: tossico da respirare e corrosivo per l'ottica e le guide della macchina. È il materiale che ha rovinato più laser al mondo."
+     },
+     "alternative": {
+      "it": "Plexiglass o PETG, che si tagliano bene e sono innocui.",
+      "en": "Plexiglass o PETG, che si tagliano bene e sono innocui."
+     }
+    },
+    {
+     "name": {
+      "it": "Policarbonato (Lexan)",
+      "en": "Policarbonato (Lexan)"
+     },
+     "why": {
+      "it": "Assorbe male la lunghezza d'onda del CO2: brucia, ingiallisce e non taglia mai pulito.",
+      "en": "Assorbe male la lunghezza d'onda del CO2: brucia, ingiallisce e non taglia mai pulito."
+     },
+     "alternative": {
+      "it": "Plexiglass colato, che taglia lucido.",
+      "en": "Plexiglass colato, che taglia lucido."
+     }
+    },
+    {
+     "name": {
+      "it": "ABS",
+      "en": "ABS"
+     },
+     "why": {
+      "it": "Fonde invece di vaporizzare, lascia il bordo appiccicoso e produce fumi nocivi.",
+      "en": "Fonde invece di vaporizzare, lascia il bordo appiccicoso e produce fumi nocivi."
+     },
+     "alternative": {
+      "it": "Plexiglass, oppure stampa 3D se serve proprio l'ABS.",
+      "en": "Plexiglass, oppure stampa 3D se serve proprio l'ABS."
+     }
+    },
+    {
+     "name": {
+      "it": "PTFE (Teflon)",
+      "en": "PTFE (Teflon)"
+     },
+     "why": {
+      "it": "Libera composti fluorurati pericolosi.",
+      "en": "Libera composti fluorurati pericolosi."
+     },
+     "alternative": {
+      "it": "Nessuna al laser: va lavorato meccanicamente.",
+      "en": "Nessuna al laser: va lavorato meccanicamente."
+     }
+    },
+    {
+     "name": {
+      "it": "Fibra di carbonio e vetroresina",
+      "en": "Fibra di carbonio e vetroresina"
+     },
+     "why": {
+      "it": "Polveri e resine dannose, e il taglio resta comunque sfilacciato.",
+      "en": "Polveri e resine dannose, e il taglio resta comunque sfilacciato."
+     },
+     "alternative": {
+      "it": "Taglio a getto d'acqua o meccanico.",
+      "en": "Taglio a getto d'acqua o meccanico."
+     }
+    },
+    {
+     "name": {
+      "it": "Pelle conciata al cromo",
+      "en": "Pelle conciata al cromo"
+     },
+     "why": {
+      "it": "In lavorazione libera cromo esavalente, cancerogeno.",
+      "en": "In lavorazione libera cromo esavalente, cancerogeno."
+     },
+     "alternative": {
+      "it": "Pelle conciata al vegetale, che incide anche meglio.",
+      "en": "Pelle conciata al vegetale, che incide anche meglio."
+     }
+    }
+   ]
+  }
+ },
+ "tecnologie": {
+  "eyebrow": {
+   "it": "Servizi",
+   "en": "Services"
+  },
+  "title": {
+   "it": "Servizi & Lavorazioni",
+   "en": "Services & Processes"
+  },
+  "lead": {
+   "it": "8 lavorazioni, tutte in officina a Cesena. Per ognuna sono dichiarate la macchina, quando conviene usarla e cosa non può fare.",
+   "en": "8 in-house processes, each with machine, best use and limits."
+  },
+  "families": [
+   {
+    "id": "laser",
+    "name": {
+     "it": "Laser",
+     "en": "Laser"
+    }
+   },
+   {
+    "id": "stampa",
+    "name": {
+     "it": "Stampa",
+     "en": "Printing"
+    }
+   },
+   {
+    "id": "progetto",
+    "name": {
+     "it": "Progetto",
+     "en": "Design"
+    }
+   }
+  ],
+  "seo": {
+   "title": "Tecnologie: laser CO₂, MOPA, UV, DTF, stampa 3D | INGLY DESIGN",
+   "description": "Laser CO₂, MOPA e fibra, stampa UV e DTF, stampa 3D, incisione, taglio, marcatura, verniciatura e assemblaggio. Specifiche tecniche e materiali compatibili."
+  }
+ },
+ "creazioni": {
+  "eyebrow": {
+   "it": "Catalogo",
+   "en": "Catalogue"
+  },
+  "title": {
+   "it": "Catalogo Creazioni",
+   "en": "Creations Catalogue"
+  },
+  "lead": {
+   "it": "Tredici categorie, oltre centosettanta creazioni. Filtra per categoria, materiale, tecnologia o destinazione d'uso: i filtri restano nell'indirizzo, quindi una selezione si può salvare o inviare a qualcuno.",
+   "en": "Thirteen categories, over a hundred and seventy creations. Filters stay in the URL, so a selection can be shared."
+  },
+  "seo": {
+   "title": "Catalogo Creazioni — 13 categorie su misura | INGLY DESIGN",
+   "description": "Portamenù, tavola e cucina, targhe e insegne, gadget, casa, kids, tech, packaging, plexi e metallo, eventi. Oltre 170 creazioni personalizzabili, prodotte su commessa."
+  }
+ },
+ "portfolio": {
+  "eyebrow": {
+   "it": "Portfolio",
+   "en": "Portfolio"
+  },
+  "title": {
+   "it": "Portfolio",
+   "en": "Portfolio"
+  },
+  "lead": {
+   "it": "I lavori realizzati verranno pubblicati qui con fotografie proprie, man mano che i progetti vengono completati e i clienti autorizzano la pubblicazione.",
+   "en": "Completed work will be published here with our own photography, as clients authorise it."
+  },
+  "emptyState": {
+   "title": {
+    "it": "Portfolio in costruzione",
+    "en": "Portfolio in progress"
+   },
+   "text": {
+    "it": "Questa sezione ospiterà soltanto progetti realmente eseguiti da INGLY DESIGN, documentati con fotografie proprie. Nessun lavoro di terzi viene mostrato come proprio: è una scelta precisa, e vale più di una galleria piena riempita in fretta.\n\nNel frattempo, qui sotto trovi le tipologie di progetto che il laboratorio affronta abitualmente.",
+    "en": "This section will host only work actually carried out by INGLY DESIGN, documented with our own photography."
+   }
+  },
+  "archetypesTitle": {
+   "it": "Tipologie di progetto",
+   "en": "Project types"
+  },
+  "archetypesLead": {
+   "it": "Non sono lavori eseguiti: sono le tipologie di commessa su cui il laboratorio è attrezzato, con le lavorazioni coinvolte.",
+   "en": "Not completed jobs: the kinds of commission the workshop is equipped for."
+  },
+  "seo": {
+   "title": "Portfolio — progetti INGLY DESIGN",
+   "description": "Progetti realizzati da INGLY DESIGN e tipologie di commessa: allestimenti per ristorazione, hospitality, wedding, corporate, retail ed eventi."
+  }
+ }
+}

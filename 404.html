@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagina non trovata — INGLY DESIGN</title>
+<meta name="robots" content="noindex">
+<script>
+/* Su host statici senza rewrite (GitHub Pages) ogni percorso profondo arriva
+   qui. Il percorso richiesto viene passato all'app come hash-route, così
+   /creazioni/gadget resta un indirizzo condivisibile.
+
+   Il sito può stare in una sottocartella (github.io/<repo>/): la radice va
+   quindi calcolata, non assunta uguale a "/". */
+(function () {
+  var parts = location.pathname.split('/').filter(Boolean);
+  // Su <utente>.github.io/<repo>/... il primo segmento è il repository.
+  var base = /\.github\.io$/.test(location.hostname) && parts.length ? '/' + parts[0] + '/' : '/';
+  var route = location.pathname.slice(base.length - 1) + location.search;
+
+  document.write('<link rel="stylesheet" href="' + base + 'assets/css/reset.css">'
+    + '<link rel="stylesheet" href="' + base + 'assets/css/variables.css">'
+    + '<link rel="stylesheet" href="' + base + 'assets/css/layout.css">'
+    + '<link rel="stylesheet" href="' + base + 'assets/css/components.css">'
+    + '<link rel="stylesheet" href="' + base + 'assets/css/pages.css">');
+
+  if (route && !/404\.html$/.test(route)) location.replace(base + '#' + route);
+  window.__INGLY_BASE__ = base;
+})();
+</script>
+</head>
+<body>
+  <main class="container">
+    <div class="notfound">
+      <p class="eyebrow" style="justify-content:center">404</p>
+      <h1>Pagina non trovata</h1>
+      <p>L'indirizzo richiesto non esiste o è stato spostato.</p>
+      <div class="hero-actions" style="justify-content:center;margin-top:1rem">
+        <a class="btn btn--primary" id="lnkHome">Home</a>
+        <a class="btn btn--outline" id="lnkCat">Catalogo</a>
+      </div>
+      <script>
+        var b = window.__INGLY_BASE__ || '/';
+        document.getElementById('lnkHome').href = b;
+        document.getElementById('lnkCat').href = b + '#/creazioni';
+      </script>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,447 @@
+[
+ {
+  "id": "legno-massello",
+  "name": {
+   "it": "Legno massello",
+   "en": "Legno massello"
+  },
+  "family": "legno",
+  "order": 1,
+  "featured": true,
+  "short": {
+   "it": "Bordo scuro caramellato, che è la firma del taglio laser.",
+   "en": ""
+  },
+  "description": {
+   "it": "Bordo scuro caramellato, che è la firma del taglio laser. L'incisione scurisce la venatura e resta leggibile per anni.\n\nLe essenze resinose come il pino macchiano il bordo in modo irregolare. Per un risultato uniforme meglio betulla, faggio o tiglio.",
+   "en": "Bordo scuro caramellato, che è la firma del taglio laser. L'incisione scurisce la venatura e resta leggibile per anni."
+  },
+  "properties": {
+   "spessori": "3 · 5 · 8 · 12 · 18 mm",
+   "taglio": "fino a 20 mm",
+   "incisione": "sì",
+   "marcatura laser": "no",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "incisione-laser",
+   "stampa-uv",
+   "taglio-laser"
+  ],
+  "bestFor": {
+   "it": "insegne, bomboniere, taglieri, espositori, scritte da parete",
+   "en": ""
+  },
+  "warning": "Le essenze resinose come il pino macchiano il bordo in modo irregolare. Per un risultato uniforme meglio betulla, faggio o tiglio."
+ },
+ {
+  "id": "compensato",
+  "name": {
+   "it": "Compensato di betulla",
+   "en": "Compensato di betulla"
+  },
+  "family": "legno",
+  "order": 2,
+  "featured": true,
+  "short": {
+   "it": "Il materiale più prevedibile per taglio e incastri: stabile, chiaro, economico.",
+   "en": ""
+  },
+  "description": {
+   "it": "Il materiale più prevedibile per taglio e incastri: stabile, chiaro, economico.\n\nLa colla fra gli strati può lasciare righe più scure sul bordo. Su un pezzo a vista si sceglie compensato per laser, non da cantiere.",
+   "en": "Il materiale più prevedibile per taglio e incastri: stabile, chiaro, economico."
+  },
+  "properties": {
+   "spessori": "3 · 4 · 6 · 9 · 12 mm",
+   "taglio": "fino a 18 mm",
+   "incisione": "sì",
+   "marcatura laser": "no",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "incisione-laser",
+   "stampa-uv",
+   "taglio-laser"
+  ],
+  "bestFor": {
+   "it": "prototipi, scatole a incastro, modellini, espositori",
+   "en": ""
+  },
+  "warning": "La colla fra gli strati può lasciare righe più scure sul bordo. Su un pezzo a vista si sceglie compensato per laser, non da cantiere."
+ },
+ {
+  "id": "mdf",
+  "name": {
+   "it": "MDF",
+   "en": "MDF"
+  },
+  "family": "legno",
+  "order": 3,
+  "featured": true,
+  "short": {
+   "it": "Superficie perfettamente liscia e uniforme: il fondo migliore per la stampa UV a colori.",
+   "en": ""
+  },
+  "description": {
+   "it": "Superficie perfettamente liscia e uniforme: il fondo migliore per la stampa UV a colori.\n\nTeme l'umidità: non va all'aperto senza finitura. Il bordo tagliato resta molto scuro.",
+   "en": "Superficie perfettamente liscia e uniforme: il fondo migliore per la stampa UV a colori."
+  },
+  "properties": {
+   "spessori": "3 · 6 · 10 mm",
+   "taglio": "fino a 12 mm",
+   "incisione": "sì",
+   "marcatura laser": "no",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "incisione-laser",
+   "stampa-uv",
+   "taglio-laser"
+  ],
+  "bestFor": {
+   "it": "pannelli stampati, sagome, supporti",
+   "en": ""
+  },
+  "warning": "Teme l'umidità: non va all'aperto senza finitura. Il bordo tagliato resta molto scuro."
+ },
+ {
+  "id": "plexiglass-colato",
+  "name": {
+   "it": "Plexiglass colato",
+   "en": "Plexiglass colato"
+  },
+  "family": "plastica",
+  "order": 4,
+  "featured": true,
+  "short": {
+   "it": "Taglio con bordo lucido a specchio, senza lucidatura.",
+   "en": ""
+  },
+  "description": {
+   "it": "Taglio con bordo lucido a specchio, senza lucidatura. L'incisione diventa bianca satinata: è quella che si illumina se il pezzo è retroilluminato.\n\nIl plexiglass ESTRUSO, più economico, si incide trasparente invece che bianco e fonde sul bordo. Per l'incisione serve il colato.",
+   "en": "Taglio con bordo lucido a specchio, senza lucidatura. L'incisione diventa bianca satinata: è quella che si illumina se il pezzo è retroilluminato."
+  },
+  "properties": {
+   "spessori": "2 · 3 · 5 · 8 · 10 mm",
+   "taglio": "fino a 25 mm",
+   "incisione": "sì",
+   "marcatura laser": "no",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "incisione-laser",
+   "stampa-uv",
+   "taglio-laser"
+  ],
+  "bestFor": {
+   "it": "espositori, cake topper, targhe, insegne retroilluminate",
+   "en": ""
+  },
+  "warning": "Il plexiglass ESTRUSO, più economico, si incide trasparente invece che bianco e fonde sul bordo. Per l'incisione serve il colato."
+ },
+ {
+  "id": "acciaio-inox",
+  "name": {
+   "it": "Acciaio inox",
+   "en": "Acciaio inox"
+  },
+  "family": "metallo",
+  "order": 5,
+  "featured": true,
+  "short": {
+   "it": "Marcatura permanente che resiste a oli, solventi, disinfettanti e usura.",
+   "en": ""
+  },
+  "description": {
+   "it": "Marcatura permanente che resiste a oli, solventi, disinfettanti e usura. Non si stacca e non sbiadisce.\n\nSi marca, non si taglia: i pezzi arrivano già a misura. Formato massimo 115 × 115 mm.",
+   "en": "Marcatura permanente che resiste a oli, solventi, disinfettanti e usura. Non si stacca e non sbiadisce."
+  },
+  "properties": {
+   "spessori": "acquistato a misura",
+   "incisione": "no",
+   "marcatura laser": "sì",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "marcatura-metalli",
+   "stampa-uv"
+  ],
+  "bestFor": {
+   "it": "targhe matricola, targhette allergeni, medagliette, biglietti da visita",
+   "en": ""
+  },
+  "warning": "Si marca, non si taglia: i pezzi arrivano già a misura. Formato massimo 115 × 115 mm."
+ },
+ {
+  "id": "alluminio-anodizzato",
+  "name": {
+   "it": "Alluminio anodizzato",
+   "en": "Alluminio anodizzato"
+  },
+  "family": "metallo",
+  "order": 6,
+  "featured": true,
+  "short": {
+   "it": "Marcatura bianca netta su fondo colorato: è la combinazione più leggibile a distanza, per questo si usa nei quadri elettrici.",
+   "en": ""
+  },
+  "description": {
+   "it": "Marcatura bianca netta su fondo colorato: è la combinazione più leggibile a distanza, per questo si usa nei quadri elettrici.\n\nIl laser toglie lo strato anodizzato, non incide il metallo sotto: la marcatura è nettissima ma superficiale.",
+   "en": "Marcatura bianca netta su fondo colorato: è la combinazione più leggibile a distanza, per questo si usa nei quadri elettrici."
+  },
+  "properties": {
+   "spessori": "0,5 · 1 · 1,5 mm, a misura",
+   "incisione": "sì",
+   "marcatura laser": "sì",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "incisione-laser",
+   "marcatura-metalli",
+   "stampa-uv"
+  ],
+  "bestFor": {
+   "it": "etichette quadri, targhette tecniche, siglature, cartellini",
+   "en": ""
+  },
+  "warning": "Il laser toglie lo strato anodizzato, non incide il metallo sotto: la marcatura è nettissima ma superficiale."
+ },
+ {
+  "id": "ottone",
+  "name": {
+   "it": "Ottone",
+   "en": "Ottone"
+  },
+  "family": "metallo",
+  "order": 7,
+  "featured": false,
+  "short": {
+   "it": "Marcatura scura su fondo dorato: l'effetto più elegante fra i metalli, e invecchia bene.",
+   "en": ""
+  },
+  "description": {
+   "it": "Marcatura scura su fondo dorato: l'effetto più elegante fra i metalli, e invecchia bene.\n\nCon il tempo ossida e scurisce. È un pregio su una targa d'epoca, un difetto su una targhetta tecnica.",
+   "en": "Marcatura scura su fondo dorato: l'effetto più elegante fra i metalli, e invecchia bene."
+  },
+  "properties": {
+   "spessori": "acquistato a misura",
+   "incisione": "no",
+   "marcatura laser": "sì",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "marcatura-metalli",
+   "stampa-uv"
+  ],
+  "bestFor": {
+   "it": "targhe civiche, numeri camera, medagliette, premi",
+   "en": ""
+  },
+  "warning": "Con il tempo ossida e scurisce. È un pregio su una targa d'epoca, un difetto su una targhetta tecnica."
+ },
+ {
+  "id": "pelle-vegetale",
+  "name": {
+   "it": "Pelle conciata al vegetale",
+   "en": "Pelle conciata al vegetale"
+  },
+  "family": "pelle",
+  "order": 8,
+  "featured": false,
+  "short": {
+   "it": "Incisione bruna e profumata, che scurisce col tempo insieme alla pelle.",
+   "en": ""
+  },
+  "description": {
+   "it": "Incisione bruna e profumata, che scurisce col tempo insieme alla pelle. Il taglio sigilla il bordo.\n\nSOLO conciata al vegetale. La pelle conciata al cromo, in lavorazione, libera cromo esavalente: non si lavora, mai.",
+   "en": "Incisione bruna e profumata, che scurisce col tempo insieme alla pelle. Il taglio sigilla il bordo."
+  },
+  "properties": {
+   "spessori": "1 · 2 · 3 mm",
+   "taglio": true,
+   "incisione": "sì",
+   "marcatura laser": "no",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "incisione-laser",
+   "stampa-uv",
+   "taglio-laser"
+  ],
+  "bestFor": {
+   "it": "portachiavi, etichette bagaglio, portamenu, sottobicchieri",
+   "en": ""
+  },
+  "warning": "SOLO conciata al vegetale. La pelle conciata al cromo, in lavorazione, libera cromo esavalente: non si lavora, mai."
+ },
+ {
+  "id": "vetro",
+  "name": {
+   "it": "Vetro",
+   "en": "Vetro"
+  },
+  "family": "minerale",
+  "order": 9,
+  "featured": false,
+  "short": {
+   "it": "Il laser satina la superficie e la rende bianca opaca.",
+   "en": ""
+  },
+  "description": {
+   "it": "Il laser satina la superficie e la rende bianca opaca. La stampa UV aggiunge il colore pieno, anche sul cilindro.\n\nIl vetro si incide ma non si taglia. Il vetro temperato può crepare: si lavora solo su pezzi non temperati o su prova.",
+   "en": "Il laser satina la superficie e la rende bianca opaca. La stampa UV aggiunge il colore pieno, anche sul cilindro."
+  },
+  "properties": {
+   "spessori": "oggetti finiti",
+   "incisione": "sì",
+   "marcatura laser": "sì",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "incisione-laser",
+   "marcatura-metalli",
+   "stampa-uv"
+  ],
+  "bestFor": {
+   "it": "calici, bottiglie, bicchieri, targhe premio",
+   "en": ""
+  },
+  "warning": "Il vetro si incide ma non si taglia. Il vetro temperato può crepare: si lavora solo su pezzi non temperati o su prova."
+ },
+ {
+  "id": "ardesia",
+  "name": {
+   "it": "Ardesia",
+   "en": "Ardesia"
+  },
+  "family": "minerale",
+  "order": 10,
+  "featured": false,
+  "short": {
+   "it": "Incisione bianca su fondo nero: il contrasto più forte che si ottenga, senza inchiostri.",
+   "en": ""
+  },
+  "description": {
+   "it": "Incisione bianca su fondo nero: il contrasto più forte che si ottenga, senza inchiostri.\n\nÈ un materiale naturale: ogni pezzo ha venature diverse e il risultato non è mai identico due volte.",
+   "en": "Incisione bianca su fondo nero: il contrasto più forte che si ottenga, senza inchiostri."
+  },
+  "properties": {
+   "spessori": "oggetti finiti",
+   "incisione": "sì",
+   "marcatura laser": "no",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "incisione-laser",
+   "stampa-uv"
+  ],
+  "bestFor": {
+   "it": "sottobicchieri, targhe, taglieri da servizio, insegne",
+   "en": ""
+  },
+  "warning": "È un materiale naturale: ogni pezzo ha venature diverse e il risultato non è mai identico due volte."
+ },
+ {
+  "id": "sughero",
+  "name": {
+   "it": "Sughero",
+   "en": "Sughero"
+  },
+  "family": "naturale",
+  "order": 11,
+  "featured": false,
+  "short": {
+   "it": "Taglio pulito e leggerissimo, incisione morbida.",
+   "en": ""
+  },
+  "description": {
+   "it": "Taglio pulito e leggerissimo, incisione morbida. Assorbe bene la stampa UV.\n\nÈ tenero: un'incisione troppo profonda lo sbriciola.",
+   "en": "Taglio pulito e leggerissimo, incisione morbida. Assorbe bene la stampa UV."
+  },
+  "properties": {
+   "spessori": "2 · 3 · 5 mm",
+   "taglio": true,
+   "incisione": "sì",
+   "marcatura laser": "no",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "incisione-laser",
+   "stampa-uv",
+   "taglio-laser"
+  ],
+  "bestFor": {
+   "it": "sottobicchieri, tovagliette, bacheche, packaging",
+   "en": ""
+  },
+  "warning": "È tenero: un'incisione troppo profonda lo sbriciola."
+ },
+ {
+  "id": "tessuto",
+  "name": {
+   "it": "Tessuto e capi",
+   "en": "Tessuto e capi"
+  },
+  "family": "tessile",
+  "order": 12,
+  "featured": false,
+  "short": {
+   "it": "Colore pieno applicato a caldo con 100 kg di pressione: resiste ai lavaggi domestici e non si crepa alla piega.",
+   "en": ""
+  },
+  "description": {
+   "it": "Colore pieno applicato a caldo con 100 kg di pressione: resiste ai lavaggi domestici e non si crepa alla piega.\n\nLa sublimazione funziona su poliestere o supporti trattati. Sul cotone si usa il trasferimento DTF, che stampiamo e cuociamo in officina.",
+   "en": "Colore pieno applicato a caldo con 100 kg di pressione: resiste ai lavaggi domestici e non si crepa alla piega."
+  },
+  "properties": {
+   "spessori": "capi finiti",
+   "taglio": true,
+   "incisione": "no",
+   "marcatura laser": "no",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "stampa-uv",
+   "taglio-laser"
+  ],
+  "bestFor": {
+   "it": "grembiuli, divise, t-shirt, felpe, tote bag, cappellini",
+   "en": ""
+  },
+  "warning": "La sublimazione funziona su poliestere o supporti trattati. Sul cotone si usa il trasferimento DTF, che stampiamo e cuociamo in officina."
+ },
+ {
+  "id": "carta-cartoncino",
+  "name": {
+   "it": "Carta e cartoncino",
+   "en": "Paper and board"
+  },
+  "family": "cellulosico",
+  "order": 13,
+  "featured": false,
+  "short": {
+   "it": "Taglio e traforo netti, senza fustella e senza tirature minime.",
+   "en": ""
+  },
+  "description": {
+   "it": "Il laser taglia il cartoncino sigillando il bordo, che quindi non sfilaccia. Permette trafori e sagome che con la fustella tradizionale sarebbero antieconomici sotto le migliaia di copie.\n\nScheda tecnica in preparazione: spessori e grammature vanno confermati sul materiale effettivamente in uso.",
+   "en": "The laser cuts board with a sealed edge, enabling fretwork without die costs."
+  },
+  "properties": {
+   "taglio": "sì",
+   "incisione": "sì",
+   "marcatura laser": "no",
+   "stampa UV": "sì"
+  },
+  "technologies": [
+   "taglio-laser",
+   "incisione-laser",
+   "stampa-uv"
+  ],
+  "bestFor": {
+   "it": "inviti, cartellini, fascette, packaging",
+   "en": ""
+  },
+  "warning": null
+ }
+]

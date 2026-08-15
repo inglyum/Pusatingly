@@ -1,166 +1,73 @@
-<!doctype html>
-<html lang="it" prefix="og: https://ogp.me/ns#">
+<!DOCTYPE html>
+<html lang="it" data-mode="dark">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>INGLY DESIGN — Dall&#39;idea al pezzo finito, in officina a Cesena.</title>
-<meta name="description" content="Prototipazione rapida, taglio e incisione laser, stampa UV e personalizzazione su misura. Un pezzo solo o una serie: si parte dal tuo disegno o dalla tua idea.">
-<!-- canonico assente: compilare seo.dominio in data/config.json -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>INGLY DESIGN — Giuseppe Inglima | Creazioni su misura</title>
+<meta name="description" content="Studio di design e produzione su misura: portamenù, targhe, insegne, gadget e complementi per ristorazione, hotel, aziende ed eventi. Laser CO₂ e MOPA, stampa UV, incisione su legno, metallo e plexiglass.">
+<meta name="author" content="Giuseppe Inglima — INGLY DESIGN">
+<meta name="theme-color" content="#1F2328">
+<meta name="color-scheme" content="dark light">
+
+<link rel="canonical" href="https://inglydesign.it/">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/images/brand/favicon.svg" type="image/svg+xml">
+
 <meta property="og:type" content="website">
-<meta property="og:title" content="INGLY DESIGN — Dall&#39;idea al pezzo finito, in officina a Cesena.">
-<meta property="og:description" content="Prototipazione rapida, taglio e incisione laser, stampa UV e personalizzazione su misura. Un pezzo solo o una serie: si parte dal tuo disegno o dalla tua idea.">
-<meta property="og:locale" content="it_IT">
 <meta property="og:site_name" content="INGLY DESIGN">
-
+<meta property="og:locale" content="it_IT">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="author" content="Giuseppe Inglima">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<!-- il tema si applica prima del disegno: niente lampeggio di bianco -->
-<script>(function(){try{var t=localStorage.getItem("ingly_tema");
- if(t)document.documentElement.setAttribute("data-tema",t)}catch(e){}})();</script>
-<link rel="stylesheet" href="/assets/css/sito.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"/#organizzazione","name":"INGLY DESIGN","description":"Prototipazione rapida, taglio e incisione laser, stampa UV e personalizzazione su misura. Un pezzo solo o una serie: si parte dal tuo disegno o dalla tua idea.","founder":{"@id":"/#giuseppe-inglima"},"url":"/","email":"inglydesign@gmail.com","telephone":"+39 329 690 4627","address":{"@type":"PostalAddress","addressLocality":"Cesena","addressRegion":"FC","addressCountry":"IT"},"areaServed":{"@type":"Country","name":"Italia"},"sameAs":["https://instagram.com/ingly_design","https://facebook.com/inglydesign"],"knowsAbout":["Taglio laser","Incisione laser","Marcatura su metallo","Stampa UV diretta","Stampa su cilindri","Personalizzazione tessile","Sublimazione 3D","Prototipazione rapida"]},{"@type":"Person","@id":"/#giuseppe-inglima","name":"Giuseppe Inglima","jobTitle":"Maker e progettista · taglio laser, incisione e stampa UV","worksFor":{"@id":"/#organizzazione"},"knowsAbout":["Taglio laser","Incisione laser","Marcatura su metallo","Stampa UV diretta","Stampa su cilindri","Personalizzazione tessile","Sublimazione 3D","Prototipazione rapida"],"address":{"@type":"PostalAddress","addressLocality":"Cesena","addressCountry":"IT"}},{"@type":"WebSite","@id":"/#sito","name":"INGLY DESIGN","url":"/","publisher":{"@id":"/#organizzazione"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Posso ordinare un pezzo solo?","acceptedAnswer":{"@type":"Answer","text":"Sì, su quasi tutte le lavorazioni. Il pezzo unico e il prototipo sono lavori normali, non eccezioni: col laser non serve uno stampo, quindi non c'è una quantità minima che giustifichi l'attrezzatura. I minimi esistono solo dove il costo del supporto lo impone, e in quel caso sono scritti nella scheda."}},{"@type":"Question","name":"Quanto costa? Perché non vedo i prezzi?","acceptedAnswer":{"@type":"Answer","text":"Perché su una lavorazione su misura il prezzo dipende da quantità, materiale, dimensione, complessità della grafica e tempi. Un prezzo esposto sarebbe una promessa impossibile da mantenere. Il preventivo scritto arriva entro 48 ore e include gli scaglioni per quantità."}},{"@type":"Question","name":"Quanto tempo ci vuole?","acceptedAnswer":{"@type":"Answer","text":"Dal sì al pezzo in mano, di norma 5–10 giorni: 1–2 per la prova grafica, 3–7 per la produzione, 1–2 di corriere. Per le urgenze si può accelerare, va detto subito."}},{"@type":"Question","name":"Che file devo mandare?","acceptedAnswer":{"@type":"Answer","text":"Il meglio è un vettoriale: SVG, PDF, AI o DXF. Ma va bene anche una foto, uno schizzo a mano o una descrizione a parole: la vettorializzazione la faccio io e rientra nel preventivo. Non serve saper usare un programma di grafica per ordinare."}},{"@type":"Question","name":"Si può incidere il PVC?","acceptedAnswer":{"@type":"Answer","text":"No, e nessun laboratorio serio dovrebbe farlo. Il PVC tagliato al laser libera cloro gassoso: tossico per chi lavora e corrosivo per l'ottica della macchina. Se serve quell'aspetto si usa plexiglass o PETG, che si tagliano bene e sono innocui."}}]}]}</script>
+
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "INGLY DESIGN",
+  "url": "https://inglydesign.it",
+  "founder": { "@type": "Person", "name": "Giuseppe Inglima" },
+  "description": "Studio di design e produzione su misura in legno, metallo e plexiglass."
+}
+</script>
 </head>
+
 <body>
-<header class="testata">
-  <div class="testata-in contenitore">
-    <a class="marchio" href="/">INGLY DESIGN<small>Giuseppe Inglima</small></a>
-    <nav class="menu" aria-label="Principale"><a href="/servizi/">Servizi</a><a href="/materiali/">Materiali &amp; Tecniche</a><a href="/creazioni/">Catalogo Creazioni</a><a href="/come-ordinare/">Come ordinare</a><a href="/chi-sono/">Chi sono</a><a href="/contatti/">Contatti</a></nav>
-    <button class="tema" id="tema" type="button" aria-label="Cambia tema chiaro o scuro">◐</button>
+
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<header class="header" id="header"><!-- montato da nav.js --></header>
+<div class="mobile-menu" id="mobileMenu"><!-- montato da nav.js --></div>
+
+<main id="main">
+  <!-- Stato iniziale: sostituito dal router appena i dati sono pronti. -->
+  <div class="loader">
+    <div class="loader-bar"></div>
+    <p>Caricamento del catalogo…</p>
   </div>
-</header>
-
-<main>
-
-
-<div class="apertura">
-  <div class="contenitore">
-    <p class="occhiello">Maker e progettista · taglio laser, incisione e stampa UV</p>
-    <h1>Dall&#39;idea al pezzo finito, in officina a Cesena.</h1>
-    <p class="sommario">Prototipazione rapida, taglio e incisione laser, stampa UV e personalizzazione su misura. Un pezzo solo o una serie: si parte dal tuo disegno o dalla tua idea.</p>
-    <div class="azioni">
-  <a class="btn btn-pieno" href="/contatti/">Chiedi un preventivo</a>
-  <a class="btn btn-vuoto" href="/creazioni/">Guarda cosa faccio</a>
-</div>
-  </div>
-</div>
-
-<section>
-  <div class="contenitore">
-    <p class="occhiello">Cosa faccio</p>
-    <h2>Quattro tecniche che si completano</h2>
-    <p class="prosa sommario">La forma la fa il laser, il colore la stampa UV, il metallo la marcatura,
-      il tessile la pressa. Insieme coprono lavori che con una macchina sola non si possono nemmeno preventivare.</p>
-    <div class="griglia g-3" style="margin-top:2rem">
-      <a class="cella" href="/servizi/taglio-laser/">
-        <h3>Taglio laser</h3><p>Taglia legno fino a 20 mm e plexiglass fino a 25 mm, con bordo netto e senza attrezzatura dedicata.</p>
-        <span class="freccia">Vedi →</span></a><a class="cella" href="/servizi/incisione-laser/">
-        <h3>Incisione laser</h3><p>Incide disegni, testi e fotografie su superficie, con profondità regolabile.</p>
-        <span class="freccia">Vedi →</span></a><a class="cella" href="/servizi/marcatura-metalli/">
-        <h3>Marcatura su metallo</h3><p>Marcatura permanente su acciaio inox, ottone, alluminio, oro e argento.</p>
-        <span class="freccia">Vedi →</span></a><a class="cella" href="/servizi/stampa-uv/">
-        <h3>Stampa UV diretta</h3><p>Colore pieno su quasi ogni superficie rigida, anche curva, senza calore.</p>
-        <span class="freccia">Vedi →</span></a><a class="cella" href="/servizi/stampa-cilindri/">
-        <h3>Stampa su cilindri</h3><p>Stampa a colori che gira attorno a bottiglie, calici, borracce e tazze.</p>
-        <span class="freccia">Vedi →</span></a><a class="cella" href="/servizi/personalizzazione-tessile/">
-        <h3>Personalizzazione tessile</h3><p>Stampa a colori su capi e tessuti, dal pezzo singolo. Nessun minimo d&#39;ordine.</p>
-        <span class="freccia">Vedi →</span></a>
-    </div>
-    <p style="margin-top:1.5rem"><a href="/servizi/">Tutti i servizi →</a></p>
-  </div>
-</section>
-
-<section>
-  <div class="contenitore">
-    <p class="occhiello">Catalogo creazioni</p>
-    <h2>Per chi lavoro</h2>
-    <div class="griglia g-3" style="margin-top:2rem">
-      <a class="cella" href="/creazioni/horeca/">
-          <h3>Ristoranti, bar e hotel</h3><p>8 lavorazioni</p>
-          <span class="freccia">Vedi →</span></a><a class="cella" href="/creazioni/industriale/">
-          <h3>Industria e officina</h3><p>4 lavorazioni</p>
-          <span class="freccia">Vedi →</span></a><a class="cella" href="/creazioni/aziendale/">
-          <h3>Aziende e uffici</h3><p>5 lavorazioni</p>
-          <span class="freccia">Vedi →</span></a><a class="cella" href="/creazioni/eventi/">
-          <h3>Matrimoni e ricorrenze</h3><p>4 lavorazioni</p>
-          <span class="freccia">Vedi →</span></a><a class="cella" href="/creazioni/animali/">
-          <h3>Animali</h3><p>1 lavorazione</p>
-          <span class="freccia">Vedi →</span></a><a class="cella" href="/creazioni/bambini/">
-          <h3>Bambini e nascite</h3><p>3 lavorazioni</p>
-          <span class="freccia">Vedi →</span></a><a class="cella" href="/creazioni/accessori/">
-          <h3>Accessori e regali</h3><p>3 lavorazioni</p>
-          <span class="freccia">Vedi →</span></a><a class="cella" href="/creazioni/casa/">
-          <h3>Casa</h3><p>1 lavorazione</p>
-          <span class="freccia">Vedi →</span></a><a class="cella" href="/creazioni/regalo/">
-          <h3>Regali personalizzati</h3><p>1 lavorazione</p>
-          <span class="freccia">Vedi →</span></a><a class="cella" href="/creazioni/servizi/">
-          <h3>Servizi</h3><p>1 lavorazione</p>
-          <span class="freccia">Vedi →</span></a>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="contenitore prosa">
-    <p class="occhiello">Come si lavora</p>
-    <h2>Come si ordina</h2>
-    <p class="sommario">Sei passaggi, e a ognuno sai già cosa succede dopo. Nessun preventivo che arriva fra due settimane.</p>
-    <ol class="passi">
-      <li class="passo">
-        <span class="num">1</span>
-        <div><h3>Mi racconti cosa ti serve</h3><p>Via WhatsApp, per email o dal modulo. Va bene anche una foto storta o uno schizzo su un tovagliolo: quello che conta è capire l&#39;uso, la quantità e la data in cui ti serve.</p>
-        <span class="tempi">risposta entro 24 ore lavorative</span></div></li><li class="passo">
-        <span class="num">2</span>
-        <div><h3>Scegliamo materiale e tecnica</h3><p>Ti dico cosa conviene e cosa no, e perché. Se il legno che hai in mente si comporta male su quel pezzo te lo dico prima, non dopo.</p>
-        <span class="tempi">nella stessa conversazione</span></div></li><li class="passo">
-        <span class="num">3</span>
-        <div><h3>Ricevi il preventivo scritto</h3><p>Prezzo, quantità, materiale, misure e data di consegna. Se la quantità cambia il prezzo, trovi anche gli scaglioni: non ci sono sorprese a fine lavoro.</p>
-        <span class="tempi">entro 48 ore</span></div></li>
-    </ol>
-    <p><a href="/come-ordinare/">Tutti e sei i passaggi →</a></p>
-  </div>
-</section>
-
-<section>
-  <div class="contenitore prosa">
-    <p class="occhiello">Domande</p>
-    <h2>Le più frequenti</h2>
-    <details><summary>Posso ordinare un pezzo solo?</summary><div class="risposta"><p>Sì, su quasi tutte le lavorazioni. Il pezzo unico e il prototipo sono lavori normali, non eccezioni: col laser non serve uno stampo, quindi non c&#39;è una quantità minima che giustifichi l&#39;attrezzatura. I minimi esistono solo dove il costo del supporto lo impone, e in quel caso sono scritti nella scheda.</p></div></details>
-<details><summary>Quanto costa? Perché non vedo i prezzi?</summary><div class="risposta"><p>Perché su una lavorazione su misura il prezzo dipende da quantità, materiale, dimensione, complessità della grafica e tempi. Un prezzo esposto sarebbe una promessa impossibile da mantenere. Il preventivo scritto arriva entro 48 ore e include gli scaglioni per quantità.</p></div></details>
-<details><summary>Quanto tempo ci vuole?</summary><div class="risposta"><p>Dal sì al pezzo in mano, di norma 5–10 giorni: 1–2 per la prova grafica, 3–7 per la produzione, 1–2 di corriere. Per le urgenze si può accelerare, va detto subito.</p></div></details>
-<details><summary>Che file devo mandare?</summary><div class="risposta"><p>Il meglio è un vettoriale: SVG, PDF, AI o DXF. Ma va bene anche una foto, uno schizzo a mano o una descrizione a parole: la vettorializzazione la faccio io e rientra nel preventivo. Non serve saper usare un programma di grafica per ordinare.</p></div></details>
-<details><summary>Si può incidere il PVC?</summary><div class="risposta"><p>No, e nessun laboratorio serio dovrebbe farlo. Il PVC tagliato al laser libera cloro gassoso: tossico per chi lavora e corrosivo per l&#39;ottica della macchina. Se serve quell&#39;aspetto si usa plexiglass o PETG, che si tagliano bene e sono innocui.</p></div></details>
-    <p style="margin-top:1.5rem"><a href="/faq/">Tutte le domande →</a></p>
-  </div>
-</section>
 </main>
-<footer class="piede">
-  <div class="piede-griglia">
-    <div>
-      <h4>INGLY DESIGN</h4>
-      <p style="font-size:.875rem;color:var(--ink-2);margin:0">Giuseppe Inglima<br>
-        Cesena (FC) · Emilia-Romagna</p>
-    </div>
-    <div><h4>Cosa faccio</h4><ul>
-      <li><a href="/servizi/">Servizi</a></li>
-      <li><a href="/materiali/">Materiali &amp; tecniche</a></li>
-      <li><a href="/creazioni/">Catalogo creazioni</a></li>
-    </ul></div>
-    <div><h4>Lavorare insieme</h4><ul>
-      <li><a href="/come-ordinare/">Come ordinare</a></li>
-      <li><a href="/faq/">Domande frequenti</a></li>
-      <li><a href="/chi-sono/">Chi sono</a></li>
-    </ul></div>
-    <div><h4>Scrivimi</h4><ul>
-      <li><a href="mailto:inglydesign@gmail.com">inglydesign@gmail.com</a></li>
-      <li><a href="https://wa.me/393296904627" rel="noopener">WhatsApp</a></li>
-      <li><a href="/contatti/">Modulo preventivo</a></li>
-    </ul></div>
+
+<footer class="footer" id="footer"><!-- montato da nav.js --></footer>
+
+<!-- Il sito richiede il supporto ai moduli ES. -->
+<noscript>
+  <div class="container" style="padding-block:4rem">
+    <h1>INGLY DESIGN</h1>
+    <p style="margin-top:1rem">
+      Il catalogo è generato dinamicamente e richiede JavaScript attivo.
+      Per informazioni sui progetti scrivi a
+      <a href="mailto:inglydesign@gmail.com" style="color:#00E6D2">inglydesign@gmail.com</a>.
+    </p>
   </div>
-  <div class="piede-coda contenitore">
-    © 2026 INGLY DESIGN — Giuseppe Inglima · Cesena, Italia
-  </div>
-</footer>
-<script src="/assets/js/sito.js" defer></script>
+</noscript>
+
+<script type="module" src="assets/js/app.js"></script>
+
 </body>
 </html>

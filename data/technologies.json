@@ -1,0 +1,259 @@
+[
+ {
+  "id": "taglio-laser",
+  "name": {
+   "it": "Taglio laser",
+   "en": "Taglio laser"
+  },
+  "family": "laser",
+  "order": 1,
+  "featured": true,
+  "short": {
+   "it": "Taglia legno fino a 20 mm e plexiglass fino a 25 mm, con bordo netto e senza attrezzatura dedicata.",
+   "en": "Taglia legno fino a 20 mm e plexiglass fino a 25 mm, con bordo netto e senza attrezzatura dedicata."
+  },
+  "description": {
+   "it": "Dal pezzo unico alla serie da qualche centinaio. Non serve uno stampo, quindi il primo pezzo costa quanto il centesimo diviso per la quantità: è la tecnica giusta quando il disegno può ancora cambiare.",
+   "en": "Taglia legno fino a 20 mm e plexiglass fino a 25 mm, con bordo netto e senza attrezzatura dedicata."
+  },
+  "specs": {
+   "macchina": "xTool P3 · CO2 80 W · 915 × 458 mm",
+   "quando conviene": "Dal pezzo unico alla serie da qualche centinaio.",
+   "limiti": "Non taglia il metallo. Il bordo del legno resta scuro: è la firma del taglio laser, non un difetto."
+  },
+  "materials": [
+   "legno-massello",
+   "compensato",
+   "mdf",
+   "plexiglass-colato",
+   "pelle-vegetale",
+   "sughero",
+   "tessuto"
+  ],
+  "bestFor": {
+   "it": "Taglia legno fino a 20 mm e plexiglass fino a 25 mm, con bordo netto e senza attrezzatura dedicata.",
+   "en": "Taglia legno fino a 20 mm e plexiglass fino a 25 mm, con bordo netto e senza attrezzatura dedicata."
+  }
+ },
+ {
+  "id": "incisione-laser",
+  "name": {
+   "it": "Incisione laser",
+   "en": "Incisione laser"
+  },
+  "family": "laser",
+  "order": 2,
+  "featured": true,
+  "short": {
+   "it": "Incide disegni, testi e fotografie su superficie, con profondità regolabile.",
+   "en": "Incide disegni, testi e fotografie su superficie, con profondità regolabile."
+  },
+  "description": {
+   "it": "Quando la personalizzazione deve durare quanto l'oggetto. Non si stacca, non sbiadisce, non teme lavaggi né solventi.",
+   "en": "Incide disegni, testi e fotografie su superficie, con profondità regolabile."
+  },
+  "specs": {
+   "macchina": "xTool P3 per il grande formato · xTool F2 per il pezzo piccolo",
+   "quando conviene": "Quando la personalizzazione deve durare quanto l'oggetto.",
+   "limiti": "È monocromatica: il laser toglie materiale, non aggiunge colore. Per il colore si passa alla stampa UV."
+  },
+  "materials": [
+   "legno-massello",
+   "plexiglass-colato",
+   "pelle-vegetale",
+   "ardesia",
+   "vetro",
+   "sughero"
+  ],
+  "bestFor": {
+   "it": "Incide disegni, testi e fotografie su superficie, con profondità regolabile.",
+   "en": "Incide disegni, testi e fotografie su superficie, con profondità regolabile."
+  }
+ },
+ {
+  "id": "marcatura-metalli",
+  "name": {
+   "it": "Marcatura su metallo",
+   "en": "Marcatura su metallo"
+  },
+  "family": "laser",
+  "order": 3,
+  "featured": true,
+  "short": {
+   "it": "Marcatura permanente su acciaio inox, ottone, alluminio, oro e argento.",
+   "en": "Marcatura permanente su acciaio inox, ottone, alluminio, oro e argento."
+  },
+  "description": {
+   "it": "Targhette tecniche, matricole, medagliette, biglietti da visita, gioielleria. Resiste a oli, solventi e usura: è la marcatura che serve dove un'etichetta non regge.",
+   "en": "Marcatura permanente su acciaio inox, ottone, alluminio, oro e argento."
+  },
+  "specs": {
+   "macchina": "xTool F2 · IR 5 W · 115 × 115 mm, camera 50 MP, allineamento 0,1 mm",
+   "quando conviene": "Targhette tecniche, matricole, medagliette, biglietti da visita, gioielleria.",
+   "limiti": "Marca ma non taglia: i pezzi metallici si acquistano già a misura. Formato massimo 115 × 115 mm, 115 × 400 con la prolunga."
+  },
+  "materials": [
+   "acciaio-inox",
+   "ottone",
+   "alluminio-anodizzato",
+   "vetro"
+  ],
+  "bestFor": {
+   "it": "Marcatura permanente su acciaio inox, ottone, alluminio, oro e argento.",
+   "en": "Marcatura permanente su acciaio inox, ottone, alluminio, oro e argento."
+  }
+ },
+ {
+  "id": "stampa-uv",
+  "name": {
+   "it": "Stampa UV diretta",
+   "en": "Stampa UV diretta"
+  },
+  "family": "stampa",
+  "order": 4,
+  "featured": true,
+  "short": {
+   "it": "Colore pieno su quasi ogni superficie rigida, anche curva, senza calore.",
+   "en": "Colore pieno su quasi ogni superficie rigida, anche curva, senza calore."
+  },
+  "description": {
+   "it": "Quando servono i colori esatti di un marchio, una fotografia, o un cartello che per norma deve essere colorato. Il bianco coprente permette di stampare anche su fondi scuri.",
+   "en": "Colore pieno su quasi ogni superficie rigida, anche curva, senza calore."
+  },
+  "specs": {
+   "macchina": "xTool O1 Omni Dual UV · A3+ 330 × 420 × 150 mm · CMYK, bianco, vernice",
+   "quando conviene": "Quando servono i colori esatti di un marchio, una fotografia, o un cartello che per norma deve essere colorato.",
+   "limiti": "Non taglia e non sagoma: la forma la fa il laser. Le superfici molto porose richiedono un fondo."
+  },
+  "materials": [
+   "vetro",
+   "plexiglass-colato",
+   "legno-massello",
+   "pelle-vegetale",
+   "tessuto"
+  ],
+  "bestFor": {
+   "it": "Colore pieno su quasi ogni superficie rigida, anche curva, senza calore.",
+   "en": "Colore pieno su quasi ogni superficie rigida, anche curva, senza calore."
+  }
+ },
+ {
+  "id": "stampa-cilindri",
+  "name": {
+   "it": "Stampa su cilindri",
+   "en": "Stampa su cilindri"
+  },
+  "family": "stampa",
+  "order": 5,
+  "featured": true,
+  "short": {
+   "it": "Stampa a colori che gira attorno a bottiglie, calici, borracce e tazze.",
+   "en": "Stampa a colori che gira attorno a bottiglie, calici, borracce e tazze."
+  },
+  "description": {
+   "it": "Enoteche, birrifici, cantine e locali che vogliono il proprio marchio sul bicchiere. Niente cottura, niente forno: si stampa e si consegna.",
+   "en": "Stampa a colori che gira attorno a bottiglie, calici, borracce e tazze."
+  },
+  "specs": {
+   "macchina": "Rotativo della stampante UV",
+   "quando conviene": "Enoteche, birrifici, cantine e locali che vogliono il proprio marchio sul bicchiere.",
+   "limiti": "Il pezzo deve essere cilindrico e a superficie liscia."
+  },
+  "materials": [
+   "vetro",
+   "acciaio-inox"
+  ],
+  "bestFor": {
+   "it": "Stampa a colori che gira attorno a bottiglie, calici, borracce e tazze.",
+   "en": "Stampa a colori che gira attorno a bottiglie, calici, borracce e tazze."
+  }
+ },
+ {
+  "id": "personalizzazione-tessile",
+  "name": {
+   "it": "Personalizzazione tessile",
+   "en": "Personalizzazione tessile"
+  },
+  "family": "stampa",
+  "order": 6,
+  "featured": false,
+  "short": {
+   "it": "Stampa a colori su capi e tessuti, dal pezzo singolo. Nessun minimo d'ordine.",
+   "en": "Stampa a colori su capi e tessuti, dal pezzo singolo. Nessun minimo d'ordine."
+  },
+  "description": {
+   "it": "Grembiuli e divise per un locale, magliette e felpe aziendali, borse. I fornitori tessili chiedono cinquanta pezzi: qui sei pezzi sono un ordine normale.",
+   "en": "Stampa a colori su capi e tessuti, dal pezzo singolo. Nessun minimo d'ordine."
+  },
+  "specs": {
+   "macchina": "Stampante UV per il trasferimento + xTool WonderPress · 38 × 38 cm, 100 kg, 80–210 °C",
+   "quando conviene": "Grembiuli e divise per un locale, magliette e felpe aziendali, borse.",
+   "limiti": "La sublimazione richiede poliestere o supporti trattati; sul cotone si usa il trasferimento DTF."
+  },
+  "materials": [],
+  "bestFor": {
+   "it": "Stampa a colori su capi e tessuti, dal pezzo singolo. Nessun minimo d'ordine.",
+   "en": "Stampa a colori su capi e tessuti, dal pezzo singolo. Nessun minimo d'ordine."
+  }
+ },
+ {
+  "id": "sublimazione-3d",
+  "name": {
+   "it": "Sublimazione 3D",
+   "en": "Sublimazione 3D"
+  },
+  "family": "stampa",
+  "order": 7,
+  "featured": false,
+  "short": {
+   "it": "Stampa che avvolge l'intera superficie di un oggetto sagomato, senza giunzioni visibili.",
+   "en": "Stampa che avvolge l'intera superficie di un oggetto sagomato, senza giunzioni visibili."
+  },
+  "description": {
+   "it": "Tazze, borracce e cover telefono con una fotografia che gira tutt'intorno. È la differenza visibile da un'etichetta applicata storta.",
+   "en": "Stampa che avvolge l'intera superficie di un oggetto sagomato, senza giunzioni visibili."
+  },
+  "specs": {
+   "macchina": "Modulo sottovuoto della WonderPress",
+   "quando conviene": "Tazze, borracce e cover telefono con una fotografia che gira tutt'intorno.",
+   "limiti": "Servono supporti predisposti per la sublimazione."
+  },
+  "materials": [],
+  "bestFor": {
+   "it": "Stampa che avvolge l'intera superficie di un oggetto sagomato, senza giunzioni visibili.",
+   "en": "Stampa che avvolge l'intera superficie di un oggetto sagomato, senza giunzioni visibili."
+  }
+ },
+ {
+  "id": "prototipazione",
+  "name": {
+   "it": "Prototipazione rapida",
+   "en": "Prototipazione rapida"
+  },
+  "family": "progetto",
+  "order": 8,
+  "featured": false,
+  "short": {
+   "it": "Dal disegno al pezzo fisico in mano, spesso in giornata.",
+   "en": "Dal disegno al pezzo fisico in mano, spesso in giornata."
+  },
+  "description": {
+   "it": "Quando un'idea va vista e tenuta in mano prima di impegnare uno stampo o una serie. Si fanno più versioni e si sceglie sul tavolo, non sullo schermo.",
+   "en": "Dal disegno al pezzo fisico in mano, spesso in giornata."
+  },
+  "specs": {
+   "macchina": "Tutte, secondo cosa serve provare",
+   "quando conviene": "Quando un'idea va vista e tenuta in mano prima di impegnare uno stampo o una serie.",
+   "limiti": "Il prototipo laser riproduce forma, incastri e proporzioni, non i materiali di uno stampo a iniezione."
+  },
+  "materials": [
+   "compensato",
+   "mdf",
+   "plexiglass-colato"
+  ],
+  "bestFor": {
+   "it": "Dal disegno al pezzo fisico in mano, spesso in giornata.",
+   "en": "Dal disegno al pezzo fisico in mano, spesso in giornata."
+  }
+ }
+]

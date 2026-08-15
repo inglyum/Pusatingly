@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Appendiabiti da parete a cinque pomelli">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#222429"/>
+      <stop offset="1" stop-color="#2E3137"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".035" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  <rect x="40" y="40" width="720" height="520" fill="none" stroke="#ffffff" stroke-opacity=".07"/>
+  <line x1="40" y1="244" x2="104" y2="244" stroke="#00E6D2" stroke-width="2"/>
+  <text x="40" y="222" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="17" font-weight="600" letter-spacing="3.4" fill="#8A9099">CASA &amp; ARREDAMENTO</text>
+  <text x="40" y="306" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="40" font-weight="600" fill="#FFFFFF">Appendiabiti da parete a</text>
+  <text x="40" y="354" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="40" font-weight="600" fill="#FFFFFF">cinque pomelli</text>
+  <text x="40" y="548" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="15" letter-spacing="1.6" fill="#767C85">CS-001 · DA SOSTITUIRE</text>
+  <text x="760" y="548" text-anchor="end" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="600" letter-spacing="2.4" fill="#5E646C">INGLY DESIGN</text>
+</svg>

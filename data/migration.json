@@ -1,0 +1,1442 @@
+{
+ "version": 1,
+ "updated": "2026-08-14",
+ "note": "Mappa di migrazione machine-readable. Fonte narrativa: docs/MIGRATION-MAP.md",
+ "brand": {
+  "from": {
+   "brand": "Pusateri Maker",
+   "person": "Alessio Pusateri"
+  },
+  "to": {
+   "brand": "INGLY DESIGN",
+   "person": "Giuseppe Inglima"
+  },
+  "rule": "Struttura editoriale riusata come modello. Contenuto personale, clienti, referenze, numeri e nomi di prodotto NON importati. Vedi docs/MIGRATION-MAP.md §3."
+ },
+ "categoryMap": [
+  {
+   "from": "Catalogo Creazioni",
+   "to": "Catalogo Creazioni",
+   "id": null,
+   "url": "/creazioni"
+  },
+  {
+   "from": "Portamenù",
+   "to": "Soluzioni Menu",
+   "id": "soluzioni-menu",
+   "url": "/creazioni/soluzioni-menu"
+  },
+  {
+   "from": "Tavola & Cucina",
+   "to": "Tavola & Cucina",
+   "id": "tavola-cucina",
+   "url": "/creazioni/tavola-cucina"
+  },
+  {
+   "from": "Wood Art & Design",
+   "to": "Wood Art & Design",
+   "id": "wood-art-design",
+   "url": "/creazioni/wood-art-design"
+  },
+  {
+   "from": "Oggettistica & Complementi d'Arredo",
+   "to": "Oggettistica & Complementi",
+   "id": "oggettistica",
+   "url": "/creazioni/oggettistica"
+  },
+  {
+   "from": "Targhe & Insegne",
+   "to": "Targhe & Insegne",
+   "id": "targhe-insegne",
+   "url": "/creazioni/targhe-insegne"
+  },
+  {
+   "from": "Gadget di legno",
+   "to": "Gadget & Personalizzati",
+   "id": "gadget",
+   "url": "/creazioni/gadget"
+  },
+  {
+   "from": "Per la casa",
+   "to": "Casa & Arredamento",
+   "id": "casa",
+   "url": "/creazioni/casa"
+  },
+  {
+   "from": "PusaToys",
+   "to": "INGLY Kids",
+   "id": "kids",
+   "url": "/creazioni/kids"
+  },
+  {
+   "from": "Automata",
+   "to": "Arte & Movimento",
+   "id": "arte-movimento",
+   "url": "/creazioni/arte-movimento"
+  },
+  {
+   "from": "PusaTeck",
+   "to": "INGLY Tech",
+   "id": "tech",
+   "url": "/creazioni/tech"
+  },
+  {
+   "from": "Carta & Cartone",
+   "to": "Carta & Packaging",
+   "id": "carta-packaging",
+   "url": "/creazioni/carta-packaging"
+  },
+  {
+   "from": "Plexi & Metal",
+   "to": "Plexi & Metallo",
+   "id": "plexi-metallo",
+   "url": "/creazioni/plexi-metallo"
+  },
+  {
+   "from": "Eventi & Fiere",
+   "to": "Eventi & B2B",
+   "id": "eventi",
+   "url": "/creazioni/eventi"
+  },
+  {
+   "from": "Chi Sono",
+   "to": "Giuseppe Inglima",
+   "id": null,
+   "url": "/chi-sono"
+  },
+  {
+   "from": "Materiali",
+   "to": "Materiali INGLY",
+   "id": null,
+   "url": "/materiali"
+  },
+  {
+   "from": "Tecniche",
+   "to": "Tecnologie & Tecniche",
+   "id": null,
+   "url": "/tecnologie"
+  },
+  {
+   "from": "Come acquistare",
+   "to": "Come acquistare",
+   "id": null,
+   "url": "/come-acquistare"
+  },
+  {
+   "from": "Contattami",
+   "to": "Contattami",
+   "id": null,
+   "url": "/contatti"
+  },
+  {
+   "from": "Portfolio clienti",
+   "to": "Portfolio",
+   "id": null,
+   "url": "/portfolio"
+  }
+ ],
+ "collections": [
+  {
+   "id": "ristorazione",
+   "name": {
+    "it": "Ristorazione",
+    "en": "Restaurants"
+   },
+   "description": {
+    "it": "Ristoranti, bar, pizzerie, wine bar",
+    "en": "Restaurants, bars, wine bars"
+   },
+   "icon": "restaurant",
+   "order": 1,
+   "featured": true
+  },
+  {
+   "id": "casa",
+   "name": {
+    "it": "Casa",
+    "en": "Home"
+   },
+   "description": {
+    "it": "Complementi e decorazione per la casa",
+    "en": "Home accents and decor"
+   },
+   "icon": "home",
+   "order": 2,
+   "featured": true
+  },
+  {
+   "id": "regali",
+   "name": {
+    "it": "Regali",
+    "en": "Gifts"
+   },
+   "description": {
+    "it": "Idee regalo personalizzate",
+    "en": "Personalised gift ideas"
+   },
+   "icon": "gift",
+   "order": 3,
+   "featured": true
+  },
+  {
+   "id": "aziendale",
+   "name": {
+    "it": "Aziendale",
+    "en": "Corporate"
+   },
+   "description": {
+    "it": "Corporate gifting e identità aziendale",
+    "en": "Corporate gifting and identity"
+   },
+   "icon": "corporate",
+   "order": 4,
+   "featured": true
+  },
+  {
+   "id": "eventi",
+   "name": {
+    "it": "Eventi",
+    "en": "Events"
+   },
+   "description": {
+    "it": "Allestimenti, fiere, congressi",
+    "en": "Set-ups, trade shows, conferences"
+   },
+   "icon": "event",
+   "order": 5,
+   "featured": true
+  },
+  {
+   "id": "wedding",
+   "name": {
+    "it": "Wedding",
+    "en": "Wedding"
+   },
+   "description": {
+    "it": "Matrimoni e cerimonie",
+    "en": "Weddings and ceremonies"
+   },
+   "icon": "wedding",
+   "order": 6,
+   "featured": true
+  },
+  {
+   "id": "turismo",
+   "name": {
+    "it": "Turismo",
+    "en": "Tourism"
+   },
+   "description": {
+    "it": "Hotel, B&B, case vacanza",
+    "en": "Hotels, B&Bs, holiday homes"
+   },
+   "icon": "tourism",
+   "order": 7,
+   "featured": true
+  },
+  {
+   "id": "gadget",
+   "name": {
+    "it": "Gadget",
+    "en": "Gadgets"
+   },
+   "description": {
+    "it": "Oggetti promozionali e merchandising",
+    "en": "Promotional items and merch"
+   },
+   "icon": "gadget",
+   "order": 8,
+   "featured": true
+  },
+  {
+   "id": "tecnologia",
+   "name": {
+    "it": "Tecnologia",
+    "en": "Technology"
+   },
+   "description": {
+    "it": "QR, NFC e oggetti connessi",
+    "en": "QR, NFC and connected objects"
+   },
+   "icon": "tech",
+   "order": 9,
+   "featured": true
+  },
+  {
+   "id": "custom",
+   "name": {
+    "it": "Custom",
+    "en": "Custom"
+   },
+   "description": {
+    "it": "Progetti interamente su misura",
+    "en": "Fully bespoke projects"
+   },
+   "icon": "custom",
+   "order": 10,
+   "featured": true
+  }
+ ],
+ "migrationStates": [
+  {
+   "id": "imported",
+   "label": {
+    "it": "Importato",
+    "en": "Imported"
+   },
+   "public": true,
+   "description": "Struttura importata, contenuto in lavorazione"
+  },
+  {
+   "id": "review",
+   "label": {
+    "it": "In revisione",
+    "en": "In review"
+   },
+   "public": true,
+   "description": "Revisione redazionale in corso"
+  },
+  {
+   "id": "redesign",
+   "label": {
+    "it": "In riprogettazione",
+    "en": "Redesign"
+   },
+   "public": true,
+   "description": "Prodotto INGLY in progettazione"
+  },
+  {
+   "id": "replaced",
+   "label": {
+    "it": "Sostituito",
+    "en": "Replaced"
+   },
+   "public": true,
+   "description": "Sostituito da prodotto INGLY"
+  },
+  {
+   "id": "active",
+   "label": {
+    "it": "Attivo",
+    "en": "Active"
+   },
+   "public": true,
+   "description": "Prodotto INGLY definitivo"
+  },
+  {
+   "id": "archived",
+   "label": {
+    "it": "Archiviato",
+    "en": "Archived"
+   },
+   "public": false,
+   "description": "Fuori catalogo, storia conservata"
+  }
+ ],
+ "replacementStates": [
+  {
+   "id": "pending",
+   "label": {
+    "it": "Da sostituire",
+    "en": "Pending"
+   }
+  },
+  {
+   "id": "in-progress",
+   "label": {
+    "it": "In lavorazione",
+    "en": "In progress"
+   }
+  },
+  {
+   "id": "done",
+   "label": {
+    "it": "Completato",
+    "en": "Done"
+   }
+  }
+ ],
+ "redirects": [
+  {
+   "from": "/porta-menu-lista-completa",
+   "to": "/creazioni/soluzioni-menu",
+   "type": 301
+  },
+  {
+   "from": "/tavola-cucina-lista-completa",
+   "to": "/creazioni/tavola-cucina",
+   "type": 301
+  },
+  {
+   "from": "/wood-design-lista-completa",
+   "to": "/creazioni/wood-art-design",
+   "type": 301
+  },
+  {
+   "from": "/per-la-casa",
+   "to": "/creazioni/casa",
+   "type": 301
+  },
+  {
+   "from": "/insegne-di-legno-2",
+   "to": "/creazioni/targhe-insegne",
+   "type": 301
+  },
+  {
+   "from": "/insegne-di-legno-interni-ed-esterni",
+   "to": "/creazioni/targhe-insegne",
+   "type": 301
+  },
+  {
+   "from": "/giocattoli-di-legno",
+   "to": "/creazioni/kids",
+   "type": 301
+  },
+  {
+   "from": "/le-nuove-creazioni",
+   "to": "/creazioni?ordina=novita",
+   "type": 301
+  },
+  {
+   "from": "/portfolio-clienti",
+   "to": "/portfolio",
+   "type": 301
+  },
+  {
+   "from": "/catalogo",
+   "to": "/creazioni",
+   "type": 301
+  },
+  {
+   "from": "/prodotti",
+   "to": "/creazioni",
+   "type": 301
+  },
+  {
+   "from": "/contattami",
+   "to": "/contatti",
+   "type": 301
+  },
+  {
+   "from": "/chi-siamo",
+   "to": "/chi-sono",
+   "type": 301
+  },
+  {
+   "from": "/about",
+   "to": "/chi-sono",
+   "type": 301
+  },
+  {
+   "from": "/materiali-e-tecniche",
+   "to": "/materiali",
+   "type": 301
+  },
+  {
+   "from": "/tecniche",
+   "to": "/tecnologie",
+   "type": 301
+  },
+  {
+   "from": "/servizio-realizzazione-prototipo",
+   "to": "/come-acquistare",
+   "type": 301
+  },
+  {
+   "from": "/servizi",
+   "to": "/tecnologie",
+   "type": 301
+  },
+  {
+   "from": "/servizi/taglio-laser",
+   "to": "/tecnologie",
+   "type": 301
+  },
+  {
+   "from": "/servizi/incisione-laser",
+   "to": "/tecnologie",
+   "type": 301
+  },
+  {
+   "from": "/servizi/marcatura-metalli",
+   "to": "/tecnologie",
+   "type": 301
+  },
+  {
+   "from": "/servizi/stampa-uv",
+   "to": "/tecnologie",
+   "type": 301
+  },
+  {
+   "from": "/servizi/stampa-cilindri",
+   "to": "/tecnologie",
+   "type": 301
+  },
+  {
+   "from": "/servizi/personalizzazione-tessile",
+   "to": "/tecnologie",
+   "type": 301
+  },
+  {
+   "from": "/servizi/sublimazione-3d",
+   "to": "/tecnologie",
+   "type": 301
+  },
+  {
+   "from": "/servizi/prototipazione",
+   "to": "/tecnologie",
+   "type": 301
+  },
+  {
+   "from": "/come-ordinare",
+   "to": "/come-acquistare",
+   "type": 301
+  },
+  {
+   "from": "/faq",
+   "to": "/come-acquistare",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/horeca",
+   "to": "/creazioni?uso=ristorazione",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/aziendale",
+   "to": "/creazioni?uso=aziendale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/bambini",
+   "to": "/creazioni/kids",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/regalo",
+   "to": "/creazioni?uso=regali",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/accessori",
+   "to": "/creazioni/gadget",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/industriale",
+   "to": "/creazioni/targhe-insegne",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/animali",
+   "to": "/creazioni/gadget",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/trinacria-portamenu-a4-ad-anelli-in-betulla",
+   "to": "/creazioni/soluzioni-menu/portamenu-a4-ad-anelli",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/kalsa-portamenu-a4-a-vite-passante",
+   "to": "/creazioni/soluzioni-menu/portamenu-a4-a-vite-passante",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/aretusa-portamenu-a5-ad-anelli",
+   "to": "/creazioni/soluzioni-menu/portamenu-a5-ad-anelli",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/ortigia-portamenu-a4-con-dorso-in-pelle",
+   "to": "/creazioni/soluzioni-menu/portamenu-a4-con-dorso",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/cefalu-portamenu-a-pinza-per-fogli-singoli",
+   "to": "/creazioni/soluzioni-menu/portamenu-a-pinza-per-fogli-singoli",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/erice-portamenu-a5-a-vite",
+   "to": "/creazioni/soluzioni-menu/portamenu-a5-a-vite",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/marzamemi-espositore-da-tavolo-bifacciale",
+   "to": "/creazioni/soluzioni-menu/espositore-da-tavolo-bifacciale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/vucciria-espositore-a-leggio",
+   "to": "/creazioni/soluzioni-menu/espositore-a-leggio",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/ballaro-porta-qr-da-tavolo",
+   "to": "/creazioni/soluzioni-menu/porta-qr-da-tavolo",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/salina-cubo-qr-quadrifacciale",
+   "to": "/creazioni/soluzioni-menu/cubo-qr-quadrifacciale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/vulcano-tag-nfc-da-tavolo",
+   "to": "/creazioni/soluzioni-menu/tag-nfc-da-tavolo",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/selinunte-portamenu-a4-in-plexiglass",
+   "to": "/creazioni/soluzioni-menu/portamenu-a4",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/segesta-portamenu-a5-in-plexiglass",
+   "to": "/creazioni/soluzioni-menu/portamenu-a5",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/mothia-portamenu-a-tre-ante",
+   "to": "/creazioni/soluzioni-menu/portamenu-a-tre-ante",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/tindari-portamenu-formato-lungo-per-lista-vini",
+   "to": "/creazioni/soluzioni-menu/portamenu-formato-lungo-per-lista-vini",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/naxos-portamenu-a-pinza-con-base",
+   "to": "/creazioni/soluzioni-menu/portamenu-a-pinza-con-base",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/taormina-portamenu-a4-con-copertina-incisa",
+   "to": "/creazioni/soluzioni-menu/portamenu-a4-con-copertina-incisa",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/noto-portacarta-dei-vini-ad-anelli",
+   "to": "/creazioni/soluzioni-menu/portacarta-dei-vini-ad-anelli",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/ragusa-espositore-da-banco-per-menu-del-giorno",
+   "to": "/creazioni/soluzioni-menu/espositore-da-banco-per-menu-del-giorno",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/modica-porta-qr-a-bandiera-da-parete",
+   "to": "/creazioni/soluzioni-menu/porta-qr-a-bandiera-da-parete",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/favignana-portamenu-a5-con-elastico",
+   "to": "/creazioni/soluzioni-menu/portamenu-a5-con-elastico",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/lipari-menu-nfc-in-alluminio",
+   "to": "/creazioni/soluzioni-menu/menu-nfc",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/pantelleria-portamenu-xl-per-lavagna-del-giorno",
+   "to": "/creazioni/soluzioni-menu/portamenu-xl-per-lavagna-del-giorno",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/soluzioni-menu/ustica-portamenu-a4-a-vite-con-angoli-in-metallo",
+   "to": "/creazioni/soluzioni-menu/portamenu-a4-a-vite-con-angoli",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/zagara-apribottiglie-da-banco-in-acciaio-e-legno",
+   "to": "/creazioni/tavola-cucina/apribottiglie-da-banco",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/agave-apribottiglie-tascabile-inciso",
+   "to": "/creazioni/tavola-cucina/apribottiglie-tascabile-inciso",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/ficodindia-segnatavolo-numerato-bifacciale",
+   "to": "/creazioni/tavola-cucina/segnatavolo-numerato-bifacciale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/gelso-segnatavolo-a-cubo",
+   "to": "/creazioni/tavola-cucina/segnatavolo-a-cubo",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/carrubo-segnaposto-sagomato-in-betulla",
+   "to": "/creazioni/tavola-cucina/segnaposto-sagomato",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/mandorlo-segnaposto-con-portafoto",
+   "to": "/creazioni/tavola-cucina/segnaposto-con-portafoto",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/bergamotto-poggia-posate-a-onda",
+   "to": "/creazioni/tavola-cucina/poggia-posate-a-onda",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/limone-poggia-bacchette-in-essenze-accostate",
+   "to": "/creazioni/tavola-cucina/poggia-bacchette",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/ulivo-porta-conto-a-pinza",
+   "to": "/creazioni/tavola-cucina/porta-conto-a-pinza",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/melograno-porta-conto-con-vano-scontrino",
+   "to": "/creazioni/tavola-cucina/porta-conto-con-vano-scontrino",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/cappero-porta-resto-con-vaschetta",
+   "to": "/creazioni/tavola-cucina/porta-resto-con-vaschetta",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/mirto-portatovaglioli-da-banco-a-doppia-estrazione",
+   "to": "/creazioni/tavola-cucina/portatovaglioli-da-banco-a-doppia-estrazione",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/origano-portatovaglioli-da-tavolo",
+   "to": "/creazioni/tavola-cucina/portatovaglioli-da-tavolo",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/timo-porta-zucchero-a-due-scomparti",
+   "to": "/creazioni/tavola-cucina/porta-zucchero-a-due-scomparti",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/rosmarino-menage-completo-tre-posti",
+   "to": "/creazioni/tavola-cucina/menage-completo-tre-posti",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/alloro-menage-compatto-due-posti",
+   "to": "/creazioni/tavola-cucina/menage-compatto-due-posti",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/sommacco-sottobicchieri-set-da-sei",
+   "to": "/creazioni/tavola-cucina/sottobicchieri-set-da-sei",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/lentisco-sottobicchiere-singolo-inciso",
+   "to": "/creazioni/tavola-cucina/sottobicchiere-singolo-inciso",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/ginestra-vassoio-da-servizio-rettangolare",
+   "to": "/creazioni/tavola-cucina/vassoio-da-servizio-rettangolare",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/corbezzolo-vassoio-da-colazione-con-manici",
+   "to": "/creazioni/tavola-cucina/vassoio-da-colazione-con-manici",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/pistacchio-tagliere-da-servizio-in-massello",
+   "to": "/creazioni/tavola-cucina/tagliere-da-servizio",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/nocciolo-tagliere-sagomato-con-scanalatura",
+   "to": "/creazioni/tavola-cucina/tagliere-sagomato-con-scanalatura",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/sorbo-tagliere-da-aperitivo-con-vaschette",
+   "to": "/creazioni/tavola-cucina/tagliere-da-aperitivo-con-vaschette",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/papiro-poggia-posate-a-barra-per-tavolo-lungo",
+   "to": "/creazioni/tavola-cucina/poggia-posate-a-barra-per-tavolo-lungo",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/canna-segnatavolo-a-bandierina",
+   "to": "/creazioni/tavola-cucina/segnatavolo-a-bandierina",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tavola-cucina/giunco-porta-conto-verticale-da-banco",
+   "to": "/creazioni/tavola-cucina/porta-conto-verticale-da-banco",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/tufo-cassetta-a-incastro-personalizzabile",
+   "to": "/creazioni/wood-art-design/cassetta-a-incastro-personalizzabile",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/basalto-cassetta-con-coperchio-scorrevole",
+   "to": "/creazioni/wood-art-design/cassetta-con-coperchio-scorrevole",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/pomice-cofanetto-portagioie-con-magnete",
+   "to": "/creazioni/wood-art-design/cofanetto-portagioie-con-magnete",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/ossidiana-cofanetto-per-bottiglia-singola",
+   "to": "/creazioni/wood-art-design/cofanetto-per-bottiglia-singola",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/salgemma-cofanetto-degustazione-tre-bottiglie",
+   "to": "/creazioni/wood-art-design/cofanetto-degustazione-tre-bottiglie",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/terracotta-porta-biglietti-da-visita-da-scrivania",
+   "to": "/creazioni/wood-art-design/porta-biglietti-da-visita-da-scrivania",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/cotto-porta-biglietti-da-visita-tascabile",
+   "to": "/creazioni/wood-art-design/porta-biglietti-da-visita-tascabile",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/alabastro-espositore-a-gradoni-tre-livelli",
+   "to": "/creazioni/wood-art-design/espositore-a-gradoni-tre-livelli",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/quarzo-espositore-verticale-a-colonna",
+   "to": "/creazioni/wood-art-design/espositore-verticale-a-colonna",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/ambra-biglietto-da-visita-nfc-in-legno",
+   "to": "/creazioni/wood-art-design/biglietto-da-visita-nfc",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/corallo-placca-nfc-da-banco-per-recensioni",
+   "to": "/creazioni/wood-art-design/placca-nfc-da-banco-per-recensioni",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/madreperla-targa-decorativa-a-strati-sovrapposti",
+   "to": "/creazioni/wood-art-design/targa-decorativa-a-strati-sovrapposti",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/marmo-targa-decorativa-con-retro-illuminato",
+   "to": "/creazioni/wood-art-design/targa-decorativa-con-retro-illuminato",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/calcare-segnaletica-direzionale-a-bandiera",
+   "to": "/creazioni/wood-art-design/segnaletica-direzionale-a-bandiera",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/faro-tableau-de-mariage-a-pannelli",
+   "to": "/creazioni/wood-art-design/tableau-de-mariage-a-pannelli",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/tonnara-guestbook-a-tessere-componibili",
+   "to": "/creazioni/wood-art-design/guestbook-a-tessere-componibili",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/cala-cornice-ricordo-per-evento",
+   "to": "/creazioni/wood-art-design/cornice-ricordo-per-evento",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/wood-art-design/scoglio-porta-confetti-componibile",
+   "to": "/creazioni/wood-art-design/porta-confetti-componibile",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/sestante-portapenne-da-scrivania-a-scomparti",
+   "to": "/creazioni/oggettistica/portapenne-da-scrivania-a-scomparti",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/chiglia-sottomano-da-scrivania-in-pelle-e-legno",
+   "to": "/creazioni/oggettistica/sottomano-da-scrivania",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/timone-porta-smartphone-da-scrivania",
+   "to": "/creazioni/oggettistica/porta-smartphone-da-scrivania",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/prua-svuotatasche-rettangolare",
+   "to": "/creazioni/oggettistica/svuotatasche-rettangolare",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/vela-svuotatasche-con-vano-portachiavi",
+   "to": "/creazioni/oggettistica/svuotatasche-con-vano-portachiavi",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/randa-fermalibri-geometrico-a-coppia",
+   "to": "/creazioni/oggettistica/fermalibri-geometrico-a-coppia",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/boma-fermalibri-sagomato-singolo",
+   "to": "/creazioni/oggettistica/fermalibri-sagomato-singolo",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/ancora-organizer-da-cassetto-modulare",
+   "to": "/creazioni/oggettistica/organizer-da-cassetto-modulare",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/sartia-organizer-porta-cavi-da-scrivania",
+   "to": "/creazioni/oggettistica/organizer-porta-cavi-da-scrivania",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/deriva-scultura-da-tavolo-a-strati",
+   "to": "/creazioni/oggettistica/scultura-da-tavolo-a-strati",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/rotta-mappa-incisa-da-parete",
+   "to": "/creazioni/oggettistica/mappa-incisa-da-parete",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/oggettistica/scia-portafoto-a-incastro",
+   "to": "/creazioni/oggettistica/portafoto-a-incastro",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/alba-targa-di-ingresso-ovale-in-betulla",
+   "to": "/creazioni/targhe-insegne/targa-di-ingresso-ovale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/aurora-targa-di-ingresso-rettangolare-a-due-strati",
+   "to": "/creazioni/targhe-insegne/targa-di-ingresso-rettangolare-a-due-strati",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/meriggio-numero-civico-sagomato-in-alluminio",
+   "to": "/creazioni/targhe-insegne/numero-civico-sagomato",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/tramonto-numero-civico-retroilluminato",
+   "to": "/creazioni/targhe-insegne/numero-civico-retroilluminato",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/zenit-insegna-da-parete-per-locale",
+   "to": "/creazioni/targhe-insegne/insegna-da-parete-per-locale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/nadir-insegna-a-bandiera-bifacciale",
+   "to": "/creazioni/targhe-insegne/insegna-a-bandiera-bifacciale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/eclissi-insegna-retroilluminata-in-acrilico",
+   "to": "/creazioni/targhe-insegne/insegna-retroilluminata",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/solstizio-set-segnaletica-servizi-igienici",
+   "to": "/creazioni/targhe-insegne/set-segnaletica-servizi-igienici",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/equinozio-cartello-orari-di-apertura",
+   "to": "/creazioni/targhe-insegne/cartello-orari-di-apertura",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/plenilunio-freccia-direzionale-da-parete",
+   "to": "/creazioni/targhe-insegne/freccia-direzionale-da-parete",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/novilunio-totem-direzionale-da-terra",
+   "to": "/creazioni/targhe-insegne/totem-direzionale-da-terra",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/crepuscolo-targa-numero-camera-con-appendino",
+   "to": "/creazioni/targhe-insegne/targa-numero-camera-con-appendino",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/zefiro-set-targhe-camere-per-struttura-ricettiva",
+   "to": "/creazioni/targhe-insegne/set-targhe-camere-per-struttura-ricettiva",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/targhe-insegne/borea-targa-professionale-in-acciaio-inox",
+   "to": "/creazioni/targhe-insegne/targa-professionale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/libeccio-portachiavi-sagomato-in-betulla",
+   "to": "/creazioni/gadget/portachiavi-sagomato",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/grecale-portachiavi-apribottiglie-in-acciaio",
+   "to": "/creazioni/gadget/portachiavi-apribottiglie",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/tramontana-portachiavi-nfc",
+   "to": "/creazioni/gadget/portachiavi-nfc",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/maestrale-calamita-sagomata-a-due-strati",
+   "to": "/creazioni/gadget/calamita-sagomata-a-due-strati",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/ponente-set-calamite-collezione-citta",
+   "to": "/creazioni/gadget/set-calamite-collezione-citta",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/levante-calamita-apribottiglie",
+   "to": "/creazioni/gadget/calamita-apribottiglie",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/ostro-targa-sagomata-su-misura",
+   "to": "/creazioni/gadget/targa-sagomata-su-misura",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/austro-medaglietta-identificativa-per-animali",
+   "to": "/creazioni/gadget/medaglietta-identificativa-per-animali",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/ciane-segnalibro-traforato-in-betulla",
+   "to": "/creazioni/gadget/segnalibro-traforato",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/alfeo-segnalibro-in-metallo-inciso",
+   "to": "/creazioni/gadget/segnalibro",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/anapo-spilla-in-legno-con-spilla-di-sicurezza",
+   "to": "/creazioni/gadget/spilla",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/simeto-pin-aziendale-in-alluminio",
+   "to": "/creazioni/gadget/pin-aziendale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/alcantara-apribottiglie-da-tasca-personalizzato",
+   "to": "/creazioni/gadget/apribottiglie-da-tasca-personalizzato",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/gadget/pollina-set-gadget-welcome-kit-aziendale",
+   "to": "/creazioni/gadget/set-gadget-welcome-kit-aziendale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/madonie-appendiabiti-da-parete-a-cinque-pomelli",
+   "to": "/creazioni/casa/appendiabiti-da-parete-a-cinque-pomelli",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/nebrodi-appendiabiti-verticale-salvaspazio",
+   "to": "/creazioni/casa/appendiabiti-verticale-salvaspazio",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/peloritani-orologio-da-parete-minimale",
+   "to": "/creazioni/casa/orologio-da-parete-minimale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/iblea-orologio-da-parete-a-numeri-sospesi",
+   "to": "/creazioni/casa/orologio-da-parete-a-numeri-sospesi",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/etna-pannello-decorativo-a-rilievo",
+   "to": "/creazioni/casa/pannello-decorativo-a-rilievo",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/stromboli-lettere-decorative-componibili",
+   "to": "/creazioni/casa/lettere-decorative-componibili",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/panarea-lampada-da-tavolo-a-diffusione",
+   "to": "/creazioni/casa/lampada-da-tavolo-a-diffusione",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/filicudi-applique-da-parete-in-acrilico",
+   "to": "/creazioni/casa/applique-da-parete",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/alicudi-mensola-a-incastro-senza-viti",
+   "to": "/creazioni/casa/mensola-a-incastro-senza-viti",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/levanzo-mensola-d-angolo",
+   "to": "/creazioni/casa/mensola-d-angolo",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/marettimo-portachiavi-da-parete-con-mensolina",
+   "to": "/creazioni/casa/portachiavi-da-parete-con-mensolina",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/favara-portachiavi-da-parete-a-ganci",
+   "to": "/creazioni/casa/portachiavi-da-parete-a-ganci",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/bronte-porta-mestoli-da-parete",
+   "to": "/creazioni/casa/porta-mestoli-da-parete",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/casa/randazzo-porta-capsule-da-banco",
+   "to": "/creazioni/casa/porta-capsule-da-banco",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/kids/girandola-gioco-a-incastro-animali",
+   "to": "/creazioni/kids/gioco-a-incastro-animali",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/kids/aquilone-costruzioni-a-incastro-set-base",
+   "to": "/creazioni/kids/costruzioni-a-incastro-set-base",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/kids/trottola-puzzle-sagomato-personalizzato",
+   "to": "/creazioni/kids/puzzle-sagomato-personalizzato",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/kids/altalena-puzzle-alfabeto",
+   "to": "/creazioni/kids/puzzle-alfabeto",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/kids/ninna-decorazione-nome-per-cameretta",
+   "to": "/creazioni/kids/decorazione-nome-per-cameretta",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/kids/filastrocca-metro-altezza-da-parete",
+   "to": "/creazioni/kids/metro-altezza-da-parete",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/kids/abaco-pallottoliere-didattico",
+   "to": "/creazioni/kids/pallottoliere-didattico",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/kids/sillaba-tavoletta-lettere-componibili",
+   "to": "/creazioni/kids/tavoletta-lettere-componibili",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/arte-movimento/efesto-automa-a-manovella-con-figura",
+   "to": "/creazioni/arte-movimento/automa-a-manovella-con-figura",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/arte-movimento/encelado-automa-marino-a-camme",
+   "to": "/creazioni/arte-movimento/automa-marino-a-camme",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/arte-movimento/polifemo-meccanismo-didattico-a-ingranaggi",
+   "to": "/creazioni/arte-movimento/meccanismo-didattico-a-ingranaggi",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/arte-movimento/galatea-meccanismo-a-biella-su-base",
+   "to": "/creazioni/arte-movimento/meccanismo-a-biella-su-base",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/arte-movimento/dafne-scultura-cinetica-da-tavolo",
+   "to": "/creazioni/arte-movimento/scultura-cinetica-da-tavolo",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/arte-movimento/cariddi-scultura-a-vortice-rotante",
+   "to": "/creazioni/arte-movimento/scultura-a-vortice-rotante",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tech/vettore-porta-qr-da-parete",
+   "to": "/creazioni/tech/porta-qr-da-parete",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tech/impulso-targhetta-qr-adesiva-per-tavolo",
+   "to": "/creazioni/tech/targhetta-qr-adesiva-per-tavolo",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tech/segnale-tag-nfc-universale",
+   "to": "/creazioni/tech/tag-nfc-universale",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tech/frequenza-tag-nfc-per-vetrina",
+   "to": "/creazioni/tech/tag-nfc-per-vetrina",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tech/circuito-biglietto-da-visita-nfc-in-alluminio",
+   "to": "/creazioni/tech/biglietto-da-visita-nfc-alluminio-anodizzato",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tech/modulo-biglietto-da-visita-nfc-in-plexiglass",
+   "to": "/creazioni/tech/biglietto-da-visita-nfc-plexiglass-colato",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tech/antenna-totem-informativo-da-banco",
+   "to": "/creazioni/tech/totem-informativo-da-banco",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tech/diodo-totem-da-terra-per-accoglienza",
+   "to": "/creazioni/tech/totem-da-terra-per-accoglienza",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tech/consenso-placca-recensioni-da-banco",
+   "to": "/creazioni/tech/placca-recensioni-da-banco",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/tech/riscontro-espositore-recensioni-a-bandiera",
+   "to": "/creazioni/tech/espositore-recensioni-a-bandiera",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/carta-packaging/origami-scatola-pieghevole-su-misura",
+   "to": "/creazioni/carta-packaging/scatola-pieghevole-su-misura",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/carta-packaging/piega-scatola-a-fondo-automatico",
+   "to": "/creazioni/carta-packaging/scatola-a-fondo-automatico",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/carta-packaging/cartiglio-cartellino-prodotto-traforato",
+   "to": "/creazioni/carta-packaging/cartellino-prodotto-traforato",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/carta-packaging/filigrana-cartellino-appendibile-in-cartoncino",
+   "to": "/creazioni/carta-packaging/cartellino-appendibile",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/carta-packaging/pergamena-invito-traforato-per-matrimonio",
+   "to": "/creazioni/carta-packaging/invito-traforato-per-matrimonio",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/carta-packaging/miniatura-invito-a-strati-per-evento",
+   "to": "/creazioni/carta-packaging/invito-a-strati-per-evento",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/carta-packaging/fascia-sleeve-per-packaging",
+   "to": "/creazioni/carta-packaging/sleeve-per-packaging",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/carta-packaging/nastro-fascetta-portaposate-per-catering",
+   "to": "/creazioni/carta-packaging/fascetta-portaposate-per-catering",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/plexi-metallo/prisma-espositore-in-plexiglass-trasparente",
+   "to": "/creazioni/plexi-metallo/espositore",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/plexi-metallo/lastra-targa-in-plexiglass-a-distanziali",
+   "to": "/creazioni/plexi-metallo/targa",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/plexi-metallo/lumen-insegna-retroilluminata-a-bordo-luce",
+   "to": "/creazioni/plexi-metallo/insegna-retroilluminata-a-bordo-luce",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/plexi-metallo/aura-pannello-luminoso-da-parete",
+   "to": "/creazioni/plexi-metallo/pannello-luminoso-da-parete",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/plexi-metallo/anodo-targa-tecnica-in-alluminio-anodizzato",
+   "to": "/creazioni/plexi-metallo/targa-tecnica",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/plexi-metallo/lamina-placca-in-alluminio-spazzolato",
+   "to": "/creazioni/plexi-metallo/placca",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/plexi-metallo/tempra-targa-in-acciaio-inox-marcata-mopa",
+   "to": "/creazioni/plexi-metallo/targa-acciaio-inox",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/plexi-metallo/filo-segnaposto-in-acciaio-inciso",
+   "to": "/creazioni/plexi-metallo/segnaposto",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/plexi-metallo/innesto-targa-combinata-legno-e-alluminio",
+   "to": "/creazioni/plexi-metallo/targa-combinata-legno-e-alluminio",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/plexi-metallo/giunzione-espositore-legno-e-plexiglass",
+   "to": "/creazioni/plexi-metallo/espositore-legno-e-plexiglass",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/vendicari-tableau-de-mariage-a-pannello-unico",
+   "to": "/creazioni/eventi/tableau-de-mariage-a-pannello-unico",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/portopalo-segnaposto-matrimonio-inciso",
+   "to": "/creazioni/eventi/segnaposto-matrimonio-inciso",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/avola-ventaglio-programma-cerimonia",
+   "to": "/creazioni/eventi/ventaglio-programma-cerimonia",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/eloro-porta-fedi-a-incastro",
+   "to": "/creazioni/eventi/porta-fedi-a-incastro",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/camarina-espositore-da-stand-a-colonna",
+   "to": "/creazioni/eventi/espositore-da-stand-a-colonna",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/morgantina-porta-brochure-da-terra",
+   "to": "/creazioni/eventi/porta-brochure-da-terra",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/pantalica-badge-accredito-in-betulla",
+   "to": "/creazioni/eventi/badge-accredito",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/sortino-porta-badge-con-cordino",
+   "to": "/creazioni/eventi/porta-badge-con-cordino",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/ferla-premio-a-lastra-su-base",
+   "to": "/creazioni/eventi/premio-a-lastra-su-base",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/buscemi-targa-ricordo-commemorativa",
+   "to": "/creazioni/eventi/targa-ricordo-commemorativa",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/buccheri-backdrop-modulare-per-photo-booth",
+   "to": "/creazioni/eventi/backdrop-modulare-per-photo-booth",
+   "type": 301
+  },
+  {
+   "from": "/creazioni/eventi/militello-segnaletica-evento-componibile",
+   "to": "/creazioni/eventi/segnaletica-evento-componibile",
+   "type": 301
+  }
+ ],
+ "reservedNames": {
+  "note": "Nomi propri di prodotto rilevati sul sito di riferimento. Vietati nel catalogo INGLY. Verificato da scripts/validate-data.mjs.",
+  "list": [
+   "Sperone",
+   "Libertà",
+   "Nassa",
+   "Arcoiris",
+   "Approdo",
+   "Bussola",
+   "Scirocco",
+   "In-Fusione",
+   "Identitas",
+   "Babahouse",
+   "Camula",
+   "Maidda",
+   "Avusa",
+   "Appizza",
+   "Maiolica Lignea",
+   "Mediterraneo",
+   "Pusateri",
+   "PusaToys",
+   "PusaTeck",
+   "PusaGym"
+  ]
+ },
+ "_notaRedirect": "Include gli URL del sito INGLY precedente (branch main): i link gia in circolazione continuano a funzionare."
+}
