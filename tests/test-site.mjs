@@ -149,9 +149,12 @@ test('la vista categoria filtra correttamente', () => {
 test('i filtri restituiscono sottoinsiemi coerenti', () => {
   const all = catalog.publicProducts();
 
-  const betulla = catalog.applyFilters(all, { mat: 'betulla' });
-  assert(betulla.length > 0, 'nessun prodotto in betulla: filtro rotto');
-  assert(betulla.every((p) => p.materials.includes('betulla')), 'filtro materiale impreciso');
+  // Il materiale di riferimento si prende dai dati, non da un id fisso:
+  // dopo il merge con i dati reali gli id sono cambiati.
+  const someMat = D.MATERIALS[0].id;
+  const byMat = catalog.applyFilters(all, { mat: someMat });
+  assert(byMat.length > 0, `nessun prodotto con materiale "${someMat}": filtro rotto`);
+  assert(byMat.every((p) => p.materials.includes(someMat)), 'filtro materiale impreciso');
 
   const b2b = catalog.applyFilters(all, { pub: 'b2b' });
   assert(b2b.every((p) => p.audience === 'b2b' || p.audience === 'both'),
@@ -164,8 +167,8 @@ test('i filtri restituiscono sottoinsiemi coerenti', () => {
   assert(accentless.length === search.length,
     'la ricerca deve ignorare gli accenti');
 
-  const combined = catalog.applyFilters(all, { cat: 'soluzioni-menu', mat: 'plexiglass' });
-  assert(combined.every((p) => p.category === 'soluzioni-menu' && p.materials.includes('plexiglass')),
+  const combined = catalog.applyFilters(all, { cat: 'soluzioni-menu', mat: someMat });
+  assert(combined.every((p) => p.category === 'soluzioni-menu' && p.materials.includes(someMat)),
     'i filtri combinati non si intersecano correttamente');
 });
 
@@ -224,7 +227,7 @@ test('la scheda prodotto segnala il placeholder fotografico', () => {
 
 /* ---- PAGINE EDITORIALI ------------------------------------------------- */
 
-test('la pagina materiali rende tutti i 15 materiali', () => {
+test('la pagina materiali rende tutti i materiali, senza famiglie orfane', () => {
   const root = fresh();
   pages.renderMaterials(root);
   const cards = root.querySelectorAll('.info-card');
@@ -235,7 +238,7 @@ test('la pagina materiali rende tutti i 15 materiali', () => {
   }
 });
 
-test('la pagina tecnologie rende tutte le 11 tecnologie', () => {
+test('la pagina tecnologie rende tutte le lavorazioni', () => {
   const root = fresh();
   pages.renderTechnologies(root);
   const cards = root.querySelectorAll('.info-card');
@@ -263,11 +266,13 @@ test('il portfolio dichiara di essere in costruzione se vuoto', () => {
     'tipologie di progetto non renderizzate');
 });
 
-test('la pagina come acquistare rende gli 8 passaggi del §17', () => {
+test('la pagina come acquistare rende tutti i passaggi del processo', () => {
   const root = fresh();
   pages.renderHow(root);
   const steps = root.querySelectorAll('.step');
-  assert(steps.length === 8, `attesi 8 passaggi, trovati ${steps.length}`);
+  const expected = D.CONTENT.comeAcquistare.steps.length;
+  assert(steps.length === expected, `attesi ${expected} passaggi, trovati ${steps.length}`);
+  assert(expected >= 5, 'il processo dichiarato ha troppi pochi passaggi');
   assert(root.querySelectorAll('.accordion-item').length > 0, 'FAQ mancante');
 });
 

@@ -123,8 +123,14 @@ test('il portfolio non contiene lavori non verificati', () => {
 });
 
 test('le statistiche non contengono numeri inventati', () => {
-  // Solo dati derivabili dal catalogo possono essere non-null senza fonte.
-  const derivable = { materiali: 15, tecnologie: 11, categorie: categories.length };
+  // Solo i dati derivabili dal catalogo possono essere non-null senza fonte,
+  // e il valore va contato sui file, non scritto a mano: un numero fisso qui
+  // tornerebbe a essere esattamente il tipo di dato inventato che vietiamo.
+  const derivable = {
+    materiali: read('data/materials.json').length,
+    tecnologie: read('data/technologies.json').length,
+    categorie: categories.length
+  };
   for (const [k, v] of Object.entries(config.stats)) {
     if (k === 'note' || v === null) continue;
     assert(k in derivable, `config.stats.${k} = ${v} non è derivabile dal catalogo: serve una fonte reale`);

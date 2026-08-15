@@ -142,7 +142,12 @@ for (const category of categories) {
   }
 
   seed.forEach((entry, n) => {
-    const [name, subtitle, subcategory, mats, techs, dimensions, uses, audience, detail, customization = [], featured = false] = entry;
+    const [name, subtitle, subcategory, rawMats, rawTechs, dimensions, uses, audience, detail, customization = [], featured = false] = entry;
+
+    // La rimappatura degli id può far convergere due voci sulla stessa:
+    // l'elenco si deduplica qui, non a valle.
+    const mats = [...new Set(rawMats)];
+    const techs = [...new Set(rawTechs)];
 
     const id = `${PREFIX[category.id]}-${pad(n + 1)}`;
     const slug = slugify(`${name} ${subtitle}`);

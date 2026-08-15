@@ -34,36 +34,30 @@ Prodotti totali: **176** · definitivi INGLY: **0** (0%)
 | Materiale | Prodotti |
 | --------- | -------- |
 | Legno massello | 27 |
-| Compensato di betulla | 132 |
+| Compensato di betulla | 139 |
 | MDF | 12 |
-| Compensato | 3 |
-| Plexiglass | 18 |
-| Acrilico satinato | 7 |
-| Alluminio | 26 |
+| Plexiglass colato | 26 |
 | Acciaio inox | 13 |
+| Alluminio anodizzato | 26 |
 | Ottone | 0 |
-| Pelle e similpelle | 2 |
-| Carta | 9 |
-| Cartone | 3 |
-| Tessuto | 1 |
-| PLA | 0 |
-| PETG | 1 |
+| Pelle conciata al vegetale | 2 |
+| Vetro | 0 |
+| Ardesia | 0 |
+| Sughero | 0 |
+| Tessuto e capi | 1 |
 
 ## Copertura tecnologie
 
 | Tecnologia | Prodotti |
 | ---------- | -------- |
-| Laser CO₂ | 163 |
-| Laser MOPA | 9 |
-| Laser fibra | 6 |
-| Stampa UV | 5 |
-| Stampa DTF | 0 |
-| Stampa 3D | 1 |
-| Incisione | 94 |
-| Taglio | 85 |
-| Marcatura | 13 |
-| Verniciatura | 32 |
-| Assemblaggio | 100 |
+| Taglio laser | 173 |
+| Incisione laser | 94 |
+| Marcatura su metallo | 15 |
+| Stampa UV diretta | 5 |
+| Stampa su cilindri | 0 |
+| Personalizzazione tessile | 0 |
+| Sublimazione 3D | 0 |
+| Prototipazione rapida | 1 |
 
 ## Prossimo passo
 
