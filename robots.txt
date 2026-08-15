@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inglydesign.it/sitemap.xml

@@ -83,7 +83,8 @@ Conforme al master command §9:
 `scripts/generate-placeholders.mjs` produce un SVG per prodotto e per categoria.
 
 Caratteristiche:
-- **SVG, non bitmap** → ~1 KB l'uno, nitidi a ogni densità, zero costo di banda
+- **SVG, non bitmap** → ~1,5 KB l'uno (176 prodotti + 13 categorie = 764 KB in
+  totale, meno di una singola fotografia non ottimizzata), nitidi a ogni densità
 - deterministici: stesso prodotto = stesso placeholder a ogni rigenerazione
 - brandizzati: palette INGLY (antracite + accento ciano), non blocchi grigi
 - portano **categoria e nome prodotto** leggibili → il catalogo è comprensibile
@@ -98,27 +99,39 @@ npm run placeholders
 
 ---
 
-## 5. SOSTITUZIONE 1-CLICK (master command §10)
+## 5. SOSTITUZIONE DI UNA FOTO (master command §10)
 
 Il requisito è che l'URL, il layout, la SEO, la categoria, la struttura e i
 componenti **non cambino** quando arriva la foto reale.
 
-Il front-end risolve l'immagine per convenzione di nome, con fallback:
-
-```text
-assets/images/products/<id>.webp     ← se esiste, viene usata
-assets/images/products/<id>.svg      ← altrimenti, placeholder
-```
-
-Quindi la sostituzione è letteralmente:
+La sostituzione è **due comandi**:
 
 ```bash
 cp foto-reale.webp assets/images/products/sm-001.webp
+npm run sync-images
 ```
 
-Il sito la mostra al reload successivo. Il campo `images[]` va poi allineato
-(`status: "final"`, `replacementRequired: false`) perché il report resti veritiero
-— lo fa automaticamente `npm run sync-images`.
+`sync-images` fa tutto il resto da solo: trova la foto sul disco, aggiorna
+`images[0]` (`src`, `source: ingly-original`, `status: final`,
+`replacementRequired: false`), promuove `migrationStatus` a `active`,
+`replacementStatus` a `done`, e registra `legacyReference`. Le viste
+aggiuntive `sm-001-2.webp`, `sm-001-3.webp`… diventano automaticamente
+gallery.
+
+Se una foto viene rimossa, lo stesso comando riporta il prodotto al
+placeholder invece di lasciare un'immagine rotta.
+
+### Perché non un solo comando
+
+Il front-end potrebbe tentare `<id>.webp` e ricadere sul `.svg` via `onerror`,
+rendendo superfluo il secondo comando. È stato provato e **scartato**: finché le
+foto non ci sono, ogni card genera una richiesta fallita — su una pagina di
+catalogo sono **176 richieste 404 a ogni visita**, con la console piena di
+errori e banda sprecata sul mobile.
+
+La sorgente arriva quindi sempre dal dato, e il disallineamento fra disco e dato
+si risolve una volta sola in fase di build. È anche l'unico modo perché il
+report di copertura del §6 dica il vero.
 
 ### Formati consigliati per le foto reali
 

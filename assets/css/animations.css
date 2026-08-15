@@ -1,0 +1,42 @@
+/* ============================================================
+   INGLY DESIGN — MOVIMENTO
+   Il movimento comunica causa ed effetto, non decora.
+   Solo transform e opacity: proprietà compositing-only.
+   Tutto disattivato sotto prefers-reduced-motion.
+   ============================================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity var(--dur-slow) var(--ease), transform var(--dur-slow) var(--ease);
+  will-change: opacity, transform;
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Stagger: scaglionamento breve, non una coreografia. */
+.stagger-1 { transition-delay: 40ms; }
+.stagger-2 { transition-delay: 80ms; }
+.stagger-3 { transition-delay: 120ms; }
+.stagger-4 { transition-delay: 160ms; }
+.stagger-5 { transition-delay: 200ms; }
+.stagger-6 { transition-delay: 240ms; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in { animation: fadeIn var(--dur) var(--ease); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .fade-in { animation: none !important; }
+  .loader-bar::after { animation: none !important; width: 100%; }
+}

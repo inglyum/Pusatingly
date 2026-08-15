@@ -1,0 +1,67 @@
+/* ============================================================
+   INGLY DESIGN — RESPONSIVE
+   Mobile-first: qui stanno solo gli adattamenti verso il basso.
+   Breakpoint: 1200 desktop · 900 laptop · 600 tablet
+   ============================================================ */
+
+@media (max-width: 1199px) {
+  .grid--4 { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .editorial-grid { grid-template-columns: 200px 1fr; }
+}
+
+@media (max-width: 1023px) {
+  .header-inner { height: 64px; }
+  .mobile-menu { inset-block-start: 64px; }
+
+  .manifesto-grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+  .editorial-grid { grid-template-columns: 1fr; gap: var(--sp-4); }
+  .editorial-grid h2 { position: static; }
+
+  .product-media { position: static; }
+  .product-cta { position: static; background: none; }
+}
+
+@media (max-width: 899px) {
+  .grid--3, .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .cat-card--lg { grid-column: span 1; min-height: 260px; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-6) var(--sp-5); }
+
+  .hero { min-height: auto; padding-block: var(--sp-8); }
+  .hero-meta { gap: var(--sp-6); margin-top: var(--sp-7); }
+}
+
+@media (max-width: 599px) {
+  .grid--2, .grid--3, .grid--4, .grid--auto { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: 1fr; }
+  .segment-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; }
+  .hero-meta { flex-direction: column; gap: var(--sp-4); }
+
+  .step { grid-template-columns: 1fr; gap: var(--sp-3); }
+  .step-n { width: 44px; height: 44px; font-size: var(--fs-md); }
+
+  .cta-band { padding: var(--sp-7) var(--sp-5); }
+  .card-body { padding: var(--sp-4); }
+  .filters { padding: var(--sp-4); }
+
+  .product-thumbs { grid-template-columns: repeat(3, 1fr); }
+  .catalog-bar { flex-direction: column; align-items: stretch; }
+}
+
+/* Il contenuto largo scorre dentro il proprio contenitore:
+   il body non deve mai scorrere in orizzontale. */
+.scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media print {
+  .header, .footer, .mobile-menu, .mega, .product-cta, .filters { display: none !important; }
+  body { background: #fff; color: #000; }
+}

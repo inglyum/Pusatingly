@@ -1,0 +1,15 @@
+{
+  "name": "INGLY DESIGN — Giuseppe Inglima",
+  "short_name": "INGLY DESIGN",
+  "description": "Studio di design e produzione su misura: legno, metallo, plexiglass e tecnologie digitali.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#16191D",
+  "theme_color": "#1F2328",
+  "lang": "it",
+  "categories": ["business", "shopping", "design"],
+  "icons": [
+    { "src": "assets/images/brand/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

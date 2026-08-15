@@ -10,9 +10,18 @@
     "placeholders": "node scripts/generate-placeholders.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "report": "node scripts/report.mjs",
-    "build": "npm run build:catalog && npm run placeholders && npm run sitemap && npm run report",
+    "build": "npm run build:catalog && npm run placeholders && npm run sync-images && npm run sitemap && npm run report",
     "validate": "node scripts/validate-data.mjs",
-    "test": "node scripts/validate-data.mjs && node tests/test-data.mjs && node tests/test-css.mjs && node tests/test-site.mjs"
+    "test": "node scripts/validate-data.mjs && node tests/test-data.mjs && node tests/test-css.mjs && node tests/test-site.mjs",
+    "sync-images": "node scripts/sync-images.mjs",
+    "add-product": "node scripts/add-product.mjs",
+    "crawl": "node scripts/crawl-reference.mjs",
+    "reconcile": "node scripts/reconcile-catalog.mjs"
   },
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.3"
+  }
 }

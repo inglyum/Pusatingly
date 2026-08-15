@@ -1,0 +1,480 @@
+/* ============================================================
+   INGLY DESIGN — COMPONENTI
+   Bottoni, card, chip, filtri, tabelle, form, accordion.
+   ============================================================ */
+
+/* ---- Bottoni ------------------------------------------------ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-5);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease),
+              color var(--dur) var(--ease), transform var(--dur-fast) var(--ease);
+}
+.btn:active { transform: translateY(1px); }
+.btn svg { width: 16px; height: 16px; }
+
+/* Un solo primario per schermata: è la regola dell'accento. */
+.btn--primary { background: var(--accent); color: var(--text-inverse); }
+.btn--primary:hover { background: color-mix(in srgb, var(--accent) 86%, var(--text-1)); }
+
+.btn--outline { border-color: var(--line-strong); color: var(--text-1); }
+.btn--outline:hover { border-color: var(--accent); color: var(--accent-text); }
+
+.btn--ghost { color: var(--text-2); }
+.btn--ghost:hover { background: var(--surface-2); color: var(--text-1); }
+
+.btn--lg { padding: var(--sp-4) var(--sp-6); font-size: var(--fs-md); }
+.btn--block { width: 100%; }
+
+/* Link testuale con freccia: la CTA delle card. */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-1);
+}
+.link-arrow svg {
+  width: 15px; height: 15px;
+  transition: transform var(--dur) var(--ease);
+}
+.link-arrow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+a:hover .link-arrow svg,
+.card:hover .link-arrow svg { transform: translateX(4px); }
+.card:hover .link-arrow { color: var(--accent-text); }
+
+/* ---- Chip --------------------------------------------------- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-1) var(--sp-3);
+  font-size: var(--fs-2xs);
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--text-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+.chip--accent {
+  color: var(--accent-text);
+  border-color: var(--accent-dim);
+  background: var(--accent-faint);
+}
+.chip--mono { font-family: var(--font-mono); }
+
+/* ---- Card prodotto ------------------------------------------ */
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-1);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.card:hover { border-color: var(--line-strong); background: var(--surface-2); }
+
+.card-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--surface-inset);
+  overflow: hidden;
+}
+.card-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease);
+}
+.card:hover .card-media img { transform: scale(1.03); }
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--sp-2);
+  padding: var(--sp-5);
+}
+
+.card-eyebrow {
+  font-size: var(--fs-2xs);
+  font-weight: 600;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.card-title { font-size: var(--fs-xl); }
+.card-subtitle { font-size: var(--fs-sm); color: var(--text-2); line-height: var(--lh-snug); }
+.card-desc {
+  font-size: var(--fs-sm);
+  color: var(--text-3);
+  line-height: var(--lh-snug);
+  margin-top: var(--sp-1);
+}
+
+.card-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-4);
+  margin-top: var(--sp-3);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--line-soft);
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  color: var(--text-3);
+}
+.card-specs span { display: inline-flex; align-items: center; gap: var(--sp-2); }
+.card-specs span::before { content: "◆"; color: var(--accent); font-size: 8px; }
+
+.card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-top: auto;
+  padding-top: var(--sp-4);
+}
+
+/* ---- Card categoria ----------------------------------------- */
+
+.cat-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 260px;
+  padding: var(--sp-5);
+  background: var(--surface-1);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color var(--dur) var(--ease);
+}
+.cat-card:hover { border-color: var(--accent-dim); }
+.cat-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: .5;
+  transition: opacity var(--dur-slow) var(--ease), transform var(--dur-slow) var(--ease);
+}
+.cat-card:hover img { opacity: .65; transform: scale(1.04); }
+.cat-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--surface-0) 4%, transparent 72%);
+}
+.cat-card > * { position: relative; z-index: 1; }
+.cat-card h3 { font-size: var(--fs-xl); margin-bottom: var(--sp-1); }
+.cat-card p { font-size: var(--fs-sm); color: var(--text-2); }
+.cat-card .count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  color: var(--text-3);
+  margin-top: var(--sp-3);
+}
+.cat-card--lg { grid-column: span 2; min-height: 320px; }
+
+/* ---- Card informativa (materiale / tecnologia) --------------- */
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-6);
+  background: var(--surface-1);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  transition: border-color var(--dur) var(--ease);
+}
+.info-card:hover { border-color: var(--line-strong); }
+.info-card h3 { font-size: var(--fs-lg); }
+.info-card .info-short { font-size: var(--fs-sm); color: var(--accent-text); font-weight: 500; }
+.info-card p { font-size: var(--fs-sm); color: var(--text-2); }
+
+.spec-list {
+  display: grid;
+  gap: var(--sp-2);
+  margin-top: var(--sp-3);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--line-soft);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+}
+.spec-list div { display: flex; justify-content: space-between; gap: var(--sp-4); }
+.spec-list dt, .spec-list .k { color: var(--text-3); }
+.spec-list dd, .spec-list .v { color: var(--text-1); text-align: right; }
+
+/* ---- Filtri catalogo ---------------------------------------- */
+
+.filters {
+  display: grid;
+  gap: var(--sp-5);
+  padding: var(--sp-5);
+  background: var(--surface-1);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  margin-bottom: var(--sp-6);
+}
+
+.filter-row { display: grid; gap: var(--sp-3); }
+.filter-label {
+  font-size: var(--fs-2xs);
+  font-weight: 600;
+  letter-spacing: var(--ls-caps);
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.filter-chips { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+
+.filter-chip {
+  padding: var(--sp-2) var(--sp-4);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--text-2);
+  background: var(--surface-2);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-full);
+  transition: all var(--dur) var(--ease);
+}
+.filter-chip:hover { border-color: var(--line-strong); color: var(--text-1); }
+.filter-chip[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-inverse);
+}
+
+/* "Tutte" è lo stato di partenza, non una scelta dell'utente: si segna come
+   attivo senza spendere l'accento. Il ciano resta il segnale di un filtro
+   deciso, che è la regola dell'accento del design system. */
+.filter-chip--all[aria-pressed="true"] {
+  background: var(--surface-3);
+  border-color: var(--line-strong);
+  color: var(--text-1);
+}
+
+.search-box { position: relative; }
+.search-box svg {
+  position: absolute;
+  left: var(--sp-4);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px; height: 18px;
+  color: var(--text-3);
+  pointer-events: none;
+}
+.search-box input {
+  width: 100%;
+  padding: var(--sp-4) var(--sp-4) var(--sp-4) calc(var(--sp-4) * 2 + 18px);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text-1);
+  transition: border-color var(--dur) var(--ease);
+}
+.search-box input::placeholder { color: var(--text-3); }
+.search-box input:focus { border-color: var(--accent); }
+
+.catalog-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+.result-count { font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--text-3); }
+.result-count b { color: var(--text-1); }
+
+select {
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text-1);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+}
+
+/* ---- Stato vuoto -------------------------------------------- */
+
+.empty-state {
+  padding: var(--sp-9) var(--sp-5);
+  text-align: center;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-lg);
+}
+.empty-state h3 { font-size: var(--fs-lg); margin-bottom: var(--sp-2); }
+.empty-state p { color: var(--text-3); font-size: var(--fs-sm); margin-bottom: var(--sp-5); }
+
+/* ---- Breadcrumb --------------------------------------------- */
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+  padding-block: var(--sp-5) 0;
+}
+.breadcrumb a { transition: color var(--dur) var(--ease); }
+.breadcrumb a:hover { color: var(--accent-text); }
+.breadcrumb li:not(:last-child)::after { content: "/"; margin-left: var(--sp-2); opacity: .5; }
+.breadcrumb li { display: inline-flex; align-items: center; }
+.breadcrumb [aria-current] { color: var(--text-2); }
+
+/* ---- Tabella dati tecnici ----------------------------------- */
+
+.data-table { font-family: var(--font-mono); font-size: var(--fs-sm); }
+.data-table th,
+.data-table td {
+  padding: var(--sp-3) 0;
+  text-align: left;
+  border-bottom: 1px solid var(--line-soft);
+}
+.data-table th { color: var(--text-3); font-weight: 400; }
+.data-table td { color: var(--text-1); text-align: right; }
+
+/* ---- Accordion / FAQ ---------------------------------------- */
+
+.accordion { border-top: 1px solid var(--line-soft); }
+.accordion-item { border-bottom: 1px solid var(--line-soft); }
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  width: 100%;
+  padding: var(--sp-5) 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--text-1);
+  text-align: left;
+}
+.accordion-trigger svg {
+  flex-shrink: 0;
+  width: 18px; height: 18px;
+  color: var(--text-3);
+  transition: transform var(--dur) var(--ease);
+}
+.accordion-trigger[aria-expanded="true"] svg { transform: rotate(45deg); color: var(--accent); }
+.accordion-panel { display: none; padding-bottom: var(--sp-5); }
+.accordion-panel.is-open { display: block; }
+.accordion-panel p { font-size: var(--fs-sm); color: var(--text-2); max-width: 68ch; }
+
+/* ---- Form --------------------------------------------------- */
+
+.form-grid { display: grid; gap: var(--sp-5); }
+.field { display: grid; gap: var(--sp-2); }
+.field label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--text-2);
+}
+.field label .opt { color: var(--text-3); font-weight: 400; }
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: var(--sp-4);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text-1);
+  transition: border-color var(--dur) var(--ease);
+}
+.field input:focus,
+.field textarea:focus,
+.field select:focus { border-color: var(--accent); }
+.field textarea { min-height: 140px; resize: vertical; }
+.field input[aria-invalid="true"],
+.field textarea[aria-invalid="true"] { border-color: #E5484D; }
+
+.field-error { font-size: var(--fs-xs); color: #E5484D; min-height: 1em; }
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  cursor: pointer;
+}
+.checkbox input { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--accent); flex-shrink: 0; }
+
+.form-note {
+  padding: var(--sp-4);
+  background: var(--surface-2);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+
+.form-status { font-size: var(--fs-sm); }
+.form-status[data-state="ok"] { color: var(--accent-text); }
+.form-status[data-state="err"] { color: #E5484D; }
+
+/* ---- Badge di migrazione (visibile solo in ?debug=1) --------- */
+
+.mig-badge {
+  position: absolute;
+  top: var(--sp-3);
+  left: var(--sp-3);
+  z-index: 2;
+  padding: 2px var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  background: var(--surface-0);
+  color: var(--text-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  display: none;
+}
+html[data-debug="1"] .mig-badge { display: block; }
+
+/* ---- Toast -------------------------------------------------- */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: var(--sp-6);
+  z-index: var(--z-toast);
+  transform: translate(-50%, 20px);
+  padding: var(--sp-3) var(--sp-5);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--elev-3);
+  font-size: var(--fs-sm);
+  color: var(--text-1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility var(--dur);
+}
+.toast.is-on { opacity: 1; visibility: visible; transform: translate(-50%, 0); }

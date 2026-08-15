@@ -1,0 +1,134 @@
+/* ============================================================
+   INGLY DESIGN — DESIGN TOKENS
+   Fonte unica di colori, tipografia, spazio, forma e movimento.
+   Nessun valore cromatico o dimensionale va scritto altrove:
+   la regola è verificata da tests/test-css.mjs.
+   Riferimento: docs/INGLY-DESIGN-SYSTEM.md
+   ============================================================ */
+
+:root {
+  /* ---- Palette brand (master command §20) ---- */
+  --ingly-anthracite: #1F2328;
+  --ingly-dark:       #2E3238;
+  --ingly-white:      #FFFFFF;
+  --ingly-cyan:       #00E6D2;
+  --ingly-cyan-print: #00CFC0;
+
+  /* ---- Superfici (tema scuro, default) ---- */
+  --surface-0: #16191D;
+  --surface-1: #1F2328;
+  --surface-2: #2E3238;
+  --surface-3: #3A3F46;
+  --surface-inset: #12151A;
+
+  --line:      rgba(255, 255, 255, .09);
+  --line-soft: rgba(255, 255, 255, .05);
+  --line-strong: rgba(255, 255, 255, .16);
+
+  /* ---- Testo ---- */
+  --text-1: #FFFFFF;
+  --text-2: #C6CBD2;
+  --text-3: #8A9099;
+  --text-inverse: #1F2328;
+
+  /* ---- Accento. Vedi la regola dell'accento nel design system. ---- */
+  --accent:       #00E6D2;
+  --accent-dim:   rgba(0, 230, 210, .16);
+  --accent-faint: rgba(0, 230, 210, .07);
+  --accent-text:  #00E6D2;
+
+  /* ---- Tipografia ---- */
+  --font-display: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  --fs-2xs: .6875rem;
+  --fs-xs:  .75rem;
+  --fs-sm:  .875rem;
+  --fs-md:  1rem;
+  --fs-lg:  1.25rem;
+  --fs-xl:  1.5625rem;
+  --fs-2xl: clamp(1.65rem, 3vw, 1.953rem);
+  --fs-3xl: clamp(2rem, 4.2vw, 2.441rem);
+  --fs-4xl: clamp(2.4rem, 6vw, 3.815rem);
+
+  --lh-tight: 1.15;
+  --lh-snug: 1.3;
+  --lh-base: 1.65;
+  --ls-caps: .14em;
+  --ls-tight: -.02em;
+
+  /* ---- Spazio ---- */
+  --sp-1: .25rem;  --sp-2: .5rem;   --sp-3: .75rem;  --sp-4: 1rem;
+  --sp-5: 1.5rem;  --sp-6: 2rem;    --sp-7: 3rem;    --sp-8: 4rem;
+  --sp-9: 6rem;    --sp-10: 8rem;
+
+  --section-y: clamp(4rem, 9vw, 8rem);
+  --container: 1280px;
+  --container-narrow: 820px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  /* ---- Forma ---- */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
+
+  /* ---- Elevazione: profondità strutturale, mai bagliori colorati ---- */
+  --elev-1: 0 1px 2px rgba(0, 0, 0, .28);
+  --elev-2: 0 4px 16px rgba(0, 0, 0, .30);
+  --elev-3: 0 12px 32px rgba(0, 0, 0, .34);
+  --elev-4: 0 24px 60px rgba(0, 0, 0, .42);
+
+  /* ---- Movimento ---- */
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-fast: 140ms;
+  --dur: 240ms;
+  --dur-slow: 420ms;
+
+  /* ---- Layer ---- */
+  --z-nav: 100;
+  --z-mega: 110;
+  --z-overlay: 200;
+  --z-toast: 300;
+
+  color-scheme: dark;
+}
+
+/* ============================================================
+   MODALITÀ CHIARA
+   Cambiano solo i token: nessun componente viene riscritto.
+   L'accento passa a #00A99B perché il ciano brillante su bianco
+   scende sotto la soglia di contrasto AA (~1.7:1).
+   ============================================================ */
+
+:root[data-mode="light"] {
+  --surface-0: #FFFFFF;
+  --surface-1: #F7F8F9;
+  --surface-2: #FFFFFF;
+  --surface-3: #EDEFF1;
+  --surface-inset: #F2F4F5;
+
+  --line:      rgba(31, 35, 40, .12);
+  --line-soft: rgba(31, 35, 40, .07);
+  --line-strong: rgba(31, 35, 40, .20);
+
+  --text-1: #1F2328;
+  --text-2: #4A5058;
+  --text-3: #767C85;
+  --text-inverse: #FFFFFF;
+
+  --accent:       #00A99B;
+  --accent-dim:   rgba(0, 169, 155, .14);
+  --accent-faint: rgba(0, 169, 155, .06);
+  --accent-text:  #00847A;
+
+  --elev-1: 0 1px 2px rgba(31, 35, 40, .06);
+  --elev-2: 0 4px 16px rgba(31, 35, 40, .08);
+  --elev-3: 0 12px 32px rgba(31, 35, 40, .10);
+  --elev-4: 0 24px 60px rgba(31, 35, 40, .13);
+
+  color-scheme: light;
+}

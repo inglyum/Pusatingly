@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagina non trovata — INGLY DESIGN</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/assets/css/reset.css">
+<link rel="stylesheet" href="/assets/css/variables.css">
+<link rel="stylesheet" href="/assets/css/layout.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+<link rel="stylesheet" href="/assets/css/pages.css">
+<script>
+/* Su host statici senza rewrite (GitHub Pages) ogni percorso profondo
+   arriva qui. Il percorso richiesto viene passato all'app come hash-route,
+   così /creazioni/gadget continua a funzionare come indirizzo condivisibile. */
+(function () {
+  var p = location.pathname + location.search;
+  if (p && p !== '/404.html' && !/\/404\.html$/.test(p)) {
+    location.replace('/#' + p);
+  }
+})();
+</script>
+</head>
+<body>
+  <main class="container">
+    <div class="notfound">
+      <p class="eyebrow" style="justify-content:center">404</p>
+      <h1>Pagina non trovata</h1>
+      <p>L'indirizzo richiesto non esiste o è stato spostato.</p>
+      <div class="hero-actions" style="justify-content:center;margin-top:1rem">
+        <a class="btn btn--primary" href="/">Home</a>
+        <a class="btn btn--outline" href="/#/creazioni">Catalogo</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
