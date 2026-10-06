@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Il pannello non è contenuto del sito: non va indicizzato.
+# Non è una misura di sicurezza — a scrivere sul repository
+# autorizza il token di GitHub, non l'oscurità di questo indirizzo.
+Disallow: /admin.html
+
 Sitemap: https://inglydesign.it/sitemap.xml

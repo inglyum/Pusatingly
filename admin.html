@@ -26,10 +26,12 @@
     <span id="globalIssues" style="font-size:var(--fs-xs);color:#E5484D"></span>
     <span class="a-state" id="state" data-dirty="0">nessuna modifica</span>
 
+    <button type="button" class="btn btn--ghost" id="btnSettings" aria-label="Impostazioni GitHub">⚙</button>
     <button type="button" class="btn btn--ghost" id="btnReset">Scarta</button>
     <button type="button" class="btn btn--ghost" id="btnNew">+ Nuova</button>
     <button type="button" class="btn btn--outline" id="btnPreview">Anteprima sito</button>
-    <button type="button" class="btn btn--primary" id="btnExport">Esporta products.json</button>
+    <button type="button" class="btn btn--ghost" id="btnExport">Esporta file</button>
+    <button type="button" class="btn btn--primary" id="btnPublish">Pubblica su GitHub</button>
   </div>
 
   <div class="a-body">
@@ -54,7 +56,10 @@
 
 <dialog class="a-dialog" id="howto">
   <h2>File scaricato. Ora mettilo nel sito.</h2>
-  <p>L'admin non scrive sul server: prepara i file, li metti tu nel repository.</p>
+  <p>
+    Questa è la via manuale, utile se GitHub non è raggiungibile.
+    Normalmente basta <b>Pubblica su GitHub</b>: fa tutto in un commit solo.
+  </p>
   <ol>
     <li>Sostituisci <code>data/products.json</code> con il file appena scaricato</li>
     <li id="howtoPhotos"></li>
@@ -67,6 +72,70 @@
   </p>
   <div class="a-dialog-actions">
     <button type="button" class="btn btn--primary" data-close>Ho capito</button>
+  </div>
+</dialog>
+
+<dialog class="a-dialog a-dialog--wide" id="settings">
+  <h2>Collegamento a GitHub</h2>
+  <p>L'admin scrive sul repository con le API di GitHub: un solo commit per ogni pubblicazione.</p>
+
+  <div class="a-grid a-grid--3" style="margin-top:var(--sp-5)">
+    <div class="a-field">
+      <label for="s-owner">Owner</label>
+      <input id="s-owner" placeholder="inglyum" autocomplete="off">
+    </div>
+    <div class="a-field">
+      <label for="s-repo">Repository</label>
+      <input id="s-repo" placeholder="pusatingly" autocomplete="off">
+    </div>
+    <div class="a-field">
+      <label for="s-branch">Ramo</label>
+      <input id="s-branch" placeholder="main" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="a-field" style="margin-top:var(--sp-5)">
+    <label for="s-token">Token di accesso</label>
+    <input id="s-token" type="password" placeholder="github_pat_…" autocomplete="off" spellcheck="false">
+    <span class="hint">
+      GitHub → Settings → Developer settings → Fine-grained tokens → Generate new token.
+      Dai accesso <b>solo a questo repository</b> e un solo permesso: <b>Contents → Read and write</b>.
+    </span>
+  </div>
+
+  <label class="a-check" style="margin-top:var(--sp-4)">
+    <input type="checkbox" id="s-remember">
+    <span>Ricorda il token su questo computer</span>
+  </label>
+  <p class="hint" style="margin-top:var(--sp-2)">
+    Senza la spunta il token resta in memoria finché la scheda è aperta, e sparisce alla chiusura.
+    Non finisce mai dentro un commit: non è un dato del sito.
+  </p>
+
+  <p id="s-state" class="a-issue" data-level="ok" style="margin-top:var(--sp-5)"></p>
+
+  <div class="a-dialog-actions">
+    <button type="button" class="btn btn--ghost" id="s-forget">Dimentica il token</button>
+    <button type="button" class="btn btn--outline" id="s-test">Prova il collegamento</button>
+    <button type="button" class="btn btn--primary" id="s-save">Salva</button>
+  </div>
+</dialog>
+
+<dialog class="a-dialog a-dialog--wide" id="publish">
+  <h2>Pubblica sul sito</h2>
+  <div id="p-summary"></div>
+
+  <div class="a-field" style="margin-top:var(--sp-5)">
+    <label for="p-msg">Messaggio del commit</label>
+    <input id="p-msg" placeholder="Aggiornamento catalogo">
+  </div>
+
+  <ol class="a-steps" id="p-steps"></ol>
+  <p id="p-out" class="a-issue" data-level="ok" style="margin-top:var(--sp-4);display:none"></p>
+
+  <div class="a-dialog-actions">
+    <button type="button" class="btn btn--ghost" data-close>Chiudi</button>
+    <button type="button" class="btn btn--primary" id="p-go">Pubblica</button>
   </div>
 </dialog>
 

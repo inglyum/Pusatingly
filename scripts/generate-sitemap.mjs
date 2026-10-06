@@ -2,76 +2,35 @@
 /* ============================================================
    INGLY DESIGN — SITEMAP
    Genera sitemap.xml da data/*.json.
-   I prodotti archiviati sono esclusi (docs/PRODUCT-MIGRATION.md §3).
+   L'elenco degli URL vive in assets/js/sitemap.js, condiviso con
+   l'Admin: così la sitemap pubblicata dal pannello e quella
+   generata qui non possono divergere.
    Uso:  npm run sitemap
    ============================================================ */
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { sitemapXml, sitemapUrls, pubblicati } from '../assets/js/sitemap.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (f) => JSON.parse(readFileSync(join(ROOT, f), 'utf8'));
 
-const config = read('data/config.json');
-const products = read('data/products.json');
-const categories = read('data/categories.json');
-/* Le schede macchina nascono dallo stesso file che disegna la sezione xTool:
-   se divergessero, la sitemap dichiarerebbe pagine che non esistono. */
-const xtool = read('data/xtool.json');
-const info = read('data/informazioni.json');
+const data = {
+  config: read('data/config.json'),
+  products: read('data/products.json'),
+  categories: read('data/categories.json'),
+  /* Le schede macchina nascono dallo stesso file che disegna la sezione xTool:
+     se divergessero, la sitemap dichiarerebbe pagine che non esistono. */
+  xtool: read('data/xtool.json'),
+  info: read('data/informazioni.json')
+};
 
-const ORIGIN = (config.site?.url || 'https://inglydesign.it').replace(/\/$/, '');
-const today = new Date().toISOString().slice(0, 10);
+writeFileSync(join(ROOT, 'sitemap.xml'), sitemapXml(data), 'utf8');
 
-const urls = [
-  { loc: '/', priority: '1.0', changefreq: 'weekly' },
-  { loc: '/creazioni', priority: '0.9', changefreq: 'weekly' },
-  { loc: '/materiali', priority: '0.7', changefreq: 'monthly' },
-  { loc: '/tecnologie', priority: '0.7', changefreq: 'monthly' },
-  { loc: '/portfolio', priority: '0.6', changefreq: 'monthly' },
-  { loc: '/chi-sono', priority: '0.7', changefreq: 'monthly' },
-  { loc: '/come-acquistare', priority: '0.7', changefreq: 'monthly' },
-  { loc: '/b2b', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/contatti', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/xtool', priority: '0.9', changefreq: 'monthly' }
-];
-
-for (const c of categories) {
-  urls.push({ loc: `/creazioni/${c.id}`, priority: '0.8', changefreq: 'weekly' });
-}
-
-const published = products.filter((p) => p.migrationStatus !== 'archived');
-for (const p of published) {
-  urls.push({ loc: `/creazioni/${p.category}/${p.slug}`, priority: '0.6', changefreq: 'monthly' });
-}
-
-const NS = 'http://www.sitemaps.org/schemas/sitemap/0.9';
-
-for (const m of xtool.gamma || []) {
-  urls.push({ loc: `/xtool/${m.id}`, priority: '0.7', changefreq: 'monthly' });
-}
-
-for (const p of info.pagine || []) {
-  urls.push({ loc: `/informazioni/${p.id}`, priority: '0.4', changefreq: 'yearly' });
-}
-
-
-const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="${NS}">
-${urls.map((u) => `  <url>
-    <loc>${ORIGIN}${u.loc}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>${u.changefreq}</changefreq>
-    <priority>${u.priority}</priority>
-  </url>`).join('\n')}
-</urlset>
-`;
-
-writeFileSync(join(ROOT, 'sitemap.xml'), xml, 'utf8');
-
-const archived = products.length - published.length;
-console.log(`\n  Sitemap generata: ${urls.length} URL`);
-console.log(`    pagine fisse   9`);
-console.log(`    categorie      ${categories.length}`);
-console.log(`    prodotti       ${published.length}${archived ? ` (${archived} archiviati esclusi)` : ''}\n`);
+const vivi = pubblicati(data.products);
+const archived = data.products.length - vivi.length;
+console.log(`\n  Sitemap generata: ${sitemapUrls(data).length} URL`);
+console.log(`    pagine fisse   10`);
+console.log(`    categorie      ${data.categories.length}`);
+console.log(`    prodotti       ${vivi.length}${archived ? ` (${archived} archiviati esclusi)` : ''}\n`);

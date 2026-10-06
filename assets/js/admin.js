@@ -17,6 +17,7 @@
    ============================================================ */
 
 import { $, $$, esc, loc, norm, icon, debounce } from './utils.js';
+import * as GH from './admin-github.js';
 
 const DRAFT_KEY = 'ingly-admin-draft';
 const PREVIEW_KEY = 'ingly-admin-preview';
@@ -25,7 +26,9 @@ const FILES = [
   ['config', 'CONFIG'], ['texts', 'T'], ['categories', 'CATS'],
   ['products', 'PRODUCTS'], ['materials', 'MATERIALS'],
   ['technologies', 'TECHNOLOGIES'], ['portfolio', 'PORTFOLIO'],
-  ['content', 'CONTENT'], ['migration', 'MIGRATION']
+  ['content', 'CONTENT'], ['migration', 'MIGRATION'],
+  /* servono alla sitemap che l'Admin rigenera pubblicando */
+  ['xtool', 'XTOOL'], ['informazioni', 'INFO']
 ];
 
 const S = {
@@ -35,7 +38,9 @@ const S = {
   selected: null,
   dirty: false,
   filters: { q: '', cat: '', status: '' },
-  photos: new Map()   // id → { blob, url, name } in attesa di download
+  photos: new Map(),  // id → { blob, url, name } da caricare o scaricare
+  removed: [],        // percorsi di immagini da togliere dal repository
+  snapshot: {}        // ciò che l'Admin ha letto all'avvio (guardia anti-sovrascrittura)
 };
 
 /* ============ AVVIO ============ */
@@ -60,6 +65,15 @@ async function init() {
   S.D = D;
   S.published = JSON.parse(JSON.stringify(D.PRODUCTS));
   S.products = restoreDraft() || JSON.parse(JSON.stringify(D.PRODUCTS));
+
+  /* Istantanea di ciò che l'Admin ha letto davvero: serve alla guardia
+     anti-sovrascrittura al momento di pubblicare. */
+  S.snapshot = { 'data/products.json': GH.impronta('data/products.json', JSON.stringify(D.PRODUCTS)) };
+
+  if (!GH.SET.owner || !GH.SET.repo) {
+    const auto = GH.autodetect();
+    if (auto) GH.salvaImpostazioni(auto);
+  }
 
   buildFilters();
   renderList();
@@ -97,7 +111,7 @@ function markDirty(on) {
   el.dataset.dirty = on ? '1' : '0';
   const n = on ? countChanges() : 0;
   el.textContent = on
-    ? `${n} ${n === 1 ? 'creazione modificata' : 'creazioni modificate'}, non esportate`
+    ? `${n} ${n === 1 ? 'creazione modificata' : 'creazioni modificate'}, non pubblicate`
     : 'nessuna modifica';
 }
 
@@ -193,6 +207,7 @@ function renderEditor() {
       <button type="button" class="btn btn--outline" id="btnArchive">
         ${p.migrationStatus === 'archived' ? 'Ripristina' : 'Archivia'}
       </button>
+      <button type="button" class="btn btn--ghost" id="btnDelete">Elimina</button>
     </div>
 
     <section class="a-section">
@@ -449,6 +464,7 @@ function bindEditor(p) {
 
   // azioni
   $('#btnArchive').addEventListener('click', () => toggleArchive(p));
+  $('#btnDelete').addEventListener('click', () => removeProduct(p));
   $('#btnDup').addEventListener('click', () => duplicate(p));
 }
 
@@ -603,6 +619,33 @@ function toggleArchive(p) {
   renderEditor();
 }
 
+/**
+ * Eliminazione vera: la creazione esce dal catalogo e la sua fotografia
+ * viene tolta dal repository alla prossima pubblicazione.
+ *
+ * Resta la via secondaria, non quella consigliata. Archiviare mantiene il
+ * codice occupato e il pezzo recuperabile; eliminare no. L'id però non
+ * torna mai disponibile — nextId() guarda anche l'elenco pubblicato — così
+ * un vecchio link non può finire su un prodotto diverso.
+ */
+function removeProduct(p) {
+  const msg = `Eliminare definitivamente "${p.name}" (${p.id})?\n\n`
+    + 'Sparisce dal file, non solo dal catalogo pubblico, e alla prossima '
+    + 'pubblicazione viene rimossa anche la sua fotografia dal repository.\n\n'
+    + 'Se vuoi solo toglierla dal sito tenendola recuperabile, usa Archivia.';
+  if (!confirm(msg)) return;
+
+  const foto = p.images?.[0];
+  if (foto?.status === 'final' && /^assets\/images\/products\//.test(foto.src || '')) {
+    S.removed.push(foto.src);
+  }
+  S.products = S.products.filter((x) => x.id !== p.id);
+  S.photos.delete(p.id);
+  S.selected = null;
+  touch();
+  renderEditor();
+}
+
 function slugify(s) {
   return String(s).toLowerCase()
     .normalize('NFD').replace(/[̀-ͯ]/g, '')
@@ -707,6 +750,191 @@ function showHowTo() {
   $('#howto').showModal();
 }
 
+/* ============ IMPOSTAZIONI GITHUB ============ */
+
+function openSettings() {
+  $('#s-owner').value = GH.SET.owner || '';
+  $('#s-repo').value = GH.SET.repo || '';
+  $('#s-branch').value = GH.SET.branch || 'main';
+  $('#s-remember').checked = !!GH.SET.remember;
+  $('#s-token').value = GH.token() ? '••••••••••••••••' : '';
+  settingsState(GH.token()
+    ? 'Token presente in questa sessione.'
+    : 'Nessun token: senza, l\'admin può leggere ma non pubblicare.', GH.token() ? 'ok' : 'warn');
+  $('#settings').showModal();
+}
+
+function settingsState(msg, level = 'ok') {
+  const el = $('#s-state');
+  el.textContent = msg;
+  el.dataset.level = level;
+}
+
+function saveSettings() {
+  GH.salvaImpostazioni({
+    owner: $('#s-owner').value.trim(),
+    repo: $('#s-repo').value.trim(),
+    branch: $('#s-branch').value.trim() || 'main',
+    remember: $('#s-remember').checked
+  });
+  const t = $('#s-token').value.trim();
+  /* I pallini sono il segnaposto di un token già presente: non sovrascrivono. */
+  if (t && !/^•+$/.test(t)) GH.setToken(t);
+  else if (!t) GH.dimenticaToken();
+  else GH.setToken(GH.token());        // riallinea session/local al nuovo "ricorda"
+  settingsState('Impostazioni salvate.', 'ok');
+}
+
+async function testSettings() {
+  saveSettings();
+  settingsState('Verifica in corso…', 'ok');
+  try {
+    const r = await GH.gh(`/git/ref/heads/${GH.SET.branch}`);
+    settingsState(`Collegato a ${GH.SET.owner}/${GH.SET.repo} · ramo ${GH.SET.branch} · ${r.object.sha.slice(0, 7)}`, 'ok');
+  } catch (e) {
+    settingsState(GH.spiegaErrore(e), 'error');
+  }
+}
+
+/* ============ PUBBLICAZIONE ============ */
+
+const PASSI = [
+  ['ref', 'leggo il ramo'],
+  ['blob', 'carico i file'],
+  ['albero', 'compongo l\'albero'],
+  ['commit', 'creo il commit'],
+  ['ref-avanti', 'avanzo il ramo'],
+  ['fatto', 'commit salvo'],
+  ['online', 'verifico il sito online']
+];
+
+function renderSteps(stato = {}) {
+  $('#p-steps').innerHTML = PASSI.map(([id, label]) =>
+    `<li data-state="${esc(stato[id] || 'wait')}"><span>${esc(label)}</span><span class="a-step-note" id="ps-${id}"></span></li>`
+  ).join('');
+}
+
+function openPublish() {
+  const errori = validate().filter((i) => i[0] === 'error');
+  const nuove = S.products.filter((p) => !S.published.some((q) => q.id === p.id)).length;
+  const foto = S.photos.size;
+
+  $('#p-summary').innerHTML = `
+    <div class="a-issue" data-level="${errori.length ? 'error' : 'ok'}">
+      ${errori.length
+        ? `${errori.length} errori da risolvere: la pubblicazione è bloccata.`
+        : 'Nessun errore bloccante.'}
+    </div>
+    <ul class="a-summary">
+      <li><b>${countChanges()}</b> ${countChanges() === 1 ? 'creazione modificata' : 'creazioni modificate'}</li>
+      <li><b>${nuove}</b> ${nuove === 1 ? 'nuova' : 'nuove'}</li>
+      <li><b>${S.removed.length}</b> ${S.removed.length === 1 ? 'fotografia da rimuovere' : 'fotografie da rimuovere'} dal repository</li>
+      <li><b>${foto}</b> ${foto === 1 ? 'fotografia da caricare' : 'fotografie da caricare'}</li>
+      <li>destinazione: <span class="mono">${esc(GH.SET.owner || '—')}/${esc(GH.SET.repo || '—')}</span> · ramo <span class="mono">${esc(GH.SET.branch)}</span></li>
+    </ul>`;
+
+  /* Pubblicare senza modifiche produrrebbe un commit che cambia solo la
+     versione e la data della sitemap: rumore nella cronologia. */
+  const daFare = countChanges() + nuove + S.removed.length + foto
+    + (S.products.length !== S.published.length ? 1 : 0);
+
+  $('#p-out').style.display = 'none';
+  $('#p-go').disabled = errori.length > 0 || !GH.token() || daFare === 0;
+  if (daFare === 0) {
+    $('#p-summary').insertAdjacentHTML('beforeend',
+      '<div class="a-issue" data-level="warn">Niente da pubblicare: il catalogo è identico a quello online.</div>');
+  }
+  if (!GH.token()) {
+    $('#p-summary').insertAdjacentHTML('beforeend',
+      '<div class="a-issue" data-level="warn">Manca il token: aprilo in Impostazioni (⚙).</div>');
+  }
+  renderSteps();
+  $('#publish').showModal();
+}
+
+function pubOut(html, level = 'ok') {
+  const el = $('#p-out');
+  el.innerHTML = html;
+  el.dataset.level = level;
+  el.style.display = '';
+}
+
+async function doPublish() {
+  const btn = $('#p-go');
+  btn.disabled = true;
+  const stato = {};
+  const passo = (id, nota) => {
+    stato[id] = 'run';
+    for (const [p] of PASSI) if (stato[p] === 'run' && p !== id) stato[p] = 'done';
+    renderSteps(stato);
+    if (nota) $(`#ps-${id}`).textContent = ` — ${nota}`;
+  };
+
+  try {
+    const foto = [];
+    for (const [id, ph] of S.photos) {
+      foto.push({ path: `assets/images/products/${id}.webp`, b64: await GH.blobInB64(ph.blob) });
+    }
+
+    const versione = Date.now();
+    const files = GH.pacchetto({
+      products: S.products,
+      config: S.D.CONFIG, categories: S.D.CATS,
+      xtool: S.D.XTOOL, info: S.D.INFO,
+      foto, versione
+    });
+
+    const res = await GH.pubblica({
+      files,
+      elimina: S.removed.slice(),
+      messaggio: ($('#p-msg').value.trim() || 'Aggiornamento catalogo') + ' [admin]',
+      istantanee: S.snapshot,
+      suDeriva: (fuori) => confirm(
+        'ATTENZIONE — sul repository questi file sono cambiati dopo che l\'admin ha letto i dati:\n\n'
+        + fuori.map((f) => `· ${f}`).join('\n')
+        + '\n\nPubblicando ora quelle modifiche vengono sovrascritte e vanno perse.\n\n'
+        + 'Annulla = fermati e ricarica l\'admin (consigliato)\nOK = pubblica comunque'),
+      passo
+    });
+
+    /* Da qui in poi il lavoro è salvo: il commit esiste su GitHub. */
+    stato.fatto = 'done';
+    renderSteps(stato);
+    $('#ps-fatto').textContent = ` — ${res.sha.slice(0, 7)}`;
+
+    S.published = JSON.parse(JSON.stringify(S.products));
+    S.snapshot['data/products.json'] = GH.impronta('data/products.json', JSON.stringify(S.products));
+    S.removed = [];
+    S.photos.forEach((ph) => URL.revokeObjectURL(ph.url));
+    S.photos.clear();
+    localStorage.removeItem(DRAFT_KEY);
+    markDirty(false);
+    renderList();
+    renderEditor();
+
+    const origin = String(S.D.CONFIG?.site?.url || '').replace(/\/$/, '');
+    const linea = `Pubblicato. Commit <span class="mono">${res.sha.slice(0, 7)}</span>`
+      + (origin ? ` · <a href="${esc(origin)}?v=${versione}" target="_blank" rel="noopener">apri il sito ↗</a>` : '');
+    pubOut(`${linea}<br>Controllo la messa online: puoi anche chiudere, il commit è già salvo.`, 'ok');
+
+    passo('online', 'tentativo 1');
+    const live = await GH.verificaOnline(origin, versione, {
+      onTentativo: (i, n) => { $('#ps-online').textContent = ` — tentativo ${i}/${n}`; }
+    });
+    stato.online = live.ok ? 'done' : 'warn';
+    renderSteps(stato);
+    pubOut(live.ok
+      ? `${linea}<br>Il sito online mostra la nuova versione.`
+      : `${linea}<br>Messa online non ancora confermata (${esc(live.motivo)}). Il commit <b>è salvo</b>: GitHub Pages a volte impiega qualche minuto.`,
+    live.ok ? 'ok' : 'warn');
+  } catch (e) {
+    console.error('[admin]', e);
+    pubOut(esc(GH.spiegaErrore(e)), 'error');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
 /* ============ BARRA E FILTRI ============ */
 
 function bind() {
@@ -732,7 +960,19 @@ function bind() {
     renderEditor();
   });
 
-  $$('#howto [data-close]').forEach((b) => b.addEventListener('click', () => $('#howto').close()));
+  $$('[data-close]').forEach((b) => b.addEventListener('click', () => b.closest('dialog')?.close()));
+
+  $('#btnSettings').addEventListener('click', openSettings);
+  $('#s-save').addEventListener('click', () => { saveSettings(); $('#settings').close(); });
+  $('#s-test').addEventListener('click', testSettings);
+  $('#s-forget').addEventListener('click', () => {
+    GH.dimenticaToken();
+    $('#s-token').value = '';
+    settingsState('Token dimenticato.', 'warn');
+  });
+
+  $('#btnPublish').addEventListener('click', openPublish);
+  $('#p-go').addEventListener('click', doPublish);
 
   // Non si perde il lavoro chiudendo la scheda per sbaglio.
   window.addEventListener('beforeunload', (e) => {

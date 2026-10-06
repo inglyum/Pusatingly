@@ -254,6 +254,9 @@
   padding: var(--sp-6);
   max-width: 560px;
   width: calc(100% - 2rem);
+  margin: auto;                 /* senza, la finestra si incolla in alto a sinistra */
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
   box-shadow: var(--elev-4);
 }
 .a-dialog::backdrop { background: var(--backdrop); }
@@ -273,3 +276,41 @@
 
 /* Il banner di anteprima vive in components.css: deve comparire sul SITO,
    che non carica questo foglio. */
+
+/* ---- pubblicazione su GitHub ---- */
+
+.a-dialog--wide { max-width: 720px; }
+
+.a-check {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: center;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+.a-check input { width: 1rem; height: 1rem; accent-color: var(--accent); }
+
+.a-summary {
+  display: grid;
+  gap: var(--sp-2);
+  margin-top: var(--sp-4);
+  padding-left: var(--sp-5);
+  font-size: var(--fs-sm);
+}
+.a-summary li { list-style: disc; }
+.a-summary b { color: var(--text-1); }
+
+.a-steps {
+  display: grid;
+  gap: var(--sp-2);
+  margin-top: var(--sp-5);
+  padding-left: var(--sp-5);
+  font-size: var(--fs-sm);
+}
+.a-steps li { list-style: decimal; color: var(--text-3); }
+.a-steps li[data-state="run"] { color: var(--text-1); }
+.a-steps li[data-state="done"] { color: var(--accent-text); }
+.a-steps li[data-state="warn"] { color: var(--text-2); }
+.a-step-note { font-family: var(--font-mono); font-size: var(--fs-2xs); color: var(--text-3); }
+
+.mono { font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--text-1); }
