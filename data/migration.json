@@ -3,15 +3,11 @@
  "updated": "2026-08-14",
  "note": "Mappa di migrazione machine-readable. Fonte narrativa: docs/MIGRATION-MAP.md",
  "brand": {
-  "from": {
-   "brand": "Pusateri Maker",
-   "person": "Alessio Pusateri"
-  },
   "to": {
    "brand": "INGLY DESIGN",
    "person": "Giuseppe Inglima"
   },
-  "rule": "Struttura editoriale riusata come modello. Contenuto personale, clienti, referenze, numeri e nomi di prodotto NON importati. Vedi docs/MIGRATION-MAP.md §3."
+  "nota": "La struttura editoriale di partenza e la mappatura narrativa stanno in docs/MIGRATION-MAP.md. Qui restano solo i dati che il sito usa davvero: nessun nome di terzi viene pubblicato nel payload."
  },
  "categoryMap": [
   {
