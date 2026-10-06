@@ -17,11 +17,12 @@ import {
 import { initProduct, renderProductPage, PRODUCT_FAQ } from './product.js';
 import {
   initPages, renderMaterials, renderTechnologies, renderAbout,
+  renderXtool, renderXtoolMachine, findXtoolMachine,
   renderPortfolio, renderHow, renderB2b, renderNotFound
 } from './pages.js';
 import { initForms, renderContact } from './forms.js';
 import {
-  setSeo, organizationLd, breadcrumbLd, productLd, faqLd, personLd
+  setSeo, organizationLd, breadcrumbLd, productLd, faqLd, personLd, serviceLd
 } from './seo.js';
 
 let D = null;
@@ -197,6 +198,50 @@ function render({ route, params, path, query }) {
       renderB2b(main);
       setSeoFromContent('b2b', canonical);
       break;
+
+    /* xTool — centro assistenza ufficiale.
+       I dati strutturati dichiarano un Service, non un prodotto: quello che
+       vendiamo qui è la riparazione, e «assistenza xTool» è la ricerca che
+       porta qui. Le domande vanno in FAQPage perché sono quelle che un
+       assistente AI cita quando qualcuno chiede se conviene riparare. */
+    case 'xtool': {
+      renderXtool(main);
+      const X = D.XTOOL || {};
+      const c = X.centro || {};
+      setSeo({
+        title: loc(c.titolo, lang),
+        description: loc(c.sommario, lang),
+        canonical, lang,
+        jsonLd: [
+          serviceLd({
+            name: loc(c.titolo, lang),
+            description: loc(c.sommario, lang),
+            type: 'Servizio di assistenza e riparazione',
+            url: canonical
+          }),
+          faqLd((X.faq || []).map((q) => ({ q: q.q, a: q.a })), lang)
+        ].filter(Boolean)
+      });
+      break;
+    }
+
+    case 'xtoolMachine': {
+      const m = findXtoolMachine(params[0]);
+      if (!m) { renderNotFound(main, path); setSeo({ title: '404', description: '', canonical, lang }); break; }
+      renderXtoolMachine(main, m);
+      setSeo({
+        title: m.n + ' — ' + (lang === 'en' ? 'service and repair' : 'assistenza e riparazione'),
+        description: loc(m.tipo, lang) + '. ' + loc(m.perChi, lang),
+        canonical, lang,
+        jsonLd: serviceLd({
+          name: (lang === 'en' ? 'Service and repair ' : 'Assistenza e riparazione ') + m.n,
+          description: loc(m.perChi, lang),
+          type: lang === 'en' ? 'Laser machine repair' : 'Riparazione macchine laser',
+          url: canonical
+        })
+      });
+      break;
+    }
 
     case 'contact':
       renderContact(main, query);

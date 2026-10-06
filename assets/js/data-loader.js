@@ -18,7 +18,8 @@ const FILES = [
   ['technologies', 'TECHNOLOGIES'],
   ['portfolio', 'PORTFOLIO'],
   ['content', 'CONTENT'],
-  ['migration', 'MIGRATION']
+  ['migration', 'MIGRATION'],
+  ['xtool', 'XTOOL']
 ];
 
 export const dataStatus = { version: null, missing: [], repaired: [] };

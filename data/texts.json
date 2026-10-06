@@ -91,7 +91,23 @@
   "common.darkMode": "Modalità scura",
   "common.breadcrumb": "Percorso di navigazione",
   "common.seeAll": "Vedi tutto",
-  "common.of": "di"
+  "common.of": "di",
+  "nav.xtool": "xTool",
+  "xtool.inOfficina": "La usiamo in officina",
+  "xtool.fuoriProduzione": "Fuori produzione",
+  "xtool.scheda": "Scheda e assistenza →",
+  "xtool.tempi": "Tempi",
+  "xtool.serviziEyebrow": "Assistenza ufficiale",
+  "xtool.serviziTitolo": "Cosa facciamo sulle xTool",
+  "xtool.serviziSuQuesta": "Cosa facciamo su questa macchina",
+  "xtool.domandeEyebrow": "Domande",
+  "xtool.domandeTitolo": "Quello che ci chiedono più spesso",
+  "xtool.specifiche": "Specifiche",
+  "xtool.ctaAssistenza": "Richiedi assistenza",
+  "xtool.ctaQuesta": "Richiedi assistenza per questa macchina",
+  "xtool.tuttaLaGamma": "Tutta la gamma",
+  "xtool.notaInOfficina": "Questa macchina la usiamo tutti i giorni per produrre. Quando ci chiami per un guasto non leggiamo il manuale: sappiamo già come si comporta.",
+  "xtool.notaFuoriProduzione": "Modello fuori catalogo. In Italia ne lavorano ancora tante e il costruttore non le segue più: è esattamente il caso in cui un centro assistenza serve. Ricambi e riparazione ci sono."
  },
  "en": {
   "nav.creazioni": "Creations",
@@ -185,6 +201,22 @@
   "common.darkMode": "Dark mode",
   "common.breadcrumb": "Breadcrumb",
   "common.seeAll": "See all",
-  "common.of": "of"
+  "common.of": "of",
+  "nav.xtool": "xTool",
+  "xtool.inOfficina": "We run this one in our workshop",
+  "xtool.fuoriProduzione": "Discontinued",
+  "xtool.scheda": "Specs and service →",
+  "xtool.tempi": "Timing",
+  "xtool.serviziEyebrow": "Official service",
+  "xtool.serviziTitolo": "What we do on xTool machines",
+  "xtool.serviziSuQuesta": "What we do on this machine",
+  "xtool.domandeEyebrow": "Questions",
+  "xtool.domandeTitolo": "What we get asked most",
+  "xtool.specifiche": "Specifications",
+  "xtool.ctaAssistenza": "Request service",
+  "xtool.ctaQuesta": "Request service for this machine",
+  "xtool.tuttaLaGamma": "Full range",
+  "xtool.notaInOfficina": "We run this machine in production every day. When you call about a fault we are not reading the manual: we already know how it behaves.",
+  "xtool.notaFuoriProduzione": "Discontinued model. Many are still working in Italy and the manufacturer no longer supports them: this is exactly where a service centre matters. Parts and repair are available."
  }
 }

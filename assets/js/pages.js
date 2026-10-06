@@ -292,7 +292,190 @@ export function renderB2b(root) {
   observeReveals(root);
 }
 
+
+/* ---- xTOOL · CENTRO ASSISTENZA UFFICIALE ------------------------------- */
+
+/* Perché questa sezione esiste e non è «una pagina sulle nostre macchine»:
+   siamo centro assistenza e riparazione autorizzato, quindi il servizio
+   riguarda TUTTA la gamma, non i quattro modelli che abbiamo in officina.
+   Due campi dei dati cambiano quello che la pagina dice di ogni modello:
+   `inOfficina` (lo usiamo per produrre, quindi lo conosciamo nell'uso) e
+   `fuoriProduzione` (nessuno lo assiste più: è dove serviamo di più). */
+
+const ORDINE_SERIE = ['P', 'F', 'S', 'M', 'Stampa', 'Fuori produzione'];
+
+const NOMI_SERIE = {
+  P: { it: 'Serie P — laser CO₂', en: 'P series — CO₂ lasers' },
+  F: { it: 'Serie F — fibra, infrarosso e UV', en: 'F series — fibre, infrared and UV' },
+  S: { it: 'Serie S — diodo chiuso', en: 'S series — enclosed diode' },
+  M: { it: 'Serie M — stampa e taglio', en: 'M series — print and cut' },
+  Stampa: { it: 'Stampa e trasferimento', en: 'Printing and transfer' },
+  'Fuori produzione': { it: 'Fuori produzione — assistite lo stesso', en: 'Discontinued — still serviced' }
+};
+
+function schedaMacchina(m, i) {
+  const etichette = [];
+  if (m.inOfficina) etichette.push(`<span class="chip chip--accent">${esc(t('xtool.inOfficina'))}</span>`);
+  if (m.fuoriProduzione) etichette.push(`<span class="chip">${esc(t('xtool.fuoriProduzione'))}</span>`);
+  return `
+    <article class="info-card reveal stagger-${(i % 6) + 1}" id="${esc(m.id)}">
+      ${etichette.length ? `<div class="tag-list">${etichette.join('')}</div>` : ''}
+      <h3>${esc(m.n)}</h3>
+      <p class="info-short">${esc(loc(m.tipo, lang))}</p>
+      <p>${esc(loc(m.perChi, lang))}</p>
+      <div class="spec-list">
+        ${Object.entries(m.specs || {}).map(([k, v]) => `
+          <div><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`).join('')}
+      </div>
+      <div class="tag-list" style="margin-top:var(--sp-4)">
+        <a class="chip" href="${href('/xtool/' + m.id)}">${esc(t('xtool.scheda'))}</a>
+      </div>
+    </article>`;
+}
+
+export function renderXtool(root) {
+  const X = D.XTOOL || {};
+  const c = X.centro || {};
+  const gamma = X.gamma || [];
+  const serie = ORDINE_SERIE.filter((k) => gamma.some((m) => m.serie === k));
+
+  root.innerHTML = `
+    <div class="container">
+      <header class="page-head">
+        <p class="eyebrow">${esc(loc(c.occhiello, lang))}</p>
+        <h1>${esc(loc(c.titolo, lang))}</h1>
+        <p>${esc(loc(c.sommario, lang))}</p>
+      </header>
+
+      <section class="section section--tight">
+        <div class="card"><div class="card-body">
+          <p>${esc(loc(c.percheConta, lang))}</p>
+        </div></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">${esc(t('xtool.serviziEyebrow'))}</p>
+          <h2>${esc(t('xtool.serviziTitolo'))}</h2>
+        </div>
+        <div class="grid grid--2">
+          ${(X.servizi || []).map((sv, i) => `
+            <article class="info-card reveal stagger-${(i % 6) + 1}" id="${esc(sv.id)}">
+              <h3>${esc(loc(sv.n, lang))}</h3>
+              <p>${esc(loc(sv.d, lang))}</p>
+              <div class="spec-list">
+                <div><span class="k">${esc(t('xtool.tempi'))}</span><span class="v">${esc(loc(sv.tempi, lang))}</span></div>
+              </div>
+            </article>`).join('')}
+        </div>
+        <div class="tag-list" style="margin-top:var(--sp-6)">
+          <a class="btn btn--primary" href="${href('/contatti?motivo=assistenza-xtool')}">${esc(t('xtool.ctaAssistenza'))}</a>
+        </div>
+      </section>
+
+      ${serie.map((k) => {
+        const lista = gamma.filter((m) => m.serie === k);
+        return `
+        <section class="section section--tight">
+          <div class="section-head">
+            <p class="eyebrow">${esc(loc(NOMI_SERIE[k], lang))}</p>
+          </div>
+          <div class="grid grid--2">${lista.map(schedaMacchina).join('')}</div>
+        </section>`;
+      }).join('')}
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">${esc(t('xtool.domandeEyebrow'))}</p>
+          <h2>${esc(t('xtool.domandeTitolo'))}</h2>
+        </div>
+        <div class="accordion" data-accordion>
+          ${(X.faq || []).map((q, i) => `
+            <div class="accordion-item">
+              <h3>
+                <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="xf-${i}">
+                  ${esc(loc(q.q, lang))} ${icon('plus', 18)}
+                </button>
+              </h3>
+              <div class="accordion-panel" id="xf-${i}">
+                <p>${esc(loc(q.a, lang))}</p>
+              </div>
+            </div>`).join('')}
+        </div>
+      </section>
+    </div>`;
+  observeReveals(root);
+}
+
+export function findXtoolMachine(id) {
+  return (D.XTOOL?.gamma || []).find((m) => m.id === id) || null;
+}
+
+export function renderXtoolMachine(root, m) {
+  const X = D.XTOOL || {};
+  const etichette = [];
+  if (m.inOfficina) etichette.push(`<span class="chip chip--accent">${esc(t('xtool.inOfficina'))}</span>`);
+  if (m.fuoriProduzione) etichette.push(`<span class="chip">${esc(t('xtool.fuoriProduzione'))}</span>`);
+
+  root.innerHTML = `
+    <div class="container">
+      <nav class="breadcrumb" aria-label="${esc(t('nav.breadcrumb') || 'Percorso')}">
+        <a href="${href('/xtool')}">${esc(loc(X.centro?.occhiello, lang))}</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">${esc(m.n)}</span>
+      </nav>
+
+      <header class="page-head">
+        ${etichette.length ? `<div class="tag-list">${etichette.join('')}</div>` : ''}
+        <h1>${esc(m.n)}</h1>
+        <p>${esc(loc(m.tipo, lang))} — ${esc(loc(m.perChi, lang))}</p>
+      </header>
+
+      <section class="section section--tight">
+        <div class="section-head"><p class="eyebrow">${esc(t('xtool.specifiche'))}</p></div>
+        <div class="spec-list">
+          ${Object.entries(m.specs || {}).map(([k, v]) => `
+            <div><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`).join('')}
+        </div>
+      </section>
+
+      ${m.inOfficina ? `
+      <section class="section section--tight">
+        <div class="card"><div class="card-body">
+          <p>${esc(t('xtool.notaInOfficina'))}</p>
+        </div></div>
+      </section>` : ''}
+
+      ${m.fuoriProduzione ? `
+      <section class="section section--tight">
+        <div class="card"><div class="card-body">
+          <p><strong>${esc(t('xtool.fuoriProduzione'))}.</strong> ${esc(t('xtool.notaFuoriProduzione'))}</p>
+        </div></div>
+      </section>` : ''}
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">${esc(t('xtool.serviziEyebrow'))}</p>
+          <h2>${esc(t('xtool.serviziSuQuesta'))}</h2>
+        </div>
+        <div class="grid grid--2">
+          ${(X.servizi || []).map((sv, i) => `
+            <article class="info-card reveal stagger-${(i % 6) + 1}">
+              <h3>${esc(loc(sv.n, lang))}</h3>
+              <p>${esc(loc(sv.d, lang))}</p>
+            </article>`).join('')}
+        </div>
+        <div class="tag-list" style="margin-top:var(--sp-6)">
+          <a class="btn btn--primary" href="${href('/contatti?motivo=assistenza-xtool&macchina=' + m.id)}">${esc(t('xtool.ctaQuesta'))}</a>
+          <a class="chip" href="${href('/xtool')}">${esc(t('xtool.tuttaLaGamma'))}</a>
+        </div>
+      </section>
+    </div>`;
+  observeReveals(root);
+}
+
 /* ---- 404 --------------------------------------------------------------- */
+
 
 export function renderNotFound(root, path) {
   root.innerHTML = `

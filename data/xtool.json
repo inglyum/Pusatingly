@@ -1,0 +1,148 @@
+{
+  "_nota": "Sezione xTool. INGLY DESIGN è centro assistenza e riparazione ufficiale: questa sezione non racconta solo le macchine che usiamo in officina, racconta il servizio su tutta la gamma. I campi 'inOfficina' e 'fuoriProduzione' cambiano quello che la pagina dice di ogni modello.",
+
+  "centro": {
+    "titolo": { "it": "Centro assistenza e riparazione ufficiale xTool", "en": "Official xTool service and repair centre" },
+    "occhiello": { "it": "Assistenza autorizzata · Italia", "en": "Authorised service · Italy" },
+    "sommario": {
+      "it": "Ripariamo, installiamo e tariamo le macchine xTool. Non è una consulenza letta sul manuale: le stesse macchine le usiamo tutti i giorni per produrre, quindi quando si rompe qualcosa sappiamo già dove guardare.",
+      "en": "We repair, install and calibrate xTool machines. This is not advice read off a manual: we run the same machines in production every day, so when something breaks we already know where to look."
+    },
+    "percheConta": {
+      "it": "Un laser fermo non è un guasto, è produzione che si ferma. La differenza fra un centro autorizzato e un tecnico generico è il tempo: ricambi originali, procedure del costruttore e una diagnosi che parte da chi quella macchina la fa lavorare.",
+      "en": "A laser that stops is not a fault, it is production that stops. The difference between an authorised centre and a generic technician is time: original parts, manufacturer procedures, and a diagnosis from someone who actually runs that machine."
+    }
+  },
+
+  "servizi": [
+    { "id": "diagnosi",
+      "n": { "it": "Diagnosi e preventivo", "en": "Diagnosis and quote" },
+      "d": { "it": "Si parte dal sintomo, non dal pezzo da cambiare. Diagnosi con il preventivo scritto prima di qualunque intervento: se la riparazione non conviene, lo diciamo.",
+             "en": "We start from the symptom, not from the part to replace. Diagnosis with a written quote before any work: if the repair is not worth it, we say so." },
+      "tempi": { "it": "risposta entro 24 ore lavorative", "en": "reply within 24 working hours" } },
+
+    { "id": "riparazione",
+      "n": { "it": "Riparazione", "en": "Repair" },
+      "d": { "it": "Sorgenti laser, schede, motori, cinghie, guide, ottiche, sistemi di aspirazione e raffreddamento. Ricambi originali xTool.",
+             "en": "Laser sources, boards, motors, belts, rails, optics, extraction and cooling systems. Original xTool parts." },
+      "tempi": { "it": "3–10 giorni secondo il ricambio", "en": "3–10 days depending on the part" } },
+
+    { "id": "installazione",
+      "n": { "it": "Installazione e collaudo", "en": "Installation and commissioning" },
+      "d": { "it": "Messa in servizio, allineamento, aspirazione, primo taglio di prova e consegna dei parametri già tarati sui vostri materiali.",
+             "en": "Commissioning, alignment, extraction, first test cut, and handover of parameters already tuned to your materials." },
+      "tempi": { "it": "mezza giornata in sede", "en": "half a day on site" } },
+
+    { "id": "manutenzione",
+      "n": { "it": "Manutenzione programmata", "en": "Scheduled maintenance" },
+      "d": { "it": "Pulizia ottiche, tensionamento, lubrificazione, verifica potenza. È la voce che evita il guasto, e costa una frazione della riparazione.",
+             "en": "Optics cleaning, belt tensioning, lubrication, power check. This is what prevents the breakdown, at a fraction of the repair cost." },
+      "tempi": { "it": "ogni 6–12 mesi secondo l'uso", "en": "every 6–12 months depending on use" } },
+
+    { "id": "formazione",
+      "n": { "it": "Formazione sulla macchina", "en": "Machine training" },
+      "d": { "it": "Dal primo taglio ai parametri per materiale. Chi compra un laser perde mesi a capirlo da solo: una giornata insieme li recupera.",
+             "en": "From first cut to per-material parameters. People who buy a laser lose months figuring it out alone: one day together wins those back." },
+      "tempi": { "it": "una giornata, in sede o da noi", "en": "one day, on site or at our workshop" } },
+
+    { "id": "ricambi",
+      "n": { "it": "Ricambi e consumabili", "en": "Parts and consumables" },
+      "d": { "it": "Lenti, ugelli, cinghie, filtri, piani a nido d'ape, filamenti, inchiostri UV, pellicole DTF. Originali e compatibili testati.",
+             "en": "Lenses, nozzles, belts, filters, honeycomb beds, filaments, UV inks, DTF films. Original and tested compatible parts." },
+      "tempi": { "it": "a magazzino o 3–5 giorni", "en": "in stock or 3–5 days" } }
+  ],
+
+  "gamma": [
+    { "id": "p3", "serie": "P", "n": "xTool P3", "tipo": { "it": "Laser CO₂ 80 W", "en": "80 W CO₂ laser" },
+      "inOfficina": true,
+      "specs": { "Sorgente": "CO₂ 80 W", "Piano": "915 × 458 mm", "Altezza utile": "220 mm",
+                 "Taglio": "legno 20 mm · acrilico 25 mm", "Velocità": "1.200 mm/s",
+                 "Extra": "autofocus LiDAR, doppia camera 16 MP, convogliatore per pezzi lunghi" },
+      "perChi": { "it": "Il cavallo da tiro: grande formato, taglio spesso, produzione in serie.",
+                  "en": "The workhorse: large format, thick cutting, batch production." } },
+
+    { "id": "p2s", "serie": "P", "n": "xTool P2S", "tipo": { "it": "Laser CO₂ 55 W", "en": "55 W CO₂ laser" },
+      "specs": { "Sorgente": "CO₂ 55 W", "Piano": "430 × 300 mm" },
+      "perChi": { "it": "Il CO₂ da banco: stesso principio della P3 su misure da laboratorio.",
+                  "en": "The desktop CO₂: same principle as the P3 at workshop scale." } },
+
+    { "id": "f2-ultra", "serie": "F", "n": "xTool F2 Ultra", "tipo": { "it": "Fibra MOPA 60 W + diodo 40 W", "en": "60 W MOPA fibre + 40 W diode" },
+      "specs": { "Sorgente": "MOPA 60 W (1064 nm) + diodo 40 W", "Piano": "220 × 220 mm",
+                 "Metalli": "taglia inox e ottone fino a 2 mm, alluminio 1 mm",
+                 "Colore": "oltre 100 tinte su inox e titanio", "Velocità": "15.000 mm/s" },
+      "perChi": { "it": "Il metallo serio: taglio, incisione profonda e marcatura a colori.",
+                  "en": "Serious metal: cutting, deep engraving and colour marking." } },
+
+    { "id": "f2", "serie": "F", "n": "xTool F2", "tipo": { "it": "IR 5 W + diodo 15 W, portatile", "en": "5 W IR + 15 W diode, portable" },
+      "inOfficina": true,
+      "specs": { "Sorgente": "IR 5 W (1064 nm) + diodo 15 W", "Piano": "115 × 115 mm (115 × 400 con prolunga)",
+                 "Velocità": "6.000 mm/s", "Allineamento": "camera 50 MP, 0,1 mm",
+                 "Metalli": "marca inox, ottone, alluminio, oro — non taglia" },
+      "perChi": { "it": "Il pezzo piccolo e la trasferta: si incide davanti al cliente.",
+                  "en": "Small parts and on-site work: engrave in front of the customer." } },
+
+    { "id": "f1-ultra", "serie": "F", "n": "xTool F1 Ultra", "tipo": { "it": "Fibra 20 W + diodo 20 W", "en": "20 W fibre + 20 W diode" },
+      "specs": { "Sorgente": "fibra 20 W + diodo 20 W", "Piano": "220 × 220 mm" },
+      "perChi": { "it": "Doppia sorgente compatta: metallo e organici sulla stessa macchina.",
+                  "en": "Compact dual source: metal and organics on one machine." } },
+
+    { "id": "f2-ultra-uv", "serie": "F", "n": "xTool F2 Ultra UV", "tipo": { "it": "Laser UV 5 W", "en": "5 W UV laser" },
+      "specs": { "Sorgente": "UV 5 W", "Materiali": "vetro, plastiche tecniche, materiali sensibili al calore" },
+      "perChi": { "it": "Marcatura a freddo dove il calore rovinerebbe il pezzo.",
+                  "en": "Cold marking where heat would ruin the part." } },
+
+    { "id": "s1", "serie": "S", "n": "xTool S1", "tipo": { "it": "Diodo 40 W chiuso", "en": "40 W enclosed diode" },
+      "specs": { "Sorgente": "diodo 40 W", "Piano": "498 × 319 mm, espandibile" },
+      "perChi": { "it": "Il diodo chiuso più completo: sicuro, grande, senza impianto CO₂.",
+                  "en": "The most complete enclosed diode: safe, large, no CO₂ plant needed." } },
+
+    { "id": "m2", "serie": "M", "n": "xTool M2", "tipo": { "it": "Stampa e taglia a colori", "en": "Colour print and cut" },
+      "specs": { "Funzioni": "stampa a colori + taglio nella stessa macchina" },
+      "perChi": { "it": "Erede della M1: adesivi, etichette, carta e craft a colori.",
+                  "en": "Successor to the M1: stickers, labels, paper and colour craft." } },
+
+    { "id": "o1-omni-uv", "serie": "Stampa", "n": "xTool O1 Omni Dual UV", "tipo": { "it": "Stampante UV A3+", "en": "A3+ UV printer" },
+      "inOfficina": true,
+      "specs": { "Piano": "330 × 420 × 150 mm", "Inchiostri": "CMYK + bianco rigido e flessibile + vernice",
+                 "Extra": "rotativo per cilindri, produzione di trasferimenti UV DTF" },
+      "perChi": { "it": "Il colore su qualunque superficie rigida, anche curva.",
+                  "en": "Colour on any rigid surface, curved included." } },
+
+    { "id": "wonderpress", "serie": "Stampa", "n": "xTool WonderPress", "tipo": { "it": "Pressa a caldo modulare 3 in 1", "en": "3-in-1 modular heat press" },
+      "inOfficina": true,
+      "specs": { "Piastra": "38 × 38 cm", "Pressione": "100 kg automatici", "Temperatura": "80–210 °C",
+                 "Moduli": "pressa · termoformatrice sottovuoto · forno per cura DTF" },
+      "perChi": { "it": "Il tessile e la sublimazione 3D su tazze e oggetti sagomati.",
+                  "en": "Textiles and 3D sublimation on mugs and shaped objects." } },
+
+    { "id": "d1-pro", "serie": "Fuori produzione", "n": "xTool D1 / D1 Pro", "tipo": { "it": "Diodo aperto 5–20 W", "en": "5–20 W open-frame diode" },
+      "fuoriProduzione": true,
+      "specs": { "Sorgente": "diodo 5 · 10 · 20 W", "Piano": "410 × 415 / 430 × 390 mm" },
+      "perChi": { "it": "Fuori catalogo, ma in Italia ce ne sono migliaia che lavorano. Le ripariamo.",
+                  "en": "Out of catalogue, but thousands are still working in Italy. We repair them." } },
+
+    { "id": "m1", "serie": "Fuori produzione", "n": "xTool M1 / M1 Ultra", "tipo": { "it": "Diodo + lama", "en": "Diode + blade" },
+      "fuoriProduzione": true,
+      "specs": { "Sorgente": "diodo 10–20 W + taglio a lama", "Piano": "385 × 300 mm" },
+      "perChi": { "it": "Sostituita dalla M2. Chi ce l'ha non è scoperto: ricambi e assistenza ci sono.",
+                  "en": "Replaced by the M2. Owners are not stranded: parts and service are available." } }
+  ],
+
+  "faq": [
+    { "q": { "it": "Riparate anche le macchine che non avete venduto voi?", "en": "Do you repair machines you did not sell?" },
+      "a": { "it": "Sì, sempre. Il centro assistenza serve chi ha la macchina, non chi ha lo scontrino. Vale anche per gli acquisti fatti online o all'estero.",
+             "en": "Yes, always. A service centre serves whoever owns the machine, not whoever has the receipt. This includes machines bought online or abroad." } },
+    { "q": { "it": "La mia xTool è fuori produzione. Vale la pena ripararla?", "en": "My xTool is discontinued. Is it worth repairing?" },
+      "a": { "it": "Spesso sì, ed è il caso in cui serviamo di più: una D1 Pro o una M1 che lavora vale molto più di quanto costi rimetterla in ordine. Lo diciamo dopo la diagnosi, con il preventivo in mano — e se non conviene lo diciamo lo stesso.",
+             "en": "Often yes, and this is where we are most useful: a working D1 Pro or M1 is worth far more than the cost of putting it right. We tell you after the diagnosis, quote in hand — and if it is not worth it, we say that too." } },
+    { "q": { "it": "Quanto costa la diagnosi?", "en": "How much does diagnosis cost?" },
+      "a": { "it": "La diagnosi si paga, ed è scalata dall'intervento se procedi. Serve a non promettere riparazioni al buio.",
+             "en": "Diagnosis is charged, and deducted from the repair if you go ahead. It exists so that nobody promises a repair blind." } },
+    { "q": { "it": "La macchina è ferma e devo consegnare. Potete darmi una mano subito?", "en": "My machine is down and I have a deadline. Can you help right away?" },
+      "a": { "it": "Sì: mentre la macchina è in riparazione il lavoro lo possiamo fare noi, sulle nostre. È il vantaggio di un centro assistenza che è anche un laboratorio di produzione.",
+             "en": "Yes: while your machine is being repaired we can run the job on ours. That is the advantage of a service centre that is also a production workshop." } },
+    { "q": { "it": "Fate assistenza da remoto?", "en": "Do you offer remote support?" },
+      "a": { "it": "Per taratura, software e parametri sì, e spesso basta quella. Per guasti meccanici o elettronici serve avere la macchina sotto mano.",
+             "en": "For calibration, software and parameters yes, and often that is enough. Mechanical or electronic faults need the machine in front of us." } }
+  ]
+}

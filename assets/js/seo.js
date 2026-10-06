@@ -151,6 +151,30 @@ export function faqLd(items, lang = 'it') {
   };
 }
 
+/* Un servizio di assistenza non è un prodotto: dichiararlo come Service, con
+   il fornitore e l'area servita, è ciò che fa capire a un motore che
+   «riparazione xTool in Italia» si risolve qui. Il provider è l'azienda già
+   dichiarata da organizationLd: si richiama con @id invece di ridescriverla,
+   altrimenti risultano due aziende diverse. */
+export function serviceLd({ name, description, type, url, origin = '' } = {}) {
+  if (!name) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    serviceType: type || name,
+    url,
+    provider: { '@type': 'LocalBusiness', name: BRAND },
+    areaServed: { '@type': 'Country', name: 'Italia' },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: url,
+      availableLanguage: ['it', 'en']
+    }
+  };
+}
+
 export function personLd(config, content, origin, lang = 'it') {
   return {
     '@context': 'https://schema.org',

@@ -167,6 +167,34 @@ test('esiste una regola contro lo scroll orizzontale', () => {
   assert(all.includes('overflow-x'), 'nessuna gestione di overflow-x');
 });
 
+
+/* Una classe scritta nel JavaScript ma senza regola nel CSS non dà errore:
+   l'elemento si disegna nudo e nessuno se ne accorge finché non si guarda la
+   pagina. È successo scrivendo la sezione xTool — .callout, .faq-list,
+   .faq-body e .spec-list--wide esistevano solo nella mia testa. Qui si
+   confrontano le classi usate dai moduli con quelle che il CSS definisce
+   davvero. */
+test('nessuna classe usata nel JS è priva di regole CSS', () => {
+  const css = files.map(text).join('\n');
+  const definite = new Set();
+  for (const m of css.matchAll(/\.(-?[_a-zA-Z][\w-]*)/g)) definite.add(m[1]);
+
+  const moduli = readdirSync(join(ROOT, 'assets/js'))
+    .filter((f) => f.endsWith('.js'))
+    .map((f) => readFileSync(join(ROOT, 'assets/js', f), 'utf8')).join('\n');
+
+  const mancanti = new Set();
+  for (const m of moduli.matchAll(/class="([^"${}]+)"/g)) {
+    for (const c of m[1].trim().split(/\s+/)) {
+      if (!c || definite.has(c)) continue;
+      if (/^stagger-\d+$/.test(c)) continue;       /* generate dal CSS con un ciclo */
+      mancanti.add(c);
+    }
+  }
+  assert(mancanti.size === 0,
+    'classi senza regola CSS: ' + [...mancanti].slice(0, 8).join(', '));
+});
+
 /* ---- report ------------------------------------------------------------- */
 
 console.log(`\n  TEST CSS`);

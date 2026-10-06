@@ -16,6 +16,9 @@ const read = (f) => JSON.parse(readFileSync(join(ROOT, f), 'utf8'));
 const config = read('data/config.json');
 const products = read('data/products.json');
 const categories = read('data/categories.json');
+/* Le schede macchina nascono dallo stesso file che disegna la sezione xTool:
+   se divergessero, la sitemap dichiarerebbe pagine che non esistono. */
+const xtool = read('data/xtool.json');
 
 const ORIGIN = (config.site?.url || 'https://inglydesign.it').replace(/\/$/, '');
 const today = new Date().toISOString().slice(0, 10);
@@ -29,7 +32,8 @@ const urls = [
   { loc: '/chi-sono', priority: '0.7', changefreq: 'monthly' },
   { loc: '/come-acquistare', priority: '0.7', changefreq: 'monthly' },
   { loc: '/b2b', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/contatti', priority: '0.8', changefreq: 'monthly' }
+  { loc: '/contatti', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/xtool', priority: '0.9', changefreq: 'monthly' }
 ];
 
 for (const c of categories) {
@@ -42,6 +46,11 @@ for (const p of published) {
 }
 
 const NS = 'http://www.sitemaps.org/schemas/sitemap/0.9';
+
+for (const m of xtool.gamma || []) {
+  urls.push({ loc: `/xtool/${m.id}`, priority: '0.7', changefreq: 'monthly' });
+}
+
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="${NS}">

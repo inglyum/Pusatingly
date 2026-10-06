@@ -16,6 +16,7 @@ const NAV_ITEMS = [
   { key: 'nav.tecnologie', path: '/tecnologie' },
   { key: 'nav.portfolio', path: '/portfolio' },
   { key: 'nav.b2b', path: '/b2b' },
+  { key: 'nav.xtool', path: '/xtool' },
   { key: 'nav.chiSono', path: '/chi-sono' },
   { key: 'nav.contatti', path: '/contatti' }
 ];
