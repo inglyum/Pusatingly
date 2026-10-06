@@ -329,6 +329,12 @@ function bind() {
   const menu = $('#mobileMenu');
   if (burger && menu) {
     burger.addEventListener('click', () => {
+      /* Il pannello parte da dove finisce l'header, misurato adesso: con la
+         fascia annunci sopra, un valore fisso nel CSS lo faceva partire troppo
+         in alto e copriva il logo e il pulsante stesso per chiuderlo. */
+      const sotto = header?.getBoundingClientRect().bottom;
+      if (sotto != null) menu.style.insetBlockStart = `${Math.max(0, Math.round(sotto))}px`;
+
       const open = menu.classList.toggle('is-open');
       burger.setAttribute('aria-expanded', String(open));
       burger.innerHTML = icon(open ? 'close' : 'menu');

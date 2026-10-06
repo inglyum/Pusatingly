@@ -104,6 +104,7 @@
 }
 
 .nav-link {
+  white-space: nowrap;
   position: relative;
   padding: var(--sp-2) var(--sp-4);
   font-size: var(--fs-sm);
