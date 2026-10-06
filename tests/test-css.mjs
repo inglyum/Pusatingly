@@ -162,6 +162,16 @@ test('i breakpoint dichiarati esistono', () => {
   }
 });
 
+/* Un elemento nascosto con visibility/opacity occupa ancora spazio. Il
+   mega-menu, largo come un desktop, faceva scorrere in orizzontale ogni
+   pagina sotto i 1024 px senza che si vedesse niente di strano. */
+test('il mega-menu è rimosso dal layout sotto la soglia del menu mobile', () => {
+  const r = text('responsive.css');
+  const blocco = r.split('@media (max-width: 1023px)')[1] || '';
+  assert(/\.mega\s*\{[^}]*display:\s*none/.test(blocco.split('@media')[0]),
+    'sotto i 1024 px .mega deve essere display:none, non solo trasparente');
+});
+
 test('esiste una regola contro lo scroll orizzontale', () => {
   const all = files.map(text).join('\n');
   assert(all.includes('overflow-x'), 'nessuna gestione di overflow-x');

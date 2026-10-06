@@ -14,6 +14,11 @@
   .header-inner { height: 64px; }
   .mobile-menu { inset-block-start: 64px; }
 
+  /* Sotto questa soglia comanda il menu a panino. Il mega-menu era solo
+     trasparente, non rimosso: restava largo quanto un desktop e faceva
+     scorrere OGNI pagina in orizzontale sul telefono. */
+  .mega { display: none; }
+
   .manifesto-grid { grid-template-columns: 1fr; gap: var(--sp-6); }
   .editorial-grid { grid-template-columns: 1fr; gap: var(--sp-4); }
   .editorial-grid h2 { position: static; }
