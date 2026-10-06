@@ -9,7 +9,7 @@ guardare; il **modo 2** se devi provare l'admin sul serio.
 
 Il sito è già su GitHub. Serve solo che GitHub Pages sia acceso.
 
-**Una volta sola**, su `github.com/inglyum/pusatingly`:
+**Una volta sola**, su `github.com/inglyum/Pusatingly`:
 
 > **Settings** → **Pages** → *Build and deployment* → Source: **Deploy from a branch**
 > → Branch: **`Main`** → cartella **`/ (root)`** → **Save**
@@ -18,7 +18,9 @@ Non scegliere *GitHub Actions*: in quella modalità il commit dell'admin va
 online solo dopo un workflow, e il pannello non riesce a confermarti che il sito
 è aggiornato.
 
-Dopo due minuti il sito è su `https://inglyum.github.io/pusatingly/`.
+Dopo due minuti il sito è su `https://inglyum.github.io/Pusatingly/`.
+(Il repository è stato rinominato con la P maiuscola: GitHub reindirizza
+ancora il vecchio nome, ma l'indirizzo buono è questo.)
 
 > **Perché `Main` e non `main`.** Il repository ha due rami con lo stesso nome
 > scritto diversamente. Ora puntano allo stesso commit, quindi va bene
@@ -33,8 +35,8 @@ Dopo due minuti il sito è su `https://inglyum.github.io/pusatingly/`.
 Serve Node 18 o superiore.
 
 ```bash
-git clone https://github.com/inglyum/pusatingly.git
-cd pusatingly
+git clone https://github.com/inglyum/Pusatingly.git
+cd Pusatingly
 npm install
 npm run serve
 ```
