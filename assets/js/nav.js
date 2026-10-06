@@ -158,6 +158,14 @@ function renderFooter() {
         </div>
 
         <div>
+          <p class="footer-title">${esc(t('footer.informazioni'))}</p>
+          <div class="footer-list">
+            ${(D.INFO?.pagine || []).map((p) =>
+              `<a href="${href('/informazioni/' + p.id)}">${esc(loc(p.n, lang))}</a>`).join('')}
+          </div>
+        </div>
+
+        <div>
           <p class="footer-title">Catalogo</p>
           <div class="footer-list">
             ${cats.map((c) => `<a href="${href(`/creazioni/${c.id}`)}">${esc(loc(c.name, lang))}</a>`).join('')}
@@ -180,6 +188,7 @@ function renderFooter() {
           <div class="footer-list">
             <a href="${href('/come-acquistare')}">${esc(t('nav.comeAcquistare'))}</a>
             <a href="${href('/b2b')}">${esc(t('nav.b2b'))}</a>
+            <a href="${href('/xtool')}">${esc(t('nav.xtool'))}</a>
             <a href="${href('/contatti')}">${esc(t('nav.contatti'))}</a>
           </div>
           ${socials.length ? `

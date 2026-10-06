@@ -19,6 +19,7 @@ const categories = read('data/categories.json');
 /* Le schede macchina nascono dallo stesso file che disegna la sezione xTool:
    se divergessero, la sitemap dichiarerebbe pagine che non esistono. */
 const xtool = read('data/xtool.json');
+const info = read('data/informazioni.json');
 
 const ORIGIN = (config.site?.url || 'https://inglydesign.it').replace(/\/$/, '');
 const today = new Date().toISOString().slice(0, 10);
@@ -49,6 +50,10 @@ const NS = 'http://www.sitemaps.org/schemas/sitemap/0.9';
 
 for (const m of xtool.gamma || []) {
   urls.push({ loc: `/xtool/${m.id}`, priority: '0.7', changefreq: 'monthly' });
+}
+
+for (const p of info.pagine || []) {
+  urls.push({ loc: `/informazioni/${p.id}`, priority: '0.4', changefreq: 'yearly' });
 }
 
 

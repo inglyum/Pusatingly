@@ -293,6 +293,48 @@ export function renderB2b(root) {
 }
 
 
+/* ---- INFORMAZIONI (spedizioni, resi, privacy, condizioni, cookie) ------
+   Sono le pagine che Shopify genera d'ufficio sotto /policies/ e che qui non
+   esistevano. Per un e-commerce italiano non sono facoltative.
+
+   Dove serve un dato aziendale o il parere di un professionista il testo non
+   è inventato: `daCompletare` lo dichiara in pagina, così nessuno pubblica
+   un'informativa generica credendola a posto. */
+
+export function findInfoPage(id) {
+  return (D.INFO?.pagine || []).find((p) => p.id === id) || null;
+}
+
+export function renderInfo(root, p) {
+  root.innerHTML = `
+    <div class="container container--narrow">
+      <header class="page-head">
+        <p class="eyebrow">${esc(loc(p.occhiello, lang))}</p>
+        <h1>${esc(loc(p.n, lang))}</h1>
+        <p>${esc(loc(p.lead, lang))}</p>
+      </header>
+
+      ${p.daCompletare ? `
+      <div class="card"><div class="card-body">
+        <p><strong>${esc(t('info.daCompletare'))}</strong> ${esc(loc(p.daCompletare, lang))}</p>
+      </div></div>` : ''}
+
+      ${(p.sezioni || []).map((sz, i) => `
+        <section class="section section--tight reveal stagger-${(i % 6) + 1}">
+          <h2>${esc(loc(sz.t, lang))}</h2>
+          <p>${esc(loc(sz.c, lang))}</p>
+        </section>`).join('')}
+
+      <section class="section section--tight">
+        <div class="tag-list">
+          ${(D.INFO?.pagine || []).filter((x) => x.id !== p.id).map((x) =>
+            `<a class="chip" href="${href('/informazioni/' + x.id)}">${esc(loc(x.n, lang))}</a>`).join('')}
+        </div>
+      </section>
+    </div>`;
+  observeReveals(root);
+}
+
 /* ---- xTOOL · CENTRO ASSISTENZA UFFICIALE ------------------------------- */
 
 /* Perché questa sezione esiste e non è «una pagina sulle nostre macchine»:

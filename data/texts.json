@@ -107,7 +107,9 @@
   "xtool.ctaQuesta": "Richiedi assistenza per questa macchina",
   "xtool.tuttaLaGamma": "Tutta la gamma",
   "xtool.notaInOfficina": "Questa macchina la usiamo tutti i giorni per produrre. Quando ci chiami per un guasto non leggiamo il manuale: sappiamo già come si comporta.",
-  "xtool.notaFuoriProduzione": "Modello fuori catalogo. In Italia ne lavorano ancora tante e il costruttore non le segue più: è esattamente il caso in cui un centro assistenza serve. Ricambi e riparazione ci sono."
+  "xtool.notaFuoriProduzione": "Modello fuori catalogo. In Italia ne lavorano ancora tante e il costruttore non le segue più: è esattamente il caso in cui un centro assistenza serve. Ricambi e riparazione ci sono.",
+  "info.daCompletare": "Da completare prima di pubblicare.",
+  "footer.informazioni": "Informazioni"
  },
  "en": {
   "nav.creazioni": "Creations",
@@ -217,6 +219,8 @@
   "xtool.ctaQuesta": "Request service for this machine",
   "xtool.tuttaLaGamma": "Full range",
   "xtool.notaInOfficina": "We run this machine in production every day. When you call about a fault we are not reading the manual: we already know how it behaves.",
-  "xtool.notaFuoriProduzione": "Discontinued model. Many are still working in Italy and the manufacturer no longer supports them: this is exactly where a service centre matters. Parts and repair are available."
+  "xtool.notaFuoriProduzione": "Discontinued model. Many are still working in Italy and the manufacturer no longer supports them: this is exactly where a service centre matters. Parts and repair are available.",
+  "info.daCompletare": "To be completed before publishing.",
+  "footer.informazioni": "Information"
  }
 }

@@ -1,0 +1,122 @@
+{
+  "_nota": "Le pagine che Shopify genera d'ufficio sotto /policies/ e che qui mancavano del tutto. Per un e-commerce italiano non sono facoltative. Dove serve il parere di un professionista o un dato aziendale il testo NON è inventato: è marcato con «daCompletare», e validate-data.mjs lo segnala finché resta aperto.",
+
+  "pagine": [
+    {
+      "id": "spedizioni",
+      "n": { "it": "Spedizioni e consegne", "en": "Shipping and delivery" },
+      "occhiello": { "it": "Informazioni", "en": "Information" },
+      "lead": {
+        "it": "Produzione su misura: il tempo di consegna è tempo di lavorazione più corriere, e lo diciamo prima di prendere l'ordine.",
+        "en": "Made-to-order production: delivery time is production time plus courier, and we state it before taking the order."
+      },
+      "sezioni": [
+        { "t": { "it": "Quanto ci vuole", "en": "How long it takes" },
+          "c": { "it": "Dal sì al pezzo in mano, di norma 5–10 giorni: 1–2 giorni per la prova grafica, 3–7 per la produzione, 1–2 di corriere. Per le urgenze si può accelerare, ma va detto all'inizio e non alla fine.",
+                 "en": "From approval to delivery, typically 5–10 days: 1–2 days for the proof, 3–7 for production, 1–2 for the courier. Rush orders are possible, but must be agreed up front." } },
+        { "t": { "it": "Dove spediamo", "en": "Where we ship" },
+          "c": { "it": "Tutta Italia con corriere tracciato. Per l'estero il preventivo è su richiesta: cambiano costo e tempi, e preferiamo dirlo con un numero invece che con un «dipende».",
+                 "en": "All of Italy with tracked courier. For abroad, shipping is quoted on request: cost and time change, and we prefer to give a number rather than an «it depends»." } },
+        { "t": { "it": "Ritiro in officina", "en": "Workshop collection" },
+          "c": { "it": "Se sei in zona puoi ritirare a Cesena senza costi di spedizione. Ne approfittiamo per guardare il pezzo insieme: è il momento in cui si correggono le cose che una foto non mostra.",
+                 "en": "If you are nearby you can collect in Cesena at no shipping cost. We take the chance to look at the piece together: that is when you catch what a photo does not show." } },
+        { "t": { "it": "Se arriva danneggiato", "en": "If it arrives damaged" },
+          "c": { "it": "Firma al corriere con riserva e mandaci una foto dell'imballo entro 48 ore. Con quella rifacciamo il pezzo o rimborsiamo, senza discussioni: il danno da trasporto è un nostro problema, non tuo.",
+                 "en": "Sign for the courier with reservation and send us a photo of the packaging within 48 hours. With that we remake the piece or refund, no argument: transport damage is our problem, not yours." } }
+      ]
+    },
+
+    {
+      "id": "resi",
+      "n": { "it": "Resi e diritto di recesso", "en": "Returns and right of withdrawal" },
+      "occhiello": { "it": "Informazioni", "en": "Information" },
+      "lead": {
+        "it": "Su un oggetto fatto su misura il recesso per legge non si applica. Proprio per questo la prova grafica si approva per iscritto: è la garanzia di tutti e due.",
+        "en": "On a made-to-measure item the right of withdrawal does not apply by law. That is exactly why the proof is approved in writing: it protects both sides."
+      },
+      "sezioni": [
+        { "t": { "it": "Prodotti personalizzati", "en": "Personalised items" },
+          "c": { "it": "Il Codice del Consumo esclude il diritto di recesso per i beni confezionati su misura o chiaramente personalizzati (art. 59). Un portachiavi con il nome di tuo figlio non si può rimettere a magazzino. Per questo nessun pezzo va in produzione senza la tua approvazione scritta della grafica.",
+                 "en": "Italian consumer law excludes the right of withdrawal for goods made to measure or clearly personalised (art. 59). A keyring with your child's name cannot go back on a shelf. That is why nothing goes into production without your written approval of the artwork." } },
+        { "t": { "it": "Prodotti non personalizzati", "en": "Non-personalised items" },
+          "c": { "it": "Sugli articoli a catalogo senza personalizzazione il recesso vale normalmente: 14 giorni dalla consegna, prodotto integro e nella confezione originale. Le spese di restituzione sono a carico tuo salvo nostro errore.",
+                 "en": "On catalogue items without personalisation, withdrawal applies normally: 14 days from delivery, item intact and in its original packaging. Return shipping is at your cost unless the error is ours." } },
+        { "t": { "it": "Se abbiamo sbagliato noi", "en": "If the mistake is ours" },
+          "c": { "it": "Pezzo diverso dalla prova approvata, difetto di lavorazione, misura sbagliata: rifacciamo o rimborsiamo, spese comprese. Non serve discutere e non serve citare un articolo di legge.",
+                 "en": "Piece different from the approved proof, manufacturing defect, wrong size: we remake or refund, shipping included. No argument needed and no need to quote a law." } }
+      ]
+    },
+
+    {
+      "id": "privacy",
+      "n": { "it": "Informativa privacy", "en": "Privacy notice" },
+      "occhiello": { "it": "Informazioni", "en": "Information" },
+      "lead": {
+        "it": "Che dati raccogliamo, perché, e per quanto li teniamo.",
+        "en": "What data we collect, why, and how long we keep it."
+      },
+      "daCompletare": {
+        "it": "Questa pagina richiede i dati identificativi dell'azienda (ragione sociale, P.IVA, sede, titolare del trattamento) e l'elenco esatto dei servizi terzi usati. Vanno messi prima di pubblicare: un'informativa generica non è conforme al GDPR e non protegge nessuno.",
+        "en": "This page requires the company's identifying data (legal name, VAT number, registered office, data controller) and the exact list of third-party services used. These must be filled in before publishing: a generic notice is not GDPR-compliant and protects nobody."
+      },
+      "sezioni": [
+        { "t": { "it": "Quando ci scrivi", "en": "When you contact us" },
+          "c": { "it": "Dal modulo preventivo raccogliamo nome, email, eventualmente telefono e i dettagli del lavoro. Servono a risponderti e a fare il preventivo: non vanno a nessun altro e non finiscono in nessuna lista pubblicitaria se non lo chiedi tu.",
+                 "en": "From the quote form we collect name, email, optionally phone, and the job details. They exist to reply and to quote: they go nowhere else and never into a marketing list unless you ask." } },
+        { "t": { "it": "I file che ci mandi", "en": "The files you send" },
+          "c": { "it": "Disegni, loghi e fotografie restano tuoi. Li conserviamo per poter rifare un riordino senza chiederti di rimandarli, e li cancelliamo se ce lo chiedi.",
+                 "en": "Drawings, logos and photographs remain yours. We keep them so a reorder does not require you to send them again, and we delete them on request." } },
+        { "t": { "it": "I tuoi diritti", "en": "Your rights" },
+          "c": { "it": "Puoi chiedere in qualsiasi momento di vedere, correggere o cancellare i tuoi dati scrivendo all'indirizzo nei contatti. Rispondiamo entro 30 giorni.",
+                 "en": "You can ask at any time to see, correct or delete your data by writing to the address in the contacts. We reply within 30 days." } }
+      ]
+    },
+
+    {
+      "id": "condizioni",
+      "n": { "it": "Condizioni di vendita", "en": "Terms of sale" },
+      "occhiello": { "it": "Informazioni", "en": "Information" },
+      "lead": {
+        "it": "Come funziona un ordine, dal preventivo alla consegna.",
+        "en": "How an order works, from quote to delivery."
+      },
+      "daCompletare": {
+        "it": "Servono i dati aziendali completi (ragione sociale, P.IVA, REA, sede legale) e la conferma delle condizioni di pagamento da parte del commercialista. Vanno inseriti prima di pubblicare.",
+        "en": "Full company data (legal name, VAT number, registry number, registered office) and confirmation of payment terms from the accountant are required. These must be added before publishing."
+      },
+      "sezioni": [
+        { "t": { "it": "Il preventivo", "en": "The quote" },
+          "c": { "it": "Il preventivo scritto indica prezzo, quantità, materiale, misure e data di consegna. Resta valido 30 giorni. Se la quantità cambia il prezzo, gli scaglioni sono scritti nel preventivo stesso: non ci sono sorprese a fine lavoro.",
+                 "en": "The written quote states price, quantity, material, sizes and delivery date. It is valid for 30 days. If quantity changes the price, the tiers are written into the quote itself: no surprises at the end." } },
+        { "t": { "it": "La prova grafica", "en": "The artwork proof" },
+          "c": { "it": "Prima della produzione ricevi la grafica esatta che verrà incisa o stampata. Si corregge finché non è giusta. Niente va in macchina senza il tuo sì scritto, e una volta dato quello la produzione parte.",
+                 "en": "Before production you receive the exact artwork that will be engraved or printed. It is corrected until right. Nothing goes to the machine without your written approval, and once given, production starts." } },
+        { "t": { "it": "Pagamenti", "en": "Payments" },
+          "c": { "it": "Bonifico bancario, con fattura per privati e aziende. Per il primo ordine sopra i 200 € si lavora con acconto del 40 % alla conferma e saldo alla consegna. Le aziende con ordini ricorrenti possono concordare il pagamento a 30 giorni.",
+                 "en": "Bank transfer, with invoice for individuals and companies. For a first order above €200 we work with a 40% deposit on confirmation and balance on delivery. Companies with recurring orders can agree 30-day terms." } },
+        { "t": { "it": "Proprietà del disegno", "en": "Ownership of the artwork" },
+          "c": { "it": "Il disegno che ci mandi resta tuo. Quello che disegniamo noi su tua richiesta diventa tuo con il saldo. Non rivendiamo a nessun altro un lavoro fatto per te, e se vogliamo mostrarlo nel portfolio te lo chiediamo.",
+                 "en": "Artwork you send remains yours. Artwork we draw at your request becomes yours on final payment. We never resell to anyone else a piece made for you, and if we want to show it in the portfolio we ask you first." } }
+      ]
+    },
+
+    {
+      "id": "cookie",
+      "n": { "it": "Cookie", "en": "Cookies" },
+      "occhiello": { "it": "Informazioni", "en": "Information" },
+      "lead": {
+        "it": "Cosa viene salvato nel tuo browser e perché.",
+        "en": "What is stored in your browser and why."
+      },
+      "daCompletare": {
+        "it": "Da aggiornare con l'elenco esatto degli strumenti attivi (statistiche, moduli, eventuali servizi esterni) nel momento in cui vengono collegati. Finché non c'è analitica, questa pagina descrive il minimo tecnico e va bene così.",
+        "en": "To be updated with the exact list of active tools (analytics, forms, any external services) once they are connected. Until analytics exists, this page describes the technical minimum and that is correct."
+      },
+      "sezioni": [
+        { "t": { "it": "Solo il necessario", "en": "Only what is necessary" },
+          "c": { "it": "Il sito salva nel browser la lingua scelta e il tema chiaro o scuro. Sono preferenze tue, restano sul tuo dispositivo e non ci arrivano.",
+                 "en": "The site stores your chosen language and light or dark theme in your browser. These are your preferences, they stay on your device and never reach us." } }
+      ]
+    }
+  ]
+}

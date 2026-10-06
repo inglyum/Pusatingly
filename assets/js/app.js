@@ -18,6 +18,7 @@ import { initProduct, renderProductPage, PRODUCT_FAQ } from './product.js';
 import {
   initPages, renderMaterials, renderTechnologies, renderAbout,
   renderXtool, renderXtoolMachine, findXtoolMachine,
+  renderInfo, findInfoPage,
   renderPortfolio, renderHow, renderB2b, renderNotFound
 } from './pages.js';
 import { initForms, renderContact } from './forms.js';
@@ -204,6 +205,14 @@ function render({ route, params, path, query }) {
        vendiamo qui è la riparazione, e «assistenza xTool» è la ricerca che
        porta qui. Le domande vanno in FAQPage perché sono quelle che un
        assistente AI cita quando qualcuno chiede se conviene riparare. */
+    case 'info': {
+      const p = findInfoPage(params[0]);
+      if (!p) { renderNotFound(main, path); setSeo({ title: '404', description: '', canonical, lang }); break; }
+      renderInfo(main, p);
+      setSeo({ title: loc(p.n, lang), description: loc(p.lead, lang), canonical, lang });
+      break;
+    }
+
     case 'xtool': {
       renderXtool(main);
       const X = D.XTOOL || {};

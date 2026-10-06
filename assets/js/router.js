@@ -22,6 +22,7 @@ const ROUTES = [
   { id: 'about', pattern: /^\/chi-sono\/?$/ },
   { id: 'how', pattern: /^\/come-acquistare\/?$/ },
   { id: 'b2b', pattern: /^\/b2b\/?$/ },
+  { id: 'info', pattern: /^\/informazioni\/([a-z0-9-]+)\/?$/ },
   { id: 'xtool', pattern: /^\/xtool\/?$/ },
   { id: 'xtoolMachine', pattern: /^\/xtool\/([a-z0-9-]+)\/?$/ },
   { id: 'contact', pattern: /^\/contatti\/?$/ }
