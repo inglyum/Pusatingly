@@ -54,6 +54,7 @@ export function isPlaceholder(product) {
 /* ---- reveal allo scroll ------------------------------------------------ */
 
 let observer = null;
+let failsafe = null;
 
 export function observeReveals(root = document) {
   const targets = [...root.querySelectorAll('.reveal:not(.is-in)')];
@@ -74,4 +75,17 @@ export function observeReveals(root = document) {
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
 
   targets.forEach((el) => observer.observe(el));
+
+  /* Paracadute. Un elemento che resta a opacity 0 non segnala niente: la
+     sezione sembra semplicemente vuota. Succede quando si scorre in fretta,
+     quando il browser ripristina la posizione di scroll, o se l'observer non
+     scatta. Dopo tre secondi tutto ciò che è ancora in attesa viene mostrato:
+     si perde l'animazione, non il contenuto. */
+  clearTimeout(failsafe);
+  failsafe = setTimeout(() => {
+    const pending = [...document.querySelectorAll('.reveal:not(.is-in)')];
+    if (!pending.length) return;
+    console.warn('[INGLY] reveal non scattato su', pending.length, 'elementi: mostrati dal paracadute');
+    pending.forEach((el) => el.classList.add('is-in'));
+  }, 3000);
 }

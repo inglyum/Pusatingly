@@ -45,7 +45,9 @@ const D = {
   TECHNOLOGIES: read('data/technologies.json'),
   PORTFOLIO: read('data/portfolio.json'),
   CONTENT: read('data/content.json'),
-  MIGRATION: read('data/migration.json')
+  MIGRATION: read('data/migration.json'),
+  XTOOL: read('data/xtool.json'),
+  INFO: read('data/informazioni.json')
 };
 
 const lang = 'it';
@@ -85,6 +87,25 @@ function fresh() {
 
 /* ---- HOMEPAGE ---------------------------------------------------------- */
 
+/* La home segue l'ordine dichiarato in data/content.json → home.ordine.
+   Il test verifica che ogni voce di quell'array produca una sezione, così
+   rinominare un titolo non rompe nulla ma rimuovere un blocco sì. */
+test("la homepage rende ogni sezione dichiarata in home.ordine", () => {
+  const root = fresh();
+  sections.renderHome(root);
+  const ordine = D.CONTENT.home.ordine || [];
+  assert(ordine.length >= 10, `home.ordine troppo corto: ${ordine.length}`);
+  /* Conteggio esatto: una sezione che si svuota perché legge la chiave
+     sbagliata sparisce senza errori. È successo con portfolio, che prendeva
+     gli archetipi da content.json invece che da portfolio.json. */
+  const rese = root.querySelectorAll('section').length;
+  assert(rese === ordine.length,
+    `sezioni rese ${rese} per ${ordine.length} dichiarate in home.ordine`);
+  assert(root.querySelector('.intent-grid'), 'manca la griglia "cosa vuoi fare oggi"');
+  assert(root.querySelector('.behind'), 'manca il blocco "chi c\u2019è dietro"');
+  assert(root.querySelector('.xtool-band'), 'manca il blocco macchine/assistenza xTool');
+});
+
 test('la homepage rende tutte le sezioni del master command §21', () => {
   const root = fresh();
   sections.renderHome(root);
@@ -97,7 +118,7 @@ test('la homepage rende tutte le sezioni del master command §21', () => {
   assert(h1.length === 1, `la pagina deve avere esattamente un h1, trovati ${h1.length}`);
 
   const text = root.textContent;
-  for (const needle of ['Manifesto', 'Catalogo', 'Tecnologie', 'Materiali', 'Business', 'Processo']) {
+  for (const needle of ['Manifesto', 'Catalogo', 'Tecnologie', 'Materiali', 'Business', 'Metodo']) {
     assert(text.includes(needle), `sezione "${needle}" non presente in homepage`);
   }
 });
@@ -105,7 +126,7 @@ test('la homepage rende tutte le sezioni del master command §21', () => {
 test('la homepage mostra tutte le 13 categorie', () => {
   const root = fresh();
   sections.renderHome(root);
-  const cards = root.querySelectorAll('.cat-card');
+  const cards = root.querySelectorAll('.cat-circle');
   assert(cards.length === D.CATS.length,
     `attese ${D.CATS.length} card categoria, trovate ${cards.length}`);
 });
@@ -369,7 +390,7 @@ test('nessun link interno punta a una rotta inesistente', () => {
   sections.renderHome(root);
   const catIds = new Set(D.CATS.map((c) => c.id));
   const known = new Set(['/', '/creazioni', '/materiali', '/tecnologie', '/portfolio',
-    '/chi-sono', '/come-acquistare', '/b2b', '/contatti']);
+    '/chi-sono', '/come-acquistare', '/b2b', '/contatti', '/xtool']);
 
   for (const a of root.querySelectorAll('a[href]')) {
     const raw = a.getAttribute('href');
@@ -379,6 +400,18 @@ test('nessun link interno punta a una rotta inesistente', () => {
     const m = path.match(/^\/creazioni\/([a-z0-9-]+)$/);
     if (m) {
       assert(catIds.has(m[1]), `link a categoria inesistente: ${path}`);
+      continue;
+    }
+    const im = path.match(/^\/informazioni\/([a-z0-9-]+)$/);
+    if (im) {
+      assert((D.INFO?.pagine || []).some((g) => g.id === im[1]),
+        `link a pagina informativa inesistente: ${path}`);
+      continue;
+    }
+    const xm = path.match(/^\/xtool\/([a-z0-9-]+)$/);
+    if (xm) {
+      assert((D.XTOOL?.gamma || []).some((g) => g.id === xm[1]),
+        `link a macchina xTool inesistente: ${path}`);
       continue;
     }
     const pm = path.match(/^\/creazioni\/([a-z0-9-]+)\/([a-z0-9-]+)$/);

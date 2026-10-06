@@ -354,3 +354,227 @@
   0% { transform: translateX(-100%); }
   100% { transform: translateX(350%); }
 }
+
+/* ============================================================
+   HOMEPAGE — SEZIONI DELLA STRUTTURA A INGRESSI
+   Ordine e contenuti stanno in data/content.json → home.ordine.
+   ============================================================ */
+
+.section-more { margin-top: var(--sp-7); }
+
+/* ---- Acquista per categoria: pastiglie circolari ------------- */
+
+.cat-circles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  gap: var(--sp-5) var(--sp-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cat-circle a {
+  display: grid;
+  justify-items: center;
+  gap: var(--sp-3);
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+}
+.cat-circle-media {
+  display: block;
+  width: 100%;
+  max-width: 7.5rem;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-full);
+  background: var(--surface-2);
+}
+.cat-circle-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform var(--dur-slow) var(--ease);
+}
+.cat-circle-media { display: grid; place-items: center; }
+.cat-circle-mono {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  letter-spacing: var(--ls-caps);
+  color: var(--text-3);
+  transition: color var(--dur) var(--ease);
+}
+.cat-circle a:hover .cat-circle-mono { color: var(--accent-text); }
+.cat-circle a:hover .cat-circle-media { border-color: var(--accent); }
+.cat-circle a:hover .cat-circle-media img { transform: scale(1.06); }
+.cat-circle-name {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  color: var(--text-1);
+}
+
+/* ---- Binario scorrevole per i prodotti in evidenza ----------- */
+
+.rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(16rem, 19rem);
+  gap: var(--sp-5);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: var(--sp-4);
+  scrollbar-width: thin;
+}
+.rail-item { scroll-snap-align: start; }
+
+/* ---- Chi c'è dietro ------------------------------------------ */
+
+.behind {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: var(--sp-8);
+  align-items: center;
+}
+.behind-media {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface-2);
+}
+.behind-media img { display: block; width: 100%; height: auto; }
+.badge-round {
+  position: absolute;
+  right: var(--sp-5);
+  bottom: var(--sp-5);
+  display: grid;
+  place-items: center;
+  width: 8.5rem;
+  height: 8.5rem;
+  padding: var(--sp-3);
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  /* Il bollino è sempre ciano: l'inchiostro resta antracite in entrambe le
+     modalità, perché --text-inverse in luce diventa bianco e scende a ~2.5:1. */
+  color: var(--ingly-anthracite);
+  font-size: var(--fs-2xs);
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-align: center;
+  line-height: var(--lh-snug);
+  box-shadow: var(--elev-2);
+}
+.behind-body > p { color: var(--text-2); }
+.behind-points {
+  list-style: none;
+  margin: var(--sp-5) 0 var(--sp-6);
+  padding: 0;
+  display: grid;
+  gap: var(--sp-3);
+}
+.behind-points li {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: flex-start;
+  font-size: var(--fs-sm);
+  color: var(--text-1);
+}
+.behind-points svg { flex: none; margin-top: .2em; color: var(--accent-text); }
+
+/* ---- Cosa vuoi fare oggi: ingresso per intenzione ------------ */
+
+.intent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--sp-4);
+}
+.intent-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: var(--sp-2);
+  padding: var(--sp-5);
+  min-height: 11rem;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.intent-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: var(--elev-2);
+}
+.intent-num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: var(--ls-caps);
+  color: var(--text-3);
+}
+.intent-verb {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  letter-spacing: var(--ls-tight);
+  color: var(--text-1);
+}
+.intent-text {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-snug);
+  color: var(--text-3);
+}
+.intent-go {
+  position: absolute;
+  right: var(--sp-5);
+  bottom: var(--sp-5);
+  color: var(--accent-text);
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+.intent-card:hover .intent-go,
+.intent-card:focus-visible .intent-go { opacity: 1; }
+
+/* ---- Tecnologia da vedere e da provare ----------------------- */
+
+.xtool-band {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--sp-8);
+  align-items: start;
+}
+.xtool-band-body > .section-lead { max-width: 54ch; }
+.xtool-band-body .tag-list { margin-top: var(--sp-5); }
+.xtool-band-aside { display: grid; gap: var(--sp-4); }
+.xtool-service {
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--radius);
+}
+.xtool-service h3 {
+  margin: 0 0 var(--sp-1);
+  font-size: var(--fs-md);
+  color: var(--text-1);
+}
+.xtool-service p {
+  margin: 0;
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+  line-height: var(--lh-snug);
+}
+
+@media (max-width: 1023px) {
+  .behind,
+  .xtool-band { grid-template-columns: 1fr; gap: var(--sp-6); }
+  .badge-round { width: 7rem; height: 7rem; }
+}
+@media (max-width: 599px) {
+  .cat-circles { grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr)); }
+  .badge-round { right: var(--sp-3); bottom: var(--sp-3); width: 6rem; height: 6rem; }
+}

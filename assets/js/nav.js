@@ -3,8 +3,8 @@
    Header, mega-menu (§25), menu mobile, tema, lingua.
    ============================================================ */
 
-import { $, $$, esc, loc, icon } from './utils.js';
-import { href } from './router.js';
+import { $, $$, esc, loc, icon, toast } from './utils.js';
+import { href, go } from './router.js';
 
 let D = null;
 let lang = 'it';
@@ -23,9 +23,50 @@ const NAV_ITEMS = [
 
 export function initNav(data, l, translate) {
   D = data; lang = l; t = translate;
+  renderAnnounce();
   renderHeader();
+  renderPreFooter();
   renderFooter();
   bind();
+}
+
+/* ---- fascia annunci ---------------------------------------------------- */
+
+/**
+ * La barra in testa alla pagina. I messaggi stanno in config.json:
+ * nessuno configurato o `attiva: false` e la barra resta nascosta,
+ * invece di occupare spazio con una promessa vuota.
+ */
+function renderAnnounce() {
+  const el = $('#announce');
+  if (!el) return;
+  const a = D.CONFIG?.announce || {};
+  const messaggi = (a.messaggi || []).filter((m) => loc(m.testo, lang));
+  if (a.attiva === false || !messaggi.length) { el.hidden = true; return; }
+
+  el.innerHTML = `
+    <div class="container announce-inner">
+      <p class="announce-msg" aria-live="polite" aria-atomic="true">
+        ${messaggi.map((m, i) => {
+          const testo = esc(loc(m.testo, lang));
+          const corpo = m.url
+            ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">${testo}</a>`
+            : m.path ? `<a href="${href(m.path)}">${testo}</a>` : testo;
+          return `<span class="announce-slide${i === 0 ? ' is-on' : ''}">${corpo}</span>`;
+        }).join('')}
+      </p>
+    </div>`;
+  el.hidden = false;
+
+  if (messaggi.length < 2) return;
+  // Rotazione lenta e senza animazione: chi legge non viene inseguito.
+  const slides = $$('.announce-slide', el);
+  let i = 0;
+  setInterval(() => {
+    slides[i].classList.remove('is-on');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('is-on');
+  }, 6000);
 }
 
 /* ---- header ----------------------------------------------------------- */
@@ -49,6 +90,11 @@ function renderHeader() {
       </nav>
 
       <div class="header-actions">
+        <form class="header-search" id="headerSearch" role="search" novalidate>
+          <label class="sr-only" for="hdrSearch">${esc(t('catalog.searchLabel'))}</label>
+          ${icon('search', 18)}
+          <input type="search" id="hdrSearch" placeholder="${esc(t('catalog.search'))}" autocomplete="off">
+        </form>
         <div class="lang-switch" role="group" aria-label="Lingua">
           <button type="button" data-lang="it" class="${lang === 'it' ? 'is-on' : ''}" aria-pressed="${lang === 'it'}">IT</button>
           <button type="button" data-lang="en" class="${lang === 'en' ? 'is-on' : ''}" aria-pressed="${lang === 'en'}">EN</button>
@@ -131,6 +177,52 @@ function renderMobileMenu() {
           <a class="m-link" href="${href(i.path)}">${esc(t(i.key))}</a>
         </div>`).join('')}
     </div>`;
+}
+
+/* ---- fascia informativa e newsletter ---------------------------------- */
+
+function renderPreFooter() {
+  const el = $('#preFooter');
+  if (!el) return;
+  const band = D.CONTENT?.infoband;
+  const news = D.CONTENT?.newsletter;
+
+  const bandMarkup = !band?.voci?.length ? '' : `
+    <section class="infoband">
+      <div class="container infoband-grid">
+        ${band.voci.map((v) => {
+          const inner = `
+            <span class="infoband-ic">${icon(v.icona || 'arrow', 20)}</span>
+            <span class="infoband-text">
+              <strong>${esc(loc(v.titolo, lang))}</strong>
+              <span>${esc(loc(v.testo, lang))}</span>
+            </span>`;
+          if (v.url) return `<a class="infoband-item" href="${esc(v.url)}" target="_blank" rel="noopener">${inner}</a>`;
+          if (v.path) return `<a class="infoband-item" href="${href(v.path)}">${inner}</a>`;
+          return `<div class="infoband-item">${inner}</div>`;
+        }).join('')}
+      </div>
+    </section>`;
+
+  const newsMarkup = !news ? '' : `
+    <section class="newsletter">
+      <div class="container newsletter-inner">
+        <div class="newsletter-copy">
+          <p class="eyebrow">${esc(loc(news.eyebrow, lang))}</p>
+          <h2 class="section-title">${esc(loc(news.title, lang))}</h2>
+          <p class="section-lead">${esc(loc(news.lead, lang))}</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <label class="sr-only" for="nlEmail">${esc(t('newsletter.email'))}</label>
+          <input type="email" id="nlEmail" name="email" required autocomplete="email"
+                 placeholder="${esc(t('newsletter.email'))}">
+          <button type="submit" class="btn btn--primary">${esc(loc(news.cta, lang))}</button>
+          <p class="newsletter-note">${esc(loc(news.nota, lang))}</p>
+        </form>
+      </div>
+    </section>`;
+
+  el.innerHTML = bandMarkup + newsMarkup;
 }
 
 /* ---- footer ----------------------------------------------------------- */
@@ -253,6 +345,31 @@ function bind() {
       if (e.target.closest('a')) closeMobile();
     });
   }
+
+  // Ricerca dall'header: porta al catalogo con il filtro già applicato.
+  $('#headerSearch')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const v = ($('#hdrSearch')?.value || '').trim();
+    go('/creazioni' + (v ? `?q=${encodeURIComponent(v)}` : ''));
+  });
+
+  // Newsletter: senza servizio di invio collegato apriamo un'email già
+  // scritta, invece di simulare un'iscrizione che non avviene (come in forms.js).
+  $('#newsletterForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const input = $('#nlEmail');
+    const email = (input?.value || '').trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      input?.focus();
+      toast(t('common.error'));
+      return;
+    }
+    const dest = D.CONFIG?.contact?.email;
+    if (!dest) return;
+    const body = `${t('newsletter.subject')}: ${email}`;
+    window.location.href =
+      `mailto:${dest}?subject=${encodeURIComponent(t('newsletter.subject'))}&body=${encodeURIComponent(body)}`;
+  });
 
   // Tema
   $('#themeBtn')?.addEventListener('click', toggleTheme);
