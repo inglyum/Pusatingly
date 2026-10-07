@@ -13,7 +13,7 @@
 
 .section { padding-block: var(--section-y); }
 .section--tight { padding-block: calc(var(--section-y) * .6); }
-.section--alt { background: var(--surface-1); }
+.section--alt { background: var(--surface-band); }
 .section--inset { background: var(--surface-inset); }
 
 .section-head { margin-bottom: var(--sp-7); max-width: 62ch; }

@@ -21,6 +21,11 @@
   --surface-3: #3A3F46;
   --surface-inset: #12151A;
 
+  /* Le fasce alternate avevano lo stesso token delle schede. Al buio sono
+     dello stesso colore e nessuno se ne accorgeva; in luce una scheda
+     bianca su una fascia bianca sparisce. Un token per mestiere. */
+  --surface-band: #1F2328;
+
   --line:      rgba(255, 255, 255, .09);
   --line-soft: rgba(255, 255, 255, .05);
   --line-strong: rgba(255, 255, 255, .16);
@@ -108,30 +113,40 @@
    ============================================================ */
 
 :root[data-mode="light"] {
-  --surface-0: #FFFFFF;
-  --surface-1: #F7F8F9;
-  --surface-2: #FFFFFF;
-  --surface-3: #EDEFF1;
-  --surface-inset: #F2F4F5;
+  /* La pagina NON è bianca: il bianco è riservato alle schede.
+     Con pagina e scheda entrambe #FFFFFF nessun componente si staccava dal
+     fondo, le fasce alternate non si vedevano e il reticolo e l'alone
+     dell'hero — che nascono dalla differenza fra --surface-1 e --surface-0 —
+     sparivano. La pagina diventava un foglio bianco piatto.
+     Qui le superfici tornano a essere cinque valori distinti: è l'unico
+     intervento, e rimette in piedi profondità ed effetti ovunque. */
+  --surface-0: #F4F6F8;      /* fondo pagina: tinto, non bianco */
+  --surface-1: #FFFFFF;      /* schede: il bianco serve a sollevarle */
+  --surface-2: #FFFFFF;      /* scheda al passaggio del mouse: alza il bordo, non il colore */
+  --surface-3: #DDE2E9;
+  --surface-inset: #EDF0F4;
+  --surface-band: #E9ECF1;   /* fasce alternate */
 
-  --line:      rgba(31, 35, 40, .12);
-  --line-soft: rgba(31, 35, 40, .07);
-  --line-strong: rgba(31, 35, 40, .20);
+  --line:      rgba(31, 35, 40, .14);
+  --line-soft: rgba(31, 35, 40, .09);
+  --line-strong: rgba(31, 35, 40, .24);
 
-  --text-1: #1F2328;
-  --text-2: #4A5058;
-  --text-3: #767C85;
+  --text-1: #141820;
+  --text-2: #434A54;
+  --text-3: #6B727C;
   --text-inverse: #FFFFFF;
 
   --accent:       #00A99B;
-  --accent-dim:   rgba(0, 169, 155, .14);
-  --accent-faint: rgba(0, 169, 155, .06);
-  --accent-text:  #00847A;
+  --accent-dim:   rgba(0, 169, 155, .18);
+  --accent-faint: rgba(0, 169, 155, .12);
+  --accent-text:  #00776E;
 
-  --elev-1: 0 1px 2px rgba(31, 35, 40, .06);
-  --elev-2: 0 4px 16px rgba(31, 35, 40, .08);
-  --elev-3: 0 12px 32px rgba(31, 35, 40, .10);
-  --elev-4: 0 24px 60px rgba(31, 35, 40, .13);
+  /* Su fondo chiaro un'ombra appena accennata non si legge: va alzata,
+     altrimenti le schede restano appiccicate alla pagina. */
+  --elev-1: 0 1px 2px rgba(20, 24, 32, .08);
+  --elev-2: 0 6px 20px rgba(20, 24, 32, .11);
+  --elev-3: 0 14px 38px rgba(20, 24, 32, .13);
+  --elev-4: 0 26px 64px rgba(20, 24, 32, .17);
 
   color-scheme: light;
 }

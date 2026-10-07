@@ -33,7 +33,7 @@ const variables = text('variables.css');
 
 const REQUIRED_TOKENS = [
   '--ingly-anthracite', '--ingly-dark', '--ingly-white', '--ingly-cyan', '--ingly-cyan-print',
-  '--surface-0', '--surface-1', '--surface-2', '--surface-3',
+  '--surface-0', '--surface-1', '--surface-2', '--surface-3', '--surface-band',
   '--text-1', '--text-2', '--text-3', '--accent', '--line',
   '--font-display', '--font-body', '--font-mono',
   '--fs-xs', '--fs-md', '--fs-4xl', '--sp-4', '--radius', '--ease', '--dur',
@@ -98,7 +98,7 @@ test('nessun valore rgb()/hsl() sciolto fuori da variables.css', () => {
 test('la modalità chiara ridefinisce tutti i token cromatici', () => {
   const lightBlock = variables.split('[data-mode="light"]')[1] || '';
   const chromatic = [
-    '--surface-0', '--surface-1', '--surface-2', '--surface-3',
+    '--surface-0', '--surface-1', '--surface-2', '--surface-3', '--surface-band',
     '--text-1', '--text-2', '--text-3', '--accent', '--line'
   ];
   for (const tk of chromatic) {

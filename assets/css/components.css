@@ -89,9 +89,11 @@ a:hover .link-arrow svg,
   border: 1px solid var(--line-soft);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+  box-shadow: var(--elev-1);
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease);
 }
-.card:hover { border-color: var(--line-strong); background: var(--surface-2); }
+.card:hover { border-color: var(--line-strong); background: var(--surface-2); box-shadow: var(--elev-2); }
 
 .card-media {
   position: relative;
@@ -205,7 +207,8 @@ a:hover .link-arrow svg,
   background: var(--surface-1);
   border: 1px solid var(--line-soft);
   border-radius: var(--radius);
-  transition: border-color var(--dur) var(--ease);
+  box-shadow: var(--elev-1);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
 .info-card:hover { border-color: var(--line-strong); }
 .info-card h3 { font-size: var(--fs-lg); }
